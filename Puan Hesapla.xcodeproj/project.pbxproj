@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */; };
+		F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */; };
+		F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D382FE249CC91B0090A6F5 /* Main.storyboard */; };
+		F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D38301249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld */; };
+		F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D38304249CC9220090A6F5 /* Assets.xcassets */; };
+		F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */; };
+		F5D38312249CDCA60090A6F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38311249CDCA60090A6F5 /* MainViewController.swift */; };
+		F5D38315249CE97E0090A6F5 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38314249CE97E0090A6F5 /* University.swift */; };
+		F5DAEF0F24A08FAB003F2A95 /* UniversityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */; };
+		F5DAEF1324A09189003F2A95 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */; };
+		F5DAEF1424A09189003F2A95 /* ArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puan Hesapla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5D382FF249CC91B0090A6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5D38302249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Puan_Hesapla.xcdatamodel; sourceTree = "<group>"; };
+		F5D38304249CC9220090A6F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5D38307249CC9220090A6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5D38309249CC9220090A6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D38311249CDCA60090A6F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5D38314249CE97E0090A6F5 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5D382F0249CC91B0090A6F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5D382EA249CC91B0090A6F5 = {
+			isa = PBXGroup;
+			children = (
+				F5D382F5249CC91B0090A6F5 /* Puan Hesapla */,
+				F5D382F4249CC91B0090A6F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5D382F4249CC91B0090A6F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5D382F5249CC91B0090A6F5 /* Puan Hesapla */ = {
+			isa = PBXGroup;
+			children = (
+				F5DAEF1024A09171003F2A95 /* ArticleCell */,
+				F5D38313249CE9690090A6F5 /* Model */,
+				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
+				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
+				F5D38311249CDCA60090A6F5 /* MainViewController.swift */,
+				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
+				F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */,
+				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
+				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
+				F5D38309249CC9220090A6F5 /* Info.plist */,
+				F5D38301249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld */,
+			);
+			path = "Puan Hesapla";
+			sourceTree = "<group>";
+		};
+		F5D38313249CE9690090A6F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5D38314249CE97E0090A6F5 /* University.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5DAEF1024A09171003F2A95 /* ArticleCell */ = {
+			isa = PBXGroup;
+			children = (
+				F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */,
+				F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */,
+			);
+			path = ArticleCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5D382F2249CC91B0090A6F5 /* Puan Hesapla */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D3830C249CC9220090A6F5 /* Build configuration list for PBXNativeTarget "Puan Hesapla" */;
+			buildPhases = (
+				F5D382EF249CC91B0090A6F5 /* Sources */,
+				F5D382F0249CC91B0090A6F5 /* Frameworks */,
+				F5D382F1249CC91B0090A6F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Puan Hesapla";
+			productName = "Puan Hesapla";
+			productReference = F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5D382EB249CC91B0090A6F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Yasar University";
+				TargetAttributes = {
+					F5D382F2249CC91B0090A6F5 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = F5D382EE249CC91B0090A6F5 /* Build configuration list for PBXProject "Puan Hesapla" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5D382EA249CC91B0090A6F5;
+			productRefGroup = F5D382F4249CC91B0090A6F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5D382F2249CC91B0090A6F5 /* Puan Hesapla */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5D382F1249CC91B0090A6F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
+				F5DAEF1424A09189003F2A95 /* ArticleCollectionViewCell.xib in Resources */,
+				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
+				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5D382EF249CC91B0090A6F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
+				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
+				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
+				F5DAEF0F24A08FAB003F2A95 /* UniversityCollectionViewCell.swift in Sources */,
+				F5D38312249CDCA60090A6F5 /* MainViewController.swift in Sources */,
+				F5D38315249CE97E0090A6F5 /* University.swift in Sources */,
+				F5DAEF1324A09189003F2A95 /* ArticleCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5D382FE249CC91B0090A6F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D382FF249CC91B0090A6F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D38307249CC9220090A6F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5D3830A249CC9220090A6F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5D3830B249CC9220090A6F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5D3830D249CC9220090A6F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UY69P5Z799;
+				INFOPLIST_FILE = "Puan Hesapla/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasar.Puan-Hesapla";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5D3830E249CC9220090A6F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UY69P5Z799;
+				INFOPLIST_FILE = "Puan Hesapla/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasar.Puan-Hesapla";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5D382EE249CC91B0090A6F5 /* Build configuration list for PBXProject "Puan Hesapla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D3830A249CC9220090A6F5 /* Debug */,
+				F5D3830B249CC9220090A6F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D3830C249CC9220090A6F5 /* Build configuration list for PBXNativeTarget "Puan Hesapla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D3830D249CC9220090A6F5 /* Debug */,
+				F5D3830E249CC9220090A6F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5D38301249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5D38302249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodel */,
+			);
+			currentVersion = F5D38302249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodel */;
+			path = Puan_Hesapla.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F5D382EB249CC91B0090A6F5 /* Project object */;
+}
