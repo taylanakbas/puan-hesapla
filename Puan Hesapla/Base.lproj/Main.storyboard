@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -174,7 +174,7 @@ hemen puanını hesapla</string>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="collectionView" destination="eQb-wO-odb" id="xFu-hZ-yay"/>
+                                                    <outlet property="cv" destination="eQb-wO-odb" id="YUs-Vp-csW"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleTableViewCell" rowHeight="319" id="75o-xI-7gw" userLabel="ArticleTableViewCell" customClass="ArticleTableViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
@@ -231,7 +231,6 @@ hemen puanını hesapla</string>
                                                                     <size key="customSize" width="158" height="245"/>
                                                                     <connections>
                                                                         <outlet property="coverImageView" destination="62i-Ng-MSA" id="Q1x-kf-jda"/>
-                                                                        <outlet property="mainImageView" destination="62i-Ng-MSA" id="Zi7-yp-Z8G"/>
                                                                         <outlet property="titleLabel" destination="Z1H-q0-0G2" id="5kX-VW-fTi"/>
                                                                     </connections>
                                                                 </collectionViewCell>
@@ -252,7 +251,7 @@ hemen puanını hesapla</string>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="collectionView" destination="NMS-dO-7OF" id="0kl-Za-GAZ"/>
+                                                    <outlet property="cv" destination="NMS-dO-7OF" id="Jgv-9N-q24"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

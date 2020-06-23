@@ -8,30 +8,19 @@
 
 import UIKit
 
-class UniversityTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class UniversityTableViewCell: UITableViewCell {
     
-    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet weak var cv: UICollectionView!
     
     override func awakeFromNib() {
 
         super.awakeFromNib()
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversityCollectionViewCell", for: indexPath) as?  UniversityCollectionViewCell
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.tag = indexPath.row
-        collectionView.reloadData()
-        return cell!
-    }
+
 }

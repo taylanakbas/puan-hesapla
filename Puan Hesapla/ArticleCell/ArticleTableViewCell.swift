@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class ArticleTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cv: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,17 +24,6 @@ class ArticleTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
 
         // Configure the view for the selected state
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12 // Number of articles
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.tag = indexPath.row
-        collectionView.reloadData()
-        return cell!
-    }
+  
 
 }
