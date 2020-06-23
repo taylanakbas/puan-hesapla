@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     var universities : [University] = []
     let estimatedWidth = 160.0
     let cellMarginSize = 16.0
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,13 @@ class MainViewController: UIViewController {
         initUniversities()
         // Responsive font size 
         self.universityTitleLabel.adjustsFontForContentSizeCategory = true
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setupGridView()
+        DispatchQueue.main.async {
+            self.blogCollectionView.reloadData()
+        }
     }
     func setupGridView(){
         let flow = self.blogCollectionView?.collectionViewLayout as! UICollectionViewFlowLayout
@@ -72,12 +79,12 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
             uniCell.mainImageView.image = self.universities[indexPath.row].image
             uniCell.nameLabel.text = self.universities[indexPath.row].name
             uniCell.locationLabel.text = self.universities[indexPath.row].location
-            uniCell.rateLabel.text = self.universities[indexPath.row].rate
+            //uniCell.rateLabel.text = self.universities[indexPath.row].rate
             return uniCell
 
         }else {
             let articleCell = blogCollectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-            articleCell.setData(title: "2020 En çok tercih edilen üniversiteleri hemen incele", image: UIImage(named: "u2")!)
+            articleCell.setData(title: "2020 En çok tercih edilen üniversiteleri hemen incele", image: UIImage(named: "u0")!)
             return articleCell
             
         }

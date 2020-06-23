@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503711C24A0DF12008B153E /* HomeViewController.swift */; };
+		F503712624A0F2ED008B153E /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503712424A0F2ED008B153E /* UniversityTableViewCell.swift */; };
+		F503712A24A0F418008B153E /* UniversityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503712824A0F418008B153E /* UniversityCollectionViewCell.swift */; };
+		F54F4E3124A11F5C008204E9 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E3024A11F5C008204E9 /* ArticleTableViewCell.swift */; };
 		F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */; };
 		F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */; };
 		F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D382FE249CC91B0090A6F5 /* Main.storyboard */; };
@@ -15,12 +19,15 @@
 		F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */; };
 		F5D38312249CDCA60090A6F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38311249CDCA60090A6F5 /* MainViewController.swift */; };
 		F5D38315249CE97E0090A6F5 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38314249CE97E0090A6F5 /* University.swift */; };
-		F5DAEF0F24A08FAB003F2A95 /* UniversityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */; };
 		F5DAEF1324A09189003F2A95 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */; };
-		F5DAEF1424A09189003F2A95 /* ArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */; };
+		F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F503711C24A0DF12008B153E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F503712424A0F2ED008B153E /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
+		F503712824A0F418008B153E /* UniversityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCollectionViewCell.swift; sourceTree = "<group>"; };
+		F54F4E3024A11F5C008204E9 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puan Hesapla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +38,8 @@
 		F5D38309249CC9220090A6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D38311249CDCA60090A6F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F5D38314249CE97E0090A6F5 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
-		F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
-		F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCollectionViewCell.xib; sourceTree = "<group>"; };
+		F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F503712324A0F2D7008B153E /* UniversityCell */ = {
+			isa = PBXGroup;
+			children = (
+				F503712424A0F2ED008B153E /* UniversityTableViewCell.swift */,
+				F503712824A0F418008B153E /* UniversityCollectionViewCell.swift */,
+			);
+			path = UniversityCell;
+			sourceTree = "<group>";
+		};
 		F5D382EA249CC91B0090A6F5 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +81,15 @@
 		F5D382F5249CC91B0090A6F5 /* Puan Hesapla */ = {
 			isa = PBXGroup;
 			children = (
+				F503712324A0F2D7008B153E /* UniversityCell */,
 				F5DAEF1024A09171003F2A95 /* ArticleCell */,
 				F5D38313249CE9690090A6F5 /* Model */,
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
+				F503711C24A0DF12008B153E /* HomeViewController.swift */,
 				F5D38311249CDCA60090A6F5 /* MainViewController.swift */,
 				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
-				F5DAEF0E24A08FAB003F2A95 /* UniversityCollectionViewCell.swift */,
+				F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */,
 				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
 				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
 				F5D38309249CC9220090A6F5 /* Info.plist */,
@@ -92,8 +109,8 @@
 		F5DAEF1024A09171003F2A95 /* ArticleCell */ = {
 			isa = PBXGroup;
 			children = (
+				F54F4E3024A11F5C008204E9 /* ArticleTableViewCell.swift */,
 				F5DAEF1124A09189003F2A95 /* ArticleCollectionViewCell.swift */,
-				F5DAEF1224A09189003F2A95 /* ArticleCollectionViewCell.xib */,
 			);
 			path = ArticleCell;
 			sourceTree = "<group>";
@@ -157,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
-				F5DAEF1424A09189003F2A95 /* ArticleCollectionViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
 			);
@@ -172,11 +188,15 @@
 			files = (
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
+				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
-				F5DAEF0F24A08FAB003F2A95 /* UniversityCollectionViewCell.swift in Sources */,
+				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
+				F54F4E3124A11F5C008204E9 /* ArticleTableViewCell.swift in Sources */,
 				F5D38312249CDCA60090A6F5 /* MainViewController.swift in Sources */,
 				F5D38315249CE97E0090A6F5 /* University.swift in Sources */,
+				F503712A24A0F418008B153E /* UniversityCollectionViewCell.swift in Sources */,
 				F5DAEF1324A09189003F2A95 /* ArticleCollectionViewCell.swift in Sources */,
+				F503712624A0F2ED008B153E /* UniversityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
