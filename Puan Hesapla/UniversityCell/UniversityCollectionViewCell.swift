@@ -10,13 +10,14 @@ import UIKit
 
 class UniversityCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet  var mainImageView: UIImageView!
+    
+    @IBOutlet  var nameLbl: UILabel!
+    @IBOutlet  var locationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        print("zzz")
     }
 
 }

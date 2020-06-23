@@ -77,7 +77,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             let uniCell = universityCollectionView.dequeueReusableCell(withReuseIdentifier: "universityCell", for: indexPath) as! UniversityCollectionViewCell
             uniCell.mainImageView.image = self.universities[indexPath.row].image
-            uniCell.nameLabel.text = self.universities[indexPath.row].name
+//            uniCell.nameLabel.text = self.universities[indexPath.row].name
             uniCell.locationLabel.text = self.universities[indexPath.row].location
             //uniCell.rateLabel.text = self.universities[indexPath.row].rate
             return uniCell

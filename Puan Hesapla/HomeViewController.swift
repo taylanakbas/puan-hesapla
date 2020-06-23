@@ -19,9 +19,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        // Do any additional setup after loading the view.
     }
     
 }
@@ -33,23 +30,23 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityTableViewCell", for: indexPath) as! UniversityTableViewCell
+        if indexPath.section == 0 {
+            let cell = Bundle.main.loadNibNamed("OnlyCollectionCell", owner: self, options: nil)?.first as! OnlyCollectionCell
             
-            cell.cv.dataSource = self
-            cell.cv.delegate = self
-            cell.cv.register(UINib(nibName: "ReciptCVCell", bundle: nil), forCellWithReuseIdentifier: "ReciptCVCell")
-            self.cvUni = cell.cv
+            self.cvUni = cell.collectionView
+            cell.collectionView.delegate = self
+            cell.collectionView.dataSource = self
+            cell.collectionView.register(UINib(nibName: "ToolsCVCell", bundle: nil), forCellWithReuseIdentifier: "ToolsCVCell")
+            
             
             return cell
+        }else {
+            let cell = Bundle.main.loadNibNamed("OnlyCollectionCell", owner: self, options: nil)?.first as! OnlyCollectionCell
             
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as! UniversityTableViewCell
-            
-            cell.cv.dataSource = self
-            cell.cv.delegate = self
-            cell.cv.register(UINib(nibName: "ArticleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCollectionViewCell")
-            self.cvBlog = cell.cv
+            self.cvBlog = cell.collectionView
+            cell.collectionView.delegate = self
+            cell.collectionView.dataSource = self
+            cell.collectionView.register(UINib(nibName: "ToolsCVCell", bundle: nil), forCellWithReuseIdentifier: "ToolsCVCell")
             
             return cell
         }
@@ -70,37 +67,34 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == cvUni {
-            return 2
-        }
-        return 10
+        return 8
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == cvUni {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversityCollectionViewCell", for: indexPath) as!  UniversityCollectionViewCell
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            
+        
+        if collectionView == self.cvUni {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ToolsCVCell", for: indexPath) as? ToolsCVCell else {
+                fatalError("Cell not exists in storyboard")
+            }
+        
+            cell.lblTitle.text = "text"
             
             return cell
-            
         }else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ToolsCVCell", for: indexPath) as? ToolsCVCell else {
+                fatalError("Cell not exists in storyboard")
+            }
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as! ArticleCollectionViewCell
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            
+            cell.lblTitle.text = "text"
             
             return cell
-            
         }
+        
     }
+    
 }

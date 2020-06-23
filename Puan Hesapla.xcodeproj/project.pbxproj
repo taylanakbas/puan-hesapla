@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC25C7FF24A1FAF6003B5A39 /* ToolsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */; };
+		DC25C80024A1FAF6003B5A39 /* ToolsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */; };
+		DC25C80324A1FB2D003B5A39 /* OnlyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */; };
+		DC25C80424A1FB2D003B5A39 /* OnlyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */; };
+		DC25C80624A1FD39003B5A39 /* tblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C80524A1FD39003B5A39 /* tblViewCell.swift */; };
 		F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503711C24A0DF12008B153E /* HomeViewController.swift */; };
 		F503712624A0F2ED008B153E /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503712424A0F2ED008B153E /* UniversityTableViewCell.swift */; };
 		F503712A24A0F418008B153E /* UniversityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503712824A0F418008B153E /* UniversityCollectionViewCell.swift */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsCVCell.xib; sourceTree = "<group>"; };
+		DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsCVCell.swift; sourceTree = "<group>"; };
+		DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlyCollectionCell.xib; sourceTree = "<group>"; };
+		DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyCollectionCell.swift; sourceTree = "<group>"; };
+		DC25C80524A1FD39003B5A39 /* tblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tblViewCell.swift; sourceTree = "<group>"; };
 		F503711C24A0DF12008B153E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F503712424A0F2ED008B153E /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		F503712824A0F418008B153E /* UniversityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +91,11 @@
 		F5D382F5249CC91B0090A6F5 /* Puan Hesapla */ = {
 			isa = PBXGroup;
 			children = (
+				DC25C80524A1FD39003B5A39 /* tblViewCell.swift */,
+				DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */,
+				DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */,
+				DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */,
+				DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */,
 				F503712324A0F2D7008B153E /* UniversityCell */,
 				F5DAEF1024A09171003F2A95 /* ArticleCell */,
 				F5D38313249CE9690090A6F5 /* Model */,
@@ -173,8 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC25C80324A1FB2D003B5A39 /* OnlyCollectionCell.xib in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
+				DC25C7FF24A1FAF6003B5A39 /* ToolsCVCell.xib in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,9 +206,12 @@
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
+				DC25C80624A1FD39003B5A39 /* tblViewCell.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
 				F54F4E3124A11F5C008204E9 /* ArticleTableViewCell.swift in Sources */,
+				DC25C80024A1FAF6003B5A39 /* ToolsCVCell.swift in Sources */,
+				DC25C80424A1FB2D003B5A39 /* OnlyCollectionCell.swift in Sources */,
 				F5D38312249CDCA60090A6F5 /* MainViewController.swift in Sources */,
 				F5D38315249CE97E0090A6F5 /* University.swift in Sources */,
 				F503712A24A0F418008B153E /* UniversityCollectionViewCell.swift in Sources */,

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,198 +67,7 @@ hemen puanını hesapla</string>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
                                         <rect key="frame" x="0.0" y="190" width="375" height="1061"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UniversityTableViewCell" rowHeight="241" id="g0H-Ot-qXV" customClass="UniversityTableViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="241"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0H-Ot-qXV" id="Kwh-Dz-pms">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popüler Üniversiteler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-K5-6Rv">
-                                                            <rect key="frame" x="15" y="11" width="228" height="29"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="29" id="iQo-7H-LSr"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-wO-odb">
-                                                            <rect key="frame" x="0.0" y="48" width="375" height="185"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CKp-xe-CcS">
-                                                                <size key="itemSize" width="179" height="172"/>
-                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            </collectionViewFlowLayout>
-                                                            <cells>
-                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UniversityCollectionViewCell" id="cuS-dt-Y2j" customClass="UniversityCollectionViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="6.5" width="179" height="172"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eqp-UB-V4Z">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="172"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="u3" translatesAutoresizingMaskIntoConstraints="NO" id="8zB-RF-t2X">
-                                                                                <rect key="frame" x="8" y="0.0" width="163" height="102"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="102" id="6Nx-wd-mRl"/>
-                                                                                    <constraint firstAttribute="width" constant="163" id="9AA-XR-Mc4"/>
-                                                                                </constraints>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                                        <integer key="value" value="6"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adnan Menderes Üniversitesi" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcP-T5-fFo">
-                                                                                <rect key="frame" x="8" y="109.5" width="163" height="33.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İzmir, Türkiye" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiz-0U-hPc" userLabel="Location Label">
-                                                                                <rect key="frame" x="8" y="147" width="163" height="17"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="trailing" secondItem="Qiz-0U-hPc" secondAttribute="trailing" constant="8" id="5O8-jc-Oi7"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="8zB-RF-t2X" secondAttribute="trailing" constant="8" id="HsV-W2-AlJ"/>
-                                                                            <constraint firstItem="Qiz-0U-hPc" firstAttribute="leading" secondItem="eqp-UB-V4Z" secondAttribute="leading" constant="8" id="L6h-2b-tU1"/>
-                                                                            <constraint firstItem="8zB-RF-t2X" firstAttribute="leading" secondItem="eqp-UB-V4Z" secondAttribute="leading" constant="8" id="QZu-eD-S14"/>
-                                                                            <constraint firstItem="8zB-RF-t2X" firstAttribute="top" secondItem="eqp-UB-V4Z" secondAttribute="top" id="THO-sM-Lvf"/>
-                                                                            <constraint firstItem="KcP-T5-fFo" firstAttribute="top" secondItem="8zB-RF-t2X" secondAttribute="bottom" constant="7.5" id="oeh-yP-CWl"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="Qiz-0U-hPc" secondAttribute="bottom" constant="8" id="w5k-3j-aFs"/>
-                                                                            <constraint firstItem="Qiz-0U-hPc" firstAttribute="top" secondItem="KcP-T5-fFo" secondAttribute="bottom" constant="4" id="wWt-gB-asE"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="KcP-T5-fFo" secondAttribute="trailing" constant="8" id="yu6-yb-qbd"/>
-                                                                            <constraint firstItem="KcP-T5-fFo" firstAttribute="leading" secondItem="eqp-UB-V4Z" secondAttribute="leading" constant="8" id="z9v-NY-zQV"/>
-                                                                        </constraints>
-                                                                    </collectionViewCellContentView>
-                                                                    <size key="customSize" width="179" height="172"/>
-                                                                    <connections>
-                                                                        <outlet property="locationLabel" destination="Qiz-0U-hPc" id="kDA-Xi-61G"/>
-                                                                        <outlet property="mainImageView" destination="8zB-RF-t2X" id="44P-5T-yFE"/>
-                                                                        <outlet property="nameLabel" destination="Qiz-0U-hPc" id="sOv-ky-2IP"/>
-                                                                    </connections>
-                                                                </collectionViewCell>
-                                                            </cells>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="MUS-6U-YC5" id="OWm-cv-dEq"/>
-                                                                <outlet property="delegate" destination="MUS-6U-YC5" id="1y3-5D-hTW"/>
-                                                            </connections>
-                                                        </collectionView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZC-qv-H4b">
-                                                            <rect key="frame" x="279" y="8" width="80" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="q4G-Vx-jmb"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <state key="normal" title="Tümünü Gör"/>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="eQb-wO-odb" secondAttribute="bottom" constant="8" id="1NR-VE-tUX"/>
-                                                        <constraint firstItem="fZC-qv-H4b" firstAttribute="top" secondItem="Kwh-Dz-pms" secondAttribute="top" constant="8" id="IpZ-CV-yt0"/>
-                                                        <constraint firstItem="qbO-K5-6Rv" firstAttribute="leading" secondItem="Kwh-Dz-pms" secondAttribute="leadingMargin" id="Yhq-lS-L2r"/>
-                                                        <constraint firstItem="qbO-K5-6Rv" firstAttribute="top" secondItem="Kwh-Dz-pms" secondAttribute="topMargin" id="i3J-MA-ZDz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="eQb-wO-odb" secondAttribute="trailing" id="iZA-Vc-sGl"/>
-                                                        <constraint firstItem="eQb-wO-odb" firstAttribute="leading" secondItem="Kwh-Dz-pms" secondAttribute="leading" id="mNp-Ee-zSe"/>
-                                                        <constraint firstAttribute="trailing" secondItem="fZC-qv-H4b" secondAttribute="trailing" constant="16" id="tM6-gB-xg5"/>
-                                                        <constraint firstItem="eQb-wO-odb" firstAttribute="top" secondItem="qbO-K5-6Rv" secondAttribute="bottom" constant="8" id="ue9-nU-1Be"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="cv" destination="eQb-wO-odb" id="YUs-Vp-csW"/>
-                                                </connections>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleTableViewCell" rowHeight="319" id="75o-xI-7gw" userLabel="ArticleTableViewCell" customClass="ArticleTableViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="269" width="375" height="319"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="75o-xI-7gw" id="tOm-bb-qB8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazılar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP8-IS-XHw">
-                                                            <rect key="frame" x="15" y="11" width="72" height="29"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="29" id="n2E-0p-Anx"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-dO-7OF">
-                                                            <rect key="frame" x="0.0" y="48" width="375" height="263"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JkC-GL-OCC">
-                                                                <size key="itemSize" width="158" height="245"/>
-                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            </collectionViewFlowLayout>
-                                                            <cells>
-                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCollectionViewCell" id="hHP-N7-Rqo" userLabel="ArticleCollectionViewCell" customClass="ArticleCollectionViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="245"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dWM-QT-RFS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="245"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" image="u3" translatesAutoresizingMaskIntoConstraints="NO" id="62i-Ng-MSA">
-                                                                                <rect key="frame" x="8" y="8" width="142" height="140"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                                        <integer key="value" value="6"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2020 En çok tercih edilen üniversiteleri hemen incele" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1H-q0-0G2">
-                                                                                <rect key="frame" x="8" y="156" width="142" height="81"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                    </collectionViewCellContentView>
-                                                                    <size key="customSize" width="158" height="245"/>
-                                                                    <connections>
-                                                                        <outlet property="coverImageView" destination="62i-Ng-MSA" id="Q1x-kf-jda"/>
-                                                                        <outlet property="titleLabel" destination="Z1H-q0-0G2" id="5kX-VW-fTi"/>
-                                                                    </connections>
-                                                                </collectionViewCell>
-                                                            </cells>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="MUS-6U-YC5" id="dvf-ZE-izB"/>
-                                                                <outlet property="delegate" destination="MUS-6U-YC5" id="Nse-9y-RfA"/>
-                                                            </connections>
-                                                        </collectionView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="EP8-IS-XHw" firstAttribute="leading" secondItem="tOm-bb-qB8" secondAttribute="leadingMargin" id="EcD-de-9rJ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="NMS-dO-7OF" secondAttribute="bottom" constant="8" id="Mh6-8V-wsh"/>
-                                                        <constraint firstItem="NMS-dO-7OF" firstAttribute="leading" secondItem="tOm-bb-qB8" secondAttribute="leading" id="NNx-nW-PNh"/>
-                                                        <constraint firstItem="NMS-dO-7OF" firstAttribute="top" secondItem="EP8-IS-XHw" secondAttribute="bottom" constant="8" id="PkI-fu-eSh"/>
-                                                        <constraint firstItem="EP8-IS-XHw" firstAttribute="top" secondItem="tOm-bb-qB8" secondAttribute="topMargin" id="aby-ty-fqJ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="NMS-dO-7OF" secondAttribute="trailing" id="l7O-yU-Av0"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="cv" destination="NMS-dO-7OF" id="Jgv-9N-q24"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
                                         <sections/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="MUS-6U-YC5" id="VZo-pK-SNI"/>
-                                            <outlet property="delegate" destination="MUS-6U-YC5" id="qvT-C5-ru8"/>
-                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -291,7 +99,7 @@ hemen puanını hesapla</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQE-Ug-q65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="-385"/>
+            <point key="canvasLocation" x="-860" y="-385.0074962518741"/>
         </scene>
         <!--Puan Hesapla-->
         <scene sceneID="wg7-f3-ORb">
@@ -379,6 +187,5 @@ hemen puanını hesapla</string>
     <resources>
         <image name="cactus" width="7935" height="2729"/>
         <image name="calculator" width="25" height="25"/>
-        <image name="u3" width="1116" height="768"/>
     </resources>
 </document>
