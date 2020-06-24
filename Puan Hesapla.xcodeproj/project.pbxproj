@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC25C7FF24A1FAF6003B5A39 /* ToolsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */; };
-		DC25C80024A1FAF6003B5A39 /* ToolsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */; };
-		DC25C80324A1FB2D003B5A39 /* OnlyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */; };
-		DC25C80424A1FB2D003B5A39 /* OnlyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */; };
-		DC25C80624A1FD39003B5A39 /* tblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C80524A1FD39003B5A39 /* tblViewCell.swift */; };
 		F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503711C24A0DF12008B153E /* HomeViewController.swift */; };
 		F54F4E3424A22185008204E9 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E3224A22185008204E9 /* UniversityTableViewCell.swift */; };
 		F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E3324A22185008204E9 /* UniversityTableViewCell.xib */; };
@@ -32,11 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsCVCell.xib; sourceTree = "<group>"; };
-		DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsCVCell.swift; sourceTree = "<group>"; };
-		DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlyCollectionCell.xib; sourceTree = "<group>"; };
-		DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyCollectionCell.swift; sourceTree = "<group>"; };
-		DC25C80524A1FD39003B5A39 /* tblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tblViewCell.swift; sourceTree = "<group>"; };
 		F503711C24A0DF12008B153E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F54F4E3224A22185008204E9 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E3324A22185008204E9 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
@@ -80,6 +70,25 @@
 			path = UniversityCell;
 			sourceTree = "<group>";
 		};
+		F54F4E4224A36C9B008204E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F503711C24A0DF12008B153E /* HomeViewController.swift */,
+				F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F54F4E4324A36CA3008204E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
+				F503712324A0F2D7008B153E /* UniversityCell */,
+				F5DAEF1024A09171003F2A95 /* ArticleCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F5D382EA249CC91B0090A6F5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,19 +108,11 @@
 		F5D382F5249CC91B0090A6F5 /* Puan Hesapla */ = {
 			isa = PBXGroup;
 			children = (
-				DC25C80524A1FD39003B5A39 /* tblViewCell.swift */,
-				DC25C80224A1FB2D003B5A39 /* OnlyCollectionCell.swift */,
-				DC25C80124A1FB2C003B5A39 /* OnlyCollectionCell.xib */,
-				DC25C7FE24A1FAF6003B5A39 /* ToolsCVCell.swift */,
-				DC25C7FD24A1FAF6003B5A39 /* ToolsCVCell.xib */,
-				F5DAEF1024A09171003F2A95 /* ArticleCell */,
-				F503712324A0F2D7008B153E /* UniversityCell */,
-				F5D38313249CE9690090A6F5 /* Model */,
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
-				F503711C24A0DF12008B153E /* HomeViewController.swift */,
-				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
-				F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */,
+				F5D38313249CE9690090A6F5 /* Model */,
+				F54F4E4324A36CA3008204E9 /* View */,
+				F54F4E4224A36C9B008204E9 /* Controller */,
 				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
 				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
 				F5D38309249CC9220090A6F5 /* Info.plist */,
@@ -197,13 +198,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC25C80324A1FB2D003B5A39 /* OnlyCollectionCell.xib in Resources */,
 				F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */,
 				F54F4E3D24A2DB38008204E9 /* ArticleCollectionViewCell.xib in Resources */,
 				F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
-				DC25C7FF24A1FAF6003B5A39 /* ToolsCVCell.xib in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
 			);
@@ -221,11 +220,8 @@
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
-				DC25C80624A1FD39003B5A39 /* tblViewCell.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
-				DC25C80024A1FAF6003B5A39 /* ToolsCVCell.swift in Sources */,
-				DC25C80424A1FB2D003B5A39 /* OnlyCollectionCell.swift in Sources */,
 				F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */,
 				F54F4E4024A2DB57008204E9 /* ArticleTableViewCell.swift in Sources */,
 				F5D38315249CE97E0090A6F5 /* University.swift in Sources */,

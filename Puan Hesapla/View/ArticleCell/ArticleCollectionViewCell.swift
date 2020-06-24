@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ArticleCollectionViewCell: UICollectionViewCell {
+class ArticleCollectionViewCell: UICollectionViewCell,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
-        super.awakeFromNib()
+        super.awakeFromNib()        
         // Initialization code
     }
+
 
 }

@@ -11,20 +11,16 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     var cvUni : UICollectionView?
     var cvBlog : UICollectionView?
-    let cellMarginSize = 16.0
-
+    
     var universities : [University] = []
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         initUniversities()
-
     }
 
     func initUniversities(){
@@ -39,7 +35,6 @@ class HomeViewController: UIViewController {
     }
     
 }
-
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
@@ -66,16 +61,13 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 { return 300 }
+        if indexPath.section == 0 { return 260 }
         else { return 900 }
     }
-    
 }
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
@@ -83,14 +75,11 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.cvUni {
             return universities.count
-
         }
         else {
             return 8
-            
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
@@ -102,8 +91,6 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             cell.nameLabel.text = self.universities[indexPath.row].name
             cell.locationLabel.text = self.universities[indexPath.row].location
             cell.rateLabel.text = self.universities[indexPath.row].rate
-
-
             return cell
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell else {
@@ -117,4 +104,3 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
 }
-
