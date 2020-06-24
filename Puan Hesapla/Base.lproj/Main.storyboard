@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Keşfet-->
         <scene sceneID="DJf-NL-B2I">
             <objects>
                 <viewController id="MUS-6U-YC5" customClass="HomeViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V7J-lL-s3n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-EX-nQX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1251"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMS-L3-noN" userLabel="HeaderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-r4-vtr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-Sl-iRQ">
                                                 <rect key="frame" x="16" y="24" width="184" height="57.5"/>
@@ -34,11 +39,8 @@ hemen puanını hesapla</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atz-ye-vQl">
-                                                <rect key="frame" x="16" y="105.5" width="102" height="50"/>
+                                                <rect key="frame" x="16" y="105.5" width="102" height="30"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="V2t-OQ-gW3"/>
-                                                </constraints>
                                                 <state key="normal" title=" Puan Hesapla ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -51,34 +53,37 @@ hemen puanını hesapla</string>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="atz-ye-vQl" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="0WQ-cH-yap"/>
-                                            <constraint firstItem="WmG-Sl-iRQ" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="top" constant="24" id="1Ia-z9-OFQ"/>
-                                            <constraint firstItem="atz-ye-vQl" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="24c-hi-zW0"/>
-                                            <constraint firstItem="WmG-Sl-iRQ" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="7He-4B-m1s"/>
-                                            <constraint firstItem="Hm8-r4-vtr" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" id="DuW-iY-0QU"/>
-                                            <constraint firstItem="atz-ye-vQl" firstAttribute="top" secondItem="WmG-Sl-iRQ" secondAttribute="bottom" constant="24" id="UAZ-5m-bgA"/>
-                                            <constraint firstAttribute="bottom" secondItem="Hm8-r4-vtr" secondAttribute="bottom" id="Xii-0t-4LJ"/>
-                                            <constraint firstItem="atz-ye-vQl" firstAttribute="top" secondItem="WmG-Sl-iRQ" secondAttribute="bottom" constant="24" id="ix9-xL-xw8"/>
-                                            <constraint firstItem="Hm8-r4-vtr" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="top" id="jsa-hA-X90"/>
-                                            <constraint firstAttribute="height" constant="190" id="rp1-WD-eog"/>
-                                            <constraint firstAttribute="trailing" secondItem="Hm8-r4-vtr" secondAttribute="trailing" id="sIc-Kb-bvW"/>
+                                            <constraint firstItem="atz-ye-vQl" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="5Xf-b4-dxG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hm8-r4-vtr" secondAttribute="trailing" id="7o7-Ja-5NG"/>
+                                            <constraint firstItem="WmG-Sl-iRQ" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="top" constant="24" id="8Ml-MF-rkx"/>
+                                            <constraint firstAttribute="height" constant="155" id="8Zv-Hf-9j2"/>
+                                            <constraint firstItem="Hm8-r4-vtr" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="top" id="BqP-0Q-XdT"/>
+                                            <constraint firstItem="WmG-Sl-iRQ" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="R4o-bJ-YP2"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hm8-r4-vtr" secondAttribute="bottom" id="WfE-eF-hLo"/>
+                                            <constraint firstItem="atz-ye-vQl" firstAttribute="top" secondItem="WmG-Sl-iRQ" secondAttribute="bottom" constant="24" id="uPf-lg-TMD"/>
+                                            <constraint firstItem="Hm8-r4-vtr" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" id="xzZ-1V-21A"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
-                                        <rect key="frame" x="0.0" y="190" width="375" height="1061"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
+                                        <rect key="frame" x="0.0" y="155" width="375" height="463"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="MUS-6U-YC5" id="q1Q-V4-Qmu"/>
+                                            <outlet property="delegate" destination="MUS-6U-YC5" id="uea-jQ-H8X"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="bvo-Sb-AdT" firstAttribute="leading" secondItem="mD9-EX-nQX" secondAttribute="leading" id="DvK-jY-TRr"/>
-                                    <constraint firstItem="bvo-Sb-AdT" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="bottom" id="JUe-gZ-kLa"/>
-                                    <constraint firstItem="xMS-L3-noN" firstAttribute="leading" secondItem="mD9-EX-nQX" secondAttribute="leading" id="Psa-Jy-tSL"/>
-                                    <constraint firstAttribute="bottom" secondItem="bvo-Sb-AdT" secondAttribute="bottom" id="aX8-6w-5sL"/>
-                                    <constraint firstAttribute="trailing" secondItem="xMS-L3-noN" secondAttribute="trailing" id="fLv-lh-MbH"/>
-                                    <constraint firstAttribute="trailing" secondItem="bvo-Sb-AdT" secondAttribute="trailing" id="oPT-TD-gi4"/>
-                                    <constraint firstItem="xMS-L3-noN" firstAttribute="top" secondItem="mD9-EX-nQX" secondAttribute="top" id="xAD-Yg-OZ4"/>
+                                    <constraint firstItem="bvo-Sb-AdT" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="bottom" id="3uV-na-SqO"/>
+                                    <constraint firstAttribute="trailing" secondItem="bvo-Sb-AdT" secondAttribute="trailing" id="4mu-e1-aW2"/>
+                                    <constraint firstAttribute="bottom" secondItem="bvo-Sb-AdT" secondAttribute="bottom" id="Epi-Wc-IwV"/>
+                                    <constraint firstAttribute="trailing" secondItem="xMS-L3-noN" secondAttribute="trailing" id="HfX-5t-6Iw"/>
+                                    <constraint firstItem="bvo-Sb-AdT" firstAttribute="leading" secondItem="mD9-EX-nQX" secondAttribute="leading" id="d2R-gJ-CoD"/>
+                                    <constraint firstItem="xMS-L3-noN" firstAttribute="top" secondItem="mD9-EX-nQX" secondAttribute="top" id="jnO-Jp-Vkf"/>
+                                    <constraint firstItem="xMS-L3-noN" firstAttribute="leading" secondItem="mD9-EX-nQX" secondAttribute="leading" id="uXA-qt-sWz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -91,20 +96,20 @@ hemen puanını hesapla</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wRy-EL-Ba3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Xo1-25-U3G"/>
-                    <size key="freeformSize" width="375" height="1300"/>
+                    <tabBarItem key="tabBarItem" title="Keşfet" image="compass" id="Xo1-25-U3G"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="tableView" destination="bvo-Sb-AdT" id="XYO-Wr-9d3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQE-Ug-q65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="-385.0074962518741"/>
+            <point key="canvasLocation" x="1072.8" y="-322.48875562218893"/>
         </scene>
         <!--Puan Hesapla-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="CalculatorViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tyt" id="8rJ-Kc-sve" customClass="CalculatorViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,17 +144,10 @@ hemen puanını hesapla</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="373-59-bkq" userLabel="TYTView">
-                                                <rect key="frame" x="0.0" y="130" width="375" height="374"/>
+                                                <rect key="frame" x="0.0" y="130" width="375" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TYT Puan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-l3-2SR">
-                                                <rect key="frame" x="10" y="140" width="111" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
@@ -163,7 +161,7 @@ hemen puanını hesapla</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.79999999999995" y="287.40629685157421"/>
+            <point key="canvasLocation" x="1073" y="436"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -175,7 +173,6 @@ hemen puanını hesapla</string>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="MUS-6U-YC5" kind="relationship" relationship="viewControllers" id="6cb-en-PxI"/>
                     </connections>
                 </tabBarController>
@@ -187,5 +184,6 @@ hemen puanını hesapla</string>
     <resources>
         <image name="cactus" width="7935" height="2729"/>
         <image name="calculator" width="25" height="25"/>
+        <image name="compass" width="25" height="25"/>
     </resources>
 </document>

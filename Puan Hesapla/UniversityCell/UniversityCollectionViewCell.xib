@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UniversityCollectionViewCell" id="gTV-IL-0wX" customClass="UniversityCollectionViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="173"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u3" translatesAutoresizingMaskIntoConstraints="NO" id="hpF-Tm-ZHh">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="Cla-Nz-TiQ"/>
+                            <constraint firstAttribute="width" constant="180" id="cgE-Pr-jpK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yaşar Üniversitesi" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSj-5r-8ix">
+                        <rect key="frame" x="4" y="118" width="172" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwZ-Dj-XtL">
+                        <rect key="frame" x="137" y="8" width="35" height="17"/>
+                        <color key="backgroundColor" red="0.79779702429999999" green="0.25299620630000003" blue="0.3151286244" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="h2g-of-N3G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İzmir, Türkiye" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkV-Yn-gWw">
+                        <rect key="frame" x="4" y="143" width="172" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GSj-5r-8ix" secondAttribute="trailing" constant="4" id="23w-ly-dlI"/>
+                <constraint firstAttribute="trailing" secondItem="vwZ-Dj-XtL" secondAttribute="trailing" constant="8" id="6Kz-cg-ITy"/>
+                <constraint firstItem="hpF-Tm-ZHh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6NY-yH-pD6"/>
+                <constraint firstItem="BkV-Yn-gWw" firstAttribute="top" secondItem="GSj-5r-8ix" secondAttribute="bottom" constant="8" id="8Mu-ek-ODX"/>
+                <constraint firstItem="BkV-Yn-gWw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="An7-yy-cv1"/>
+                <constraint firstItem="GSj-5r-8ix" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Jiw-w5-IR9"/>
+                <constraint firstItem="vwZ-Dj-XtL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Kog-w6-Px5"/>
+                <constraint firstItem="GSj-5r-8ix" firstAttribute="top" secondItem="hpF-Tm-ZHh" secondAttribute="bottom" constant="8" id="L1i-C7-v9Z"/>
+                <constraint firstAttribute="trailing" secondItem="BkV-Yn-gWw" secondAttribute="trailing" constant="4" id="QZH-9V-vFp"/>
+                <constraint firstItem="hpF-Tm-ZHh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZW2-lt-HHr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="158" height="161"/>
+            <connections>
+                <outlet property="locationLabel" destination="BkV-Yn-gWw" id="GO3-97-yjF"/>
+                <outlet property="mainImageView" destination="hpF-Tm-ZHh" id="ogX-Pq-lKh"/>
+                <outlet property="nameLabel" destination="GSj-5r-8ix" id="z4M-ml-EhZ"/>
+                <outlet property="rateLabel" destination="vwZ-Dj-XtL" id="TNd-sR-d9o"/>
+            </connections>
+            <point key="canvasLocation" x="26.086956521739133" y="221.31696428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="u3" width="1116" height="768"/>
+    </resources>
+</document>

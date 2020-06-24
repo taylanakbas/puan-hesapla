@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="410"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="410"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazılar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-Ut-5IO">
+                        <rect key="frame" x="16" y="24" width="72" height="29"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RB6-ov-zr0">
+                        <rect key="frame" x="301" y="24" width="88" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <state key="normal" title="Tümünü Gör"/>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UQm-zn-zO0">
+                        <rect key="frame" x="0.0" y="78" width="405" height="332"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mxx-ow-eUC">
+                            <size key="itemSize" width="160" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="UQm-zn-zO0" secondAttribute="bottom" id="76y-v2-PiG"/>
+                    <constraint firstItem="UQm-zn-zO0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NMf-2e-SAE"/>
+                    <constraint firstAttribute="trailing" secondItem="UQm-zn-zO0" secondAttribute="trailing" id="SH8-hV-1HN"/>
+                    <constraint firstItem="RB6-ov-zr0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="VJP-xq-USK"/>
+                    <constraint firstAttribute="trailing" secondItem="RB6-ov-zr0" secondAttribute="trailing" constant="16" id="ZrH-UX-5bC"/>
+                    <constraint firstItem="Bhk-Ut-5IO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ejJ-A0-cI8"/>
+                    <constraint firstItem="Bhk-Ut-5IO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="hyX-fl-jj0"/>
+                    <constraint firstItem="UQm-zn-zO0" firstAttribute="top" secondItem="RB6-ov-zr0" secondAttribute="bottom" constant="24" id="wXu-5t-LIL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="UQm-zn-zO0" id="YQy-ar-Lhe"/>
+                <outlet property="seeAllButton" destination="RB6-ov-zr0" id="pZ3-y9-fVT"/>
+            </connections>
+            <point key="canvasLocation" x="-102.17391304347827" y="127.90178571428571"/>
+        </tableViewCell>
+    </objects>
+</document>
