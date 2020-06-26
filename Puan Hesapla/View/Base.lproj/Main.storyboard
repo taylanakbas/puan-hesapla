@@ -114,54 +114,58 @@ hemen puanını hesapla</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-lM-wxq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-eY-XHq" userLabel="CalculateView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnp-Ue-csO" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-mz-Dgg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-98-Pfj" userLabel="CalculateView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-NA-Sii">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5l-Yb-irr">
-                                                        <rect key="frame" x="16" y="37" width="184" height="57.5"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <string key="text">Hayalindeki üniversiteye
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-tw-Cjj">
+                                        <rect key="frame" x="16" y="24" width="184" height="57.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Hayalindeki üniversiteye
 ne kadar uzaktasın
 hemen puanını hesapla</string>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="373-59-bkq" userLabel="TYTView">
-                                                <rect key="frame" x="0.0" y="130" width="375" height="67"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="foN-go-ZvE"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
+                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="l4Q-Rt-VOM"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="uDl-nK-xvq"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="AP7-36-KQQ"/>
+                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="bottom" id="SYM-D7-l1B"/>
+                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="X7X-wT-A1p"/>
+                            <constraint firstItem="SEa-eY-XHq" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="XQL-aP-Uh2"/>
+                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="eUb-zp-xwo"/>
+                            <constraint firstItem="SEa-eY-XHq" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="sHe-7C-ZkY"/>
+                            <constraint firstItem="SEa-eY-XHq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="zcB-2O-gkR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Puan Hesapla" image="calculator" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Ql-Av-aaF" id="mil-rv-s7T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="436"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="434.93253373313348"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -174,6 +178,7 @@ hemen puanını hesapla</string>
                     </tabBar>
                     <connections>
                         <segue destination="MUS-6U-YC5" kind="relationship" relationship="viewControllers" id="6cb-en-PxI"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="Lke-kb-mih"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
