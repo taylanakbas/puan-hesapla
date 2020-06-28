@@ -11,7 +11,6 @@ import UIKit
 class UniversityTableViewCell: UITableViewCell,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var seeAllButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

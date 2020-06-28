@@ -92,8 +92,9 @@
 			children = (
 				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
 				F54F4E4424A48FA6008204E9 /* Base */,
-				F54F4E4924A49119008204E9 /* CalculateCell */,
+				F503712324A0F2D7008B153E /* UniversityCell */,
 				F5DAEF1024A09171003F2A95 /* ArticleCell */,
+				F54F4E4924A49119008204E9 /* CalculateCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,7 +113,6 @@
 			children = (
 				F54F4E4A24A49148008204E9 /* CalculateTableViewCell.swift */,
 				F54F4E4B24A49148008204E9 /* CalculateTableViewCell.xib */,
-				F503712324A0F2D7008B153E /* UniversityCell */,
 			);
 			path = CalculateCell;
 			sourceTree = "<group>";

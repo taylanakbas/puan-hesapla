@@ -25,7 +25,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="6"/>
+                                                        <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
@@ -46,7 +46,7 @@ hemen puanını hesapla</string>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
+                                                        <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -64,7 +64,7 @@ hemen puanını hesapla</string>
                                             <constraint firstItem="Hm8-r4-vtr" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" id="xzZ-1V-21A"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
                                         <rect key="frame" x="0.0" y="155" width="375" height="463"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -97,7 +97,6 @@ hemen puanını hesapla</string>
                         <viewLayoutGuide key="safeArea" id="wRy-EL-Ba3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Keşfet" image="compass" id="Xo1-25-U3G"/>
-                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="tableView" destination="bvo-Sb-AdT" id="XYO-Wr-9d3"/>
                     </connections>
@@ -117,13 +116,16 @@ hemen puanını hesapla</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-eY-XHq" userLabel="CalculateView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-mz-Dgg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-mz-Dgg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-tw-Cjj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-tw-Cjj">
                                         <rect key="frame" x="16" y="24" width="184" height="57.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Hayalindeki üniversiteye
 ne kadar uzaktasın
 hemen puanını hesapla</string>
@@ -134,7 +136,13 @@ hemen puanını hesapla</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="nJz-mz-Dgg" firstAttribute="leading" secondItem="SEa-eY-XHq" secondAttribute="leading" id="6XO-h3-cny"/>
+                                    <constraint firstItem="nJz-mz-Dgg" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="top" id="FIS-CC-SrY"/>
+                                    <constraint firstAttribute="bottom" secondItem="nJz-mz-Dgg" secondAttribute="bottom" id="MQP-Dm-MI3"/>
+                                    <constraint firstAttribute="trailing" secondItem="nJz-mz-Dgg" secondAttribute="trailing" id="TT3-ut-Aqs"/>
+                                    <constraint firstItem="5GX-tw-Cjj" firstAttribute="leading" secondItem="SEa-eY-XHq" secondAttribute="leading" constant="16" id="ULl-7I-GOo"/>
                                     <constraint firstAttribute="height" constant="130" id="foN-go-ZvE"/>
+                                    <constraint firstItem="5GX-tw-Cjj" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="top" constant="24" id="sIo-GQ-rXc"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
@@ -159,13 +167,14 @@ hemen puanını hesapla</string>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Puan Hesapla" image="calculator" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="Fe2-H7-tsk"/>
                     <connections>
                         <outlet property="tableView" destination="4Ql-Av-aaF" id="mil-rv-s7T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="434.93253373313348"/>
+            <point key="canvasLocation" x="1073" y="344"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -183,7 +192,7 @@ hemen puanını hesapla</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="246" y="-15"/>
         </scene>
     </scenes>
     <resources>

@@ -24,7 +24,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="8"/>
+                                <integer key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
@@ -78,7 +78,7 @@
                 <outlet property="nameLabel" destination="GSj-5r-8ix" id="z4M-ml-EhZ"/>
                 <outlet property="rateLabel" destination="vwZ-Dj-XtL" id="TNd-sR-d9o"/>
             </connections>
-            <point key="canvasLocation" x="31.884057971014496" y="203.57142857142856"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="24.776785714285712"/>
         </collectionViewCell>
     </objects>
     <resources>

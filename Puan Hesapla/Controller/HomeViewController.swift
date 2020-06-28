@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     var cvBlog : UICollectionView?
     
     var universities : [University] = []
+    let estimatedWidth = 160.0
+    let cellMarginSize = 16.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,28 @@ class HomeViewController: UIViewController {
         self.universities.insert(u3, at: 3)
     }
     
+    @objc func allUniversities(){
+        print("all universities")
+    }
+    @objc func allArticles(){
+        print("all articles")
+    }
+    @objc func detailedUniversity(_ sender : UITapGestureRecognizer){
+        let location = sender.location(in: self.cvUni)
+        let indexPath = self.cvUni?.indexPathForItem(at: location)
+
+        if let index = indexPath {
+           print("Index: \(index)")
+        }
+    }
+    @objc func detailedArticle(_ sender : UITapGestureRecognizer){
+        let location = sender.location(in: self.cvBlog)
+        let indexPath = self.cvBlog?.indexPathForItem(at: location)
+
+        if let index = indexPath {
+           print("Index: \(index)")
+        }
+    }
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -44,15 +68,23 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            
+            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            cell.titleLabel.text = "Popüler Üniversiteler"
+            cell.seeAllButton.addTarget(self, action: #selector(allUniversities), for: .touchUpInside)
+            return cell
+        }else if indexPath.section == 1 {
             let cell = Bundle.main.loadNibNamed("UniversityTableViewCell", owner: self, options: nil)?.first as! UniversityTableViewCell
             self.cvUni = cell.collectionView
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
             cell.collectionView.register(UINib(nibName: "UniversityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UniversityCollectionViewCell")
-            //cell.seeAllButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
             return cell
-        }else {
+        }else if indexPath.section == 2 {
+            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            cell.titleLabel.text = "Yazılar"
+            cell.seeAllButton.addTarget(self, action: #selector(allArticles), for: .touchUpInside)
+            return cell
+        }else{
             let cell = Bundle.main.loadNibNamed("ArticleTableViewCell", owner: self, options: nil)?.first as! ArticleTableViewCell
             self.cvBlog = cell.collectionView
             cell.collectionView.delegate = self
@@ -62,11 +94,12 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 { return 260 }
-        else { return 900 }
+        if indexPath.section == 0 || indexPath.section == 2  { return 80.0 }
+        else if indexPath.section == 1 { return 180.0 }
+        else { return 830 }
     }
 }
 
@@ -81,8 +114,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
+
         if collectionView == self.cvUni {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversityCollectionViewCell", for: indexPath) as? UniversityCollectionViewCell else {
                 fatalError("Cell not exists in storyboard")
@@ -91,6 +123,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             cell.nameLabel.text = self.universities[indexPath.row].name
             cell.locationLabel.text = self.universities[indexPath.row].location
             cell.rateLabel.text = self.universities[indexPath.row].rate
+            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(detailedUniversity(_:))))
             return cell
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell else {
@@ -98,9 +131,26 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             }
             cell.mainImageView.image = UIImage(named: "u3")
             cell.titleLabel.text = "2020 En çok tercih edilen üniversiteleri hemen incele"
+            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(detailedArticle(_:))))
             return cell
         }
-        
     }
-    
+}
+extension HomeViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.cvUni{
+            let width = calculateWidth()
+            return CGSize(width: width, height: 160.0)
+        }else{
+            let width = calculateWidth()
+            return CGSize(width: width, height: 200.0)
+        }
+    }
+    func calculateWidth() -> CGFloat{
+        let estimatedWidth = CGFloat(self.estimatedWidth)
+        let cellCount = floor(CGFloat(self.view.frame.size.width / estimatedWidth))
+        let margin = CGFloat(cellMarginSize * 2)
+        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
+        return width
+    }
 }
