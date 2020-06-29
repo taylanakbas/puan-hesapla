@@ -18,8 +18,10 @@
 		F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */; };
 		F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */; };
 		F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */; };
-		F54F4E4C24A49148008204E9 /* CalculateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E4A24A49148008204E9 /* CalculateTableViewCell.swift */; };
-		F54F4E4D24A49148008204E9 /* CalculateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E4B24A49148008204E9 /* CalculateTableViewCell.xib */; };
+		F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */; };
+		F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */; };
+		F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */; };
+		F5C5787C24A9DD8600575C70 /* CalculateButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787A24A9DD8600575C70 /* CalculateButtonTableViewCell.xib */; };
 		F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */; };
 		F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */; };
 		F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D382FE249CC91B0090A6F5 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */; };
 		F5D38315249CE97E0090A6F5 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38314249CE97E0090A6F5 /* University.swift */; };
 		F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */; };
+		F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */; };
+		F5EC335424A8C92D00A8499E /* CalculateTYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +46,10 @@
 		F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
-		F54F4E4A24A49148008204E9 /* CalculateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTableViewCell.swift; sourceTree = "<group>"; };
-		F54F4E4B24A49148008204E9 /* CalculateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateTableViewCell.xib; sourceTree = "<group>"; };
+		F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateAYTTableViewCell.swift; sourceTree = "<group>"; };
+		F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateAYTTableViewCell.xib; sourceTree = "<group>"; };
+		F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonTableViewCell.swift; sourceTree = "<group>"; };
+		F5C5787A24A9DD8600575C70 /* CalculateButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateButtonTableViewCell.xib; sourceTree = "<group>"; };
 		F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puan Hesapla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		F5D38309249CC9220090A6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D38314249CE97E0090A6F5 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTYTTableViewCell.swift; sourceTree = "<group>"; };
+		F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateTYTTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +119,10 @@
 		F54F4E4924A49119008204E9 /* CalculateCell */ = {
 			isa = PBXGroup;
 			children = (
-				F54F4E4A24A49148008204E9 /* CalculateTableViewCell.swift */,
-				F54F4E4B24A49148008204E9 /* CalculateTableViewCell.xib */,
+				F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */,
+				F5C5787A24A9DD8600575C70 /* CalculateButtonTableViewCell.xib */,
+				F5EC334F24A8C7D900A8499E /* TYT */,
+				F5EC335024A8C7E000A8499E /* AYT */,
 			);
 			path = CalculateCell;
 			sourceTree = "<group>";
@@ -166,6 +176,24 @@
 				F54F4E3B24A2DB38008204E9 /* ArticleCollectionViewCell.xib */,
 			);
 			path = ArticleCell;
+			sourceTree = "<group>";
+		};
+		F5EC334F24A8C7D900A8499E /* TYT */ = {
+			isa = PBXGroup;
+			children = (
+				F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */,
+				F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */,
+			);
+			path = TYT;
+			sourceTree = "<group>";
+		};
+		F5EC335024A8C7E000A8499E /* AYT */ = {
+			isa = PBXGroup;
+			children = (
+				F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */,
+				F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */,
+			);
+			path = AYT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,10 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */,
-				F54F4E4D24A49148008204E9 /* CalculateTableViewCell.xib in Resources */,
 				F54F4E3D24A2DB38008204E9 /* ArticleCollectionViewCell.xib in Resources */,
 				F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */,
+				F5C5787C24A9DD8600575C70 /* CalculateButtonTableViewCell.xib in Resources */,
+				F5EC335424A8C92D00A8499E /* CalculateTYTTableViewCell.xib in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
+				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
 				F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
@@ -246,16 +276,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54F4E3C24A2DB38008204E9 /* ArticleCollectionViewCell.swift in Sources */,
+				F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */,
 				F54F4E3424A22185008204E9 /* UniversityTableViewCell.swift in Sources */,
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */,
 				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
+				F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
-				F54F4E4C24A49148008204E9 /* CalculateTableViewCell.swift in Sources */,
 				F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */,
 				F54F4E4024A2DB57008204E9 /* ArticleTableViewCell.swift in Sources */,
+				F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */,
 				F5D38315249CE97E0090A6F5 /* University.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
