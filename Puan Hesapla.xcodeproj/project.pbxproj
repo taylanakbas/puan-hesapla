@@ -22,6 +22,10 @@
 		F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */; };
 		F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */; };
 		F5C5787C24A9DD8600575C70 /* CalculateButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787A24A9DD8600575C70 /* CalculateButtonTableViewCell.xib */; };
+		F5C5787F24A9F6E600575C70 /* ResultAYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787D24A9F6E600575C70 /* ResultAYTTableViewCell.swift */; };
+		F5C5788024A9F6E600575C70 /* ResultAYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787E24A9F6E600575C70 /* ResultAYTTableViewCell.xib */; };
+		F5C5788324A9FD2400575C70 /* ResultTYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788124A9FD2400575C70 /* ResultTYTTableViewCell.swift */; };
+		F5C5788424A9FD2400575C70 /* ResultTYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5788224A9FD2400575C70 /* ResultTYTTableViewCell.xib */; };
 		F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */; };
 		F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */; };
 		F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D382FE249CC91B0090A6F5 /* Main.storyboard */; };
@@ -50,6 +54,10 @@
 		F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateAYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonTableViewCell.swift; sourceTree = "<group>"; };
 		F5C5787A24A9DD8600575C70 /* CalculateButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateButtonTableViewCell.xib; sourceTree = "<group>"; };
+		F5C5787D24A9F6E600575C70 /* ResultAYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAYTTableViewCell.swift; sourceTree = "<group>"; };
+		F5C5787E24A9F6E600575C70 /* ResultAYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultAYTTableViewCell.xib; sourceTree = "<group>"; };
+		F5C5788124A9FD2400575C70 /* ResultTYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTYTTableViewCell.swift; sourceTree = "<group>"; };
+		F5C5788224A9FD2400575C70 /* ResultTYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puan Hesapla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +191,8 @@
 			children = (
 				F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */,
 				F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */,
+				F5C5788124A9FD2400575C70 /* ResultTYTTableViewCell.swift */,
+				F5C5788224A9FD2400575C70 /* ResultTYTTableViewCell.xib */,
 			);
 			path = TYT;
 			sourceTree = "<group>";
@@ -192,6 +202,8 @@
 			children = (
 				F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */,
 				F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */,
+				F5C5787D24A9F6E600575C70 /* ResultAYTTableViewCell.swift */,
+				F5C5787E24A9F6E600575C70 /* ResultAYTTableViewCell.xib */,
 			);
 			path = AYT;
 			sourceTree = "<group>";
@@ -258,6 +270,7 @@
 				F54F4E3D24A2DB38008204E9 /* ArticleCollectionViewCell.xib in Resources */,
 				F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */,
 				F5C5787C24A9DD8600575C70 /* CalculateButtonTableViewCell.xib in Resources */,
+				F5C5788424A9FD2400575C70 /* ResultTYTTableViewCell.xib in Resources */,
 				F5EC335424A8C92D00A8499E /* CalculateTYTTableViewCell.xib in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
@@ -265,6 +278,7 @@
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
+				F5C5788024A9F6E600575C70 /* ResultAYTTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +292,14 @@
 				F54F4E3C24A2DB38008204E9 /* ArticleCollectionViewCell.swift in Sources */,
 				F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */,
 				F54F4E3424A22185008204E9 /* UniversityTableViewCell.swift in Sources */,
+				F5C5787F24A9F6E600575C70 /* ResultAYTTableViewCell.swift in Sources */,
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */,
 				F5D38303249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld in Sources */,
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
 				F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
+				F5C5788324A9FD2400575C70 /* ResultTYTTableViewCell.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
 				F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */,
 				F54F4E4024A2DB57008204E9 /* ArticleTableViewCell.swift in Sources */,

@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSD-TJ-aFh" userLabel="LeftView">
-                        <rect key="frame" x="0.0" y="0.0" width="82" height="277"/>
+                        <rect key="frame" x="0.0" y="0.0" width="82" height="256"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PzU-os-9De">
-                                <rect key="frame" x="8" y="86" width="70" height="183"/>
+                                <rect key="frame" x="8" y="74" width="70" height="174"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doğru " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-s7-fHi">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="45"/>
@@ -45,7 +45,7 @@
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diploma Puanı" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-QF-NGD">
-                                        <rect key="frame" x="0.0" y="138" width="70" height="45"/>
+                                        <rect key="frame" x="0.0" y="138" width="70" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="1b3-Id-Ek2"/>
                                             <constraint firstAttribute="height" constant="45" id="jiS-0P-g8t"/>
@@ -63,11 +63,11 @@
                             <constraint firstAttribute="bottom" secondItem="PzU-os-9De" secondAttribute="bottom" constant="8" id="DQE-Rk-4cr"/>
                             <constraint firstItem="PzU-os-9De" firstAttribute="leading" secondItem="vSD-TJ-aFh" secondAttribute="leading" constant="8" id="FtF-0S-RPe"/>
                             <constraint firstAttribute="trailing" secondItem="PzU-os-9De" secondAttribute="trailing" constant="4" id="Xsb-4k-h5l"/>
-                            <constraint firstItem="PzU-os-9De" firstAttribute="top" secondItem="vSD-TJ-aFh" secondAttribute="top" constant="86" id="qwo-1Q-f9T"/>
+                            <constraint firstItem="PzU-os-9De" firstAttribute="top" secondItem="vSD-TJ-aFh" secondAttribute="top" constant="74" id="qwo-1Q-f9T"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sah-P1-rx5" userLabel="BottomView">
-                        <rect key="frame" x="0.0" y="277" width="360" height="123"/>
+                        <rect key="frame" x="0.0" y="256" width="360" height="123"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-k2-0et">
                                 <rect key="frame" x="8" y="12" width="170" height="30"/>
@@ -153,10 +153,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-zS-Wyd" userLabel="CalculateView">
-                        <rect key="frame" x="82" y="0.0" width="278" height="277"/>
+                        <rect key="frame" x="82" y="0.0" width="278" height="256"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-ek-LbJ">
-                                <rect key="frame" x="4" y="24" width="258" height="245.5"/>
+                                <rect key="frame" x="12" y="12" width="258" height="245.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Ry-Tnp">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="38.5"/>
@@ -401,8 +401,8 @@ Mat</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="FHA-ek-LbJ" secondAttribute="trailing" constant="16" id="XO0-9F-qQQ"/>
-                            <constraint firstItem="FHA-ek-LbJ" firstAttribute="top" secondItem="Ozf-zS-Wyd" secondAttribute="top" constant="24" id="YeX-a9-6ID"/>
+                            <constraint firstAttribute="trailing" secondItem="FHA-ek-LbJ" secondAttribute="trailing" constant="8" id="XO0-9F-qQQ"/>
+                            <constraint firstItem="FHA-ek-LbJ" firstAttribute="top" secondItem="Ozf-zS-Wyd" secondAttribute="top" constant="12" id="YeX-a9-6ID"/>
                         </constraints>
                     </view>
                 </subviews>
