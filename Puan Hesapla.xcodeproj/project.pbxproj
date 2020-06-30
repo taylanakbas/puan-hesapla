@@ -28,9 +28,11 @@
 		F5C5788424A9FD2400575C70 /* ResultTYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5788224A9FD2400575C70 /* ResultTYTTableViewCell.xib */; };
 		F5C5788624AA0F0700575C70 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788524AA0F0600575C70 /* Calculator.swift */; };
 		F5C5788824AA0F2100575C70 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788724AA0F2100575C70 /* Result.swift */; };
-		F5C5788C24AA133200575C70 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788B24AA133200575C70 /* Helper.swift */; };
+		F5C5788C24AA133200575C70 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788B24AA133200575C70 /* Parser.swift */; };
 		F5C5788E24ABB16400575C70 /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C5788D24ABB16300575C70 /* AlertStoryboard.storyboard */; };
 		F5C5789024ABB19500575C70 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5788F24ABB19500575C70 /* AlertViewController.swift */; };
+		F5C5789224ABB6CA00575C70 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5789124ABB6CA00575C70 /* AlertManager.swift */; };
+		F5C5789424ABCC5C00575C70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5789324ABCC5C00575C70 /* Constants.swift */; };
 		F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */; };
 		F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */; };
 		F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D382FE249CC91B0090A6F5 /* Main.storyboard */; };
@@ -65,9 +67,11 @@
 		F5C5788224A9FD2400575C70 /* ResultTYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5C5788524AA0F0600575C70 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		F5C5788724AA0F2100575C70 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		F5C5788B24AA133200575C70 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F5C5788B24AA133200575C70 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F5C5788D24ABB16300575C70 /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		F5C5788F24ABB19500575C70 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		F5C5789124ABB6CA00575C70 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		F5C5789324ABCC5C00575C70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5D382F3249CC91B0090A6F5 /* Puan Hesapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puan Hesapla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,16 @@
 			path = CalculateCell;
 			sourceTree = "<group>";
 		};
+		F5C5789524ABD9CE00575C70 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F5C5788524AA0F0600575C70 /* Calculator.swift */,
+				F5C5789124ABB6CA00575C70 /* AlertManager.swift */,
+				F5C5788B24AA133200575C70 /* Parser.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F5D382EA249CC91B0090A6F5 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +182,8 @@
 			children = (
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
+				F5C5789324ABCC5C00575C70 /* Constants.swift */,
+				F5C5789524ABD9CE00575C70 /* Helper */,
 				F5D38313249CE9690090A6F5 /* Model */,
 				F54F4E4324A36CA3008204E9 /* View */,
 				F54F4E4224A36C9B008204E9 /* Controller */,
@@ -183,9 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D38314249CE97E0090A6F5 /* University.swift */,
-				F5C5788524AA0F0600575C70 /* Calculator.swift */,
 				F5C5788724AA0F2100575C70 /* Result.swift */,
-				F5C5788B24AA133200575C70 /* Helper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,10 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54F4E3C24A2DB38008204E9 /* ArticleCollectionViewCell.swift in Sources */,
+				F5C5789424ABCC5C00575C70 /* Constants.swift in Sources */,
 				F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */,
 				F5C5788824AA0F2100575C70 /* Result.swift in Sources */,
 				F5C5789024ABB19500575C70 /* AlertViewController.swift in Sources */,
 				F54F4E3424A22185008204E9 /* UniversityTableViewCell.swift in Sources */,
+				F5C5789224ABB6CA00575C70 /* AlertManager.swift in Sources */,
 				F5C5787F24A9F6E600575C70 /* ResultAYTTableViewCell.swift in Sources */,
 				F5D382F7249CC91B0090A6F5 /* AppDelegate.swift in Sources */,
 				F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */,
@@ -318,7 +334,7 @@
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
 				F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
-				F5C5788C24AA133200575C70 /* Helper.swift in Sources */,
+				F5C5788C24AA133200575C70 /* Parser.swift in Sources */,
 				F5C5788324A9FD2400575C70 /* ResultTYTTableViewCell.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
 				F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */,

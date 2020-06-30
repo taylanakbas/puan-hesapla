@@ -18,6 +18,8 @@ class CalculatorViewController: UIViewController {
     var tytResult = TYTIntResult()
     var aytResult = AYTIntResult()
     
+    let alertManager = AlertManager()
+    
     var reloadFlagTYT : Bool = false
     var reloadFlagAYT : Bool = false
     
@@ -30,22 +32,30 @@ class CalculatorViewController: UIViewController {
         tableView.dataSource = self
     }
     @objc func calculate(){
-        
-        reloadFlagTYT = false
-        reloadFlagAYT = false
-        tableView.setContentOffset(.zero, animated:true)
-        
+    
         var tyt = TYTParse(result: self.tytCell.tyt)
         var ayt =  AYTParse(result: self.aytCell.ayt)
+        let e1 = tyt.parseToInt()
+        let e2 = ayt.parseToInt()
         
-        if tyt.parseToInt() == 0 && ayt.parseToInt() == 0{
-            
+        if e1 == 0 && e2 == 0{
+            // Success
             var calc =  Calculator(tyt.intResult,ayt.intResult)
             tytResult = calc.calculate().0
-            aytResult = calc.calculate().1                           
+            aytResult = calc.calculate().1
+            reloadFlagTYT = false
+            reloadFlagAYT = false
+            tableView.setContentOffset(.zero, animated:true)
         }else{
-            print("Error Code TYT: \(tyt.parseToInt())")
-            print("Error Code AYT: \(ayt.parseToInt())")
+            // Error
+            if e1 != 0 {
+                let alertVC = alertManager.alert(errorCode: e1)
+                self.present(alertVC, animated: true)
+                tableView.setContentOffset(.zero, animated:true)
+            }else{
+                let alertVC = alertManager.alert(errorCode: e2)
+                self.present(alertVC, animated: true)
+            }
         }
     }
 }
