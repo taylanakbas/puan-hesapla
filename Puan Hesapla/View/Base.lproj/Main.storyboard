@@ -60,7 +60,7 @@ hemen puanını hesapla</string>
                                             <constraint firstItem="Hm8-r4-vtr" firstAttribute="top" secondItem="xMS-L3-noN" secondAttribute="top" id="BqP-0Q-XdT"/>
                                             <constraint firstItem="WmG-Sl-iRQ" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" constant="16" id="R4o-bJ-YP2"/>
                                             <constraint firstAttribute="bottom" secondItem="Hm8-r4-vtr" secondAttribute="bottom" id="WfE-eF-hLo"/>
-                                            <constraint firstItem="atz-ye-vQl" firstAttribute="top" secondItem="WmG-Sl-iRQ" secondAttribute="bottom" constant="24" id="uPf-lg-TMD"/>
+                                            <constraint firstAttribute="bottom" secondItem="atz-ye-vQl" secondAttribute="bottom" constant="19.5" id="fjS-G0-kwU"/>
                                             <constraint firstItem="Hm8-r4-vtr" firstAttribute="leading" secondItem="xMS-L3-noN" secondAttribute="leading" id="xzZ-1V-21A"/>
                                         </constraints>
                                     </view>
@@ -145,7 +145,7 @@ hemen puanını hesapla</string>
                                     <constraint firstItem="5GX-tw-Cjj" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="top" constant="24" id="sIo-GQ-rXc"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
                                 <rect key="frame" x="0.0" y="130" width="375" height="488"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
