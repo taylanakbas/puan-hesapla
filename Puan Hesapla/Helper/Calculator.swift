@@ -18,14 +18,14 @@ struct Calculator {
         self.tyt = tyt
         self.ayt = ayt
         self.dp = diplomaGrade()
+        self.calculate()
     }
     
-    mutating func calculate() -> (TYTIntResult,AYTIntResult) {
+    mutating func calculate(){
         TYTNet()
         AYTNet()
         TYTGrade()
         AYTGrade()
-        return (tyt,ayt)
     }
     
     mutating func TYTNet(){

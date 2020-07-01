@@ -33,6 +33,7 @@ class CalculatorViewController: UIViewController {
     }
     @objc func calculate(){
     
+        
         var tyt = TYTParse(result: self.tytCell.tyt)
         var ayt =  AYTParse(result: self.aytCell.ayt)
         let e1 = tyt.parseToInt()
@@ -40,11 +41,8 @@ class CalculatorViewController: UIViewController {
         
         if e1 == 0 && e2 == 0{
             // Success
-            var calc =  Calculator(tyt.intResult,ayt.intResult)
-            tytResult = calc.calculate().0
-            aytResult = calc.calculate().1
-            reloadFlagTYT = false
-            reloadFlagAYT = false
+            tytResult = Calculator(tyt.intResult,ayt.intResult).tyt
+            aytResult = Calculator(tyt.intResult,ayt.intResult).ayt
             tableView.setContentOffset(.zero, animated:true)
         }else{
             // Error
@@ -75,20 +73,18 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.titleLabel.text = "TYT Puan"
             return cell
         }else if indexPath.section == 1 {
-            if !reloadFlagTYT {
-                let cell = Bundle.main.loadNibNamed("CalculateTYTTableViewCell", owner: self, options: nil)?.first as! CalculateTYTTableViewCell
-                self.tytCell = cell
-                self.reloadFlagTYT = true
+                var cell = Bundle.main.loadNibNamed("CalculateTYTTableViewCell", owner: self, options: nil)?.first as! CalculateTYTTableViewCell
+                if !reloadFlagTYT {
+                    self.tytCell = cell
+                    self.reloadFlagTYT = true
+                } else {
+                    cell = self.tytCell
+                }
                 cell.TRNet.text = String(format: "%.2f", tytResult.trNet)
                 cell.MATHNet.text = String(format: "%.2f", tytResult.matNet)
                 cell.SONet.text = String(format: "%.2f", tytResult.sosNet)
                 cell.SCNet.text = String(format: "%.2f", tytResult.fenNet)
                 return cell
-            }else {
-                var cell = Bundle.main.loadNibNamed("CalculateTYTTableViewCell", owner: self, options: nil)?.first as! CalculateTYTTableViewCell
-                cell = self.tytCell
-                return cell
-            }
         }else if indexPath.section == 2 {
             let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true
@@ -111,21 +107,20 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             return cell
             
         }else if indexPath.section == 5 {
+            
+            var cell = Bundle.main.loadNibNamed("CalculateAYTTableViewCell", owner: self, options: nil)?.first as! CalculateAYTTableViewCell
             if !reloadFlagAYT {
-                let cell = Bundle.main.loadNibNamed("CalculateAYTTableViewCell", owner: self, options: nil)?.first as! CalculateAYTTableViewCell
                 self.aytCell = cell
                 self.reloadFlagAYT = true
-                cell.EDBNet.text = String(format: "%.2f", aytResult.tdNet)
-                cell.MATHNet.text = String(format: "%.2f", aytResult.matNet)
-                cell.SONet.text = String(format: "%.2f", aytResult.sosNet)
-                cell.SCNet.text = String(format: "%.2f", aytResult.fenNet)
-                cell.GRNet.text = String(format: "%.2f", aytResult.ydNet)
-                return cell
             }else {
-                var cell = Bundle.main.loadNibNamed("CalculateAYTTableViewCell", owner: self, options: nil)?.first as! CalculateAYTTableViewCell
                 cell = self.aytCell
-                return cell
             }
+            cell.EDBNet.text = String(format: "%.2f", aytResult.tdNet)
+            cell.MATHNet.text = String(format: "%.2f", aytResult.matNet)
+            cell.SONet.text = String(format: "%.2f", aytResult.sosNet)
+            cell.SCNet.text = String(format: "%.2f", aytResult.fenNet)
+            cell.GRNet.text = String(format: "%.2f", aytResult.ydNet)
+            return cell
         }else if indexPath.section == 6{
             let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true

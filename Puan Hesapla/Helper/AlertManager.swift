@@ -13,6 +13,7 @@ class AlertManager {
     
         let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! AlertViewController
+
         if errorCode <= 10 {
             let content = CalculatorAlert(body: "\(K.Error.Calc.tyt[errorCode]!) Doğru/Yanlış sonuçlarınızı kontrol ediniz!")
             alertVC.alertTitle = content.title

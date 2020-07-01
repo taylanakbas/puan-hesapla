@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -384,8 +384,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="707-45-1Zx">
-                                        <rect key="frame" x="40" y="8" width="316" height="17"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="707-45-1Zx">
+                                        <rect key="frame" x="52" y="8" width="304" height="17"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-x8-ycE">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="17"/>
@@ -394,25 +394,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUT-7O-z6f">
-                                                <rect key="frame" x="69" y="0.0" width="40" height="17"/>
+                                                <rect key="frame" x="66" y="0.0" width="40" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3j-F9-UkT">
-                                                <rect key="frame" x="138" y="0.0" width="40" height="17"/>
+                                                <rect key="frame" x="132" y="0.0" width="40" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCa-6L-vdd">
-                                                <rect key="frame" x="207" y="0.0" width="40" height="17"/>
+                                                <rect key="frame" x="198" y="0.0" width="40" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-6R-7PZ">
-                                                <rect key="frame" x="276" y="0.0" width="40" height="17"/>
+                                                <rect key="frame" x="264" y="0.0" width="40" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -462,15 +462,15 @@
                 <outlet property="GRFalse" destination="F4Z-9Q-IBo" id="Yf4-Ql-sxM"/>
                 <outlet property="GRNet" destination="t6D-6R-7PZ" id="E2F-CM-lmr"/>
                 <outlet property="GRTrue" destination="346-4w-Ztc" id="Trz-zL-N3T"/>
-                <outlet property="MATHFalse" destination="ets-Dg-Snv" id="gk1-AF-jbN"/>
+                <outlet property="MATHFalse" destination="I5U-6a-A2Z" id="E6t-SN-HbA"/>
                 <outlet property="MATHNet" destination="h3j-F9-UkT" id="owG-c5-24Y"/>
-                <outlet property="MATHTrue" destination="JUd-CG-nBS" id="oUM-gs-TOf"/>
+                <outlet property="MATHTrue" destination="ESg-AA-SDP" id="qHe-LW-jpA"/>
                 <outlet property="SCFalse" destination="4Bi-JX-jw8" id="ugJ-8H-XTn"/>
                 <outlet property="SCNet" destination="kCa-6L-vdd" id="OoP-1E-GPV"/>
                 <outlet property="SCTrue" destination="9x7-0K-WGQ" id="uzP-ZE-JUb"/>
-                <outlet property="SOFalse" destination="I5U-6a-A2Z" id="oER-RW-hKw"/>
+                <outlet property="SOFalse" destination="ets-Dg-Snv" id="Jjq-gu-KzA"/>
                 <outlet property="SONet" destination="JUT-7O-z6f" id="3aq-NJ-4RI"/>
-                <outlet property="SOTrue" destination="ESg-AA-SDP" id="U0y-52-HMT"/>
+                <outlet property="SOTrue" destination="JUd-CG-nBS" id="T8N-ya-vrR"/>
             </connections>
             <point key="canvasLocation" x="321.73913043478262" y="134.59821428571428"/>
         </tableViewCell>
