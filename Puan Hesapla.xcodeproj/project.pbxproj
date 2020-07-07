@@ -18,6 +18,8 @@
 		F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */; };
 		F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */; };
 		F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */; };
+		F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */; };
+		F56FEE1624B278640046D5D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FEE1524B278640046D5D0 /* WebViewController.swift */; };
 		F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */; };
 		F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */; };
 		F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */; };
@@ -57,6 +59,8 @@
 		F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewStoryboard.storyboard; sourceTree = "<group>"; };
+		F56FEE1524B278640046D5D0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateAYTTableViewCell.swift; sourceTree = "<group>"; };
 		F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateAYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				F503711C24A0DF12008B153E /* HomeViewController.swift */,
 				F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */,
 				F5C5788F24ABB19500575C70 /* AlertViewController.swift */,
+				F56FEE1524B278640046D5D0 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				F5D382FE249CC91B0090A6F5 /* Main.storyboard */,
 				F5C5788D24ABB16300575C70 /* AlertStoryboard.storyboard */,
+				F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */,
 				F54F4E4424A48FA6008204E9 /* Base */,
 				F503712324A0F2D7008B153E /* UniversityCell */,
 				F5DAEF1024A09171003F2A95 /* ArticleCell */,
@@ -304,6 +310,7 @@
 				F5C5788E24ABB16400575C70 /* AlertStoryboard.storyboard in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
+				F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */,
 				F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
@@ -333,6 +340,7 @@
 				F5C5788624AA0F0700575C70 /* Calculator.swift in Sources */,
 				F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */,
 				F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */,
+				F56FEE1624B278640046D5D0 /* WebViewController.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
 				F5C5788C24AA133200575C70 /* Parser.swift in Sources */,
 				F5C5788324A9FD2400575C70 /* ResultTYTTableViewCell.swift in Sources */,

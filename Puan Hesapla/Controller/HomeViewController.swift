@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class HomeViewController: UIViewController {
     
@@ -18,13 +19,13 @@ class HomeViewController: UIViewController {
     let estimatedWidth = 160.0
     let cellMarginSize = 16.0
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         initUniversities()
     }
-
     func initUniversities(){
         let u0 =  University(name: "Manchester Üniversitesi", location: "Manchester, İngiltere", rate: "9.4", image: UIImage(named: "u0")!)
         let u1 =  University(name: "Bahcesehir Üniversitesi", location: "İstanbul, Türkiye", rate: "8.8", image: UIImage(named: "u1")!)
@@ -37,10 +38,16 @@ class HomeViewController: UIViewController {
     }
     
     @objc func allUniversities(){
-        print("all universities")
+        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+        webVC.url = "https://univerlist.com/tr/universiteler/"
+        self.present(webVC, animated: true)
     }
     @objc func allArticles(){
-        print("all articles")
+        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+        webVC.url = "https://univerlist.com/tr/blog/"
+        self.present(webVC, animated: true)
     }
     @objc func detailedUniversity(_ sender : UITapGestureRecognizer){
         let location = sender.location(in: self.cvUni)
@@ -154,3 +161,5 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
         return width
     }
 }
+
+
