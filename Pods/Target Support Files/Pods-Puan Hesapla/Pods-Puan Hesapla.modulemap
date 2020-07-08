@@ -1,0 +1,6 @@
+framework module Pods_Puan_Hesapla {
+  umbrella header "Pods-Puan Hesapla-umbrella.h"
+
+  export *
+  module * { export * }
+}

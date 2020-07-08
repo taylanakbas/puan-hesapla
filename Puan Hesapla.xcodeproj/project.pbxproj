@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0A913843D506CDDB1F1FA2 /* Pods_Puan_Hesapla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13386EE72294FFA43A44C32E /* Pods_Puan_Hesapla.framework */; };
 		F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503711C24A0DF12008B153E /* HomeViewController.swift */; };
+		F543464C24B475FE0025525A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F543464B24B475FE0025525A /* GoogleService-Info.plist */; };
 		F54F4E3424A22185008204E9 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E3224A22185008204E9 /* UniversityTableViewCell.swift */; };
 		F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E3324A22185008204E9 /* UniversityTableViewCell.xib */; };
 		F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E3624A22473008204E9 /* UniversityCollectionViewCell.swift */; };
@@ -48,7 +50,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13386EE72294FFA43A44C32E /* Pods_Puan_Hesapla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Puan_Hesapla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD351F8D709FEA781DC0B69 /* Pods-Puan Hesapla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puan Hesapla.debug.xcconfig"; path = "Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla.debug.xcconfig"; sourceTree = "<group>"; };
+		E8841163FAE5D070B6293BFC /* Pods-Puan Hesapla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puan Hesapla.release.xcconfig"; path = "Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla.release.xcconfig"; sourceTree = "<group>"; };
 		F503711C24A0DF12008B153E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F543464B24B475FE0025525A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F54F4E3224A22185008204E9 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E3324A22185008204E9 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
 		F54F4E3624A22473008204E9 /* UniversityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,12 +101,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0A913843D506CDDB1F1FA2 /* Pods_Puan_Hesapla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		756AABEA8CFA93C9E7B1EB5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABD351F8D709FEA781DC0B69 /* Pods-Puan Hesapla.debug.xcconfig */,
+				E8841163FAE5D070B6293BFC /* Pods-Puan Hesapla.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A9D5015B62D60361A3DCB51F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13386EE72294FFA43A44C32E /* Pods_Puan_Hesapla.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F503712324A0F2D7008B153E /* UniversityCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +196,8 @@
 			children = (
 				F5D382F5249CC91B0090A6F5 /* Puan Hesapla */,
 				F5D382F4249CC91B0090A6F5 /* Products */,
+				756AABEA8CFA93C9E7B1EB5A /* Pods */,
+				A9D5015B62D60361A3DCB51F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +222,7 @@
 				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
 				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
 				F5D38309249CC9220090A6F5 /* Info.plist */,
+				F543464B24B475FE0025525A /* GoogleService-Info.plist */,
 				F5D38301249CC91B0090A6F5 /* Puan_Hesapla.xcdatamodeld */,
 			);
 			path = "Puan Hesapla";
@@ -250,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D3830C249CC9220090A6F5 /* Build configuration list for PBXNativeTarget "Puan Hesapla" */;
 			buildPhases = (
+				F77146FFD824A47176577E04 /* [CP] Check Pods Manifest.lock */,
 				F5D382EF249CC91B0090A6F5 /* Sources */,
 				F5D382F0249CC91B0090A6F5 /* Frameworks */,
 				F5D382F1249CC91B0090A6F5 /* Resources */,
+				E6628C735122380209CB418F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +339,7 @@
 				F5C5788E24ABB16400575C70 /* AlertStoryboard.storyboard in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
+				F543464C24B475FE0025525A /* GoogleService-Info.plist in Resources */,
 				F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */,
 				F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
@@ -320,6 +350,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E6628C735122380209CB418F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F77146FFD824A47176577E04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Puan Hesapla-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5D382EF249CC91B0090A6F5 /* Sources */ = {
@@ -490,6 +562,7 @@
 		};
 		F5D3830D249CC9220090A6F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD351F8D709FEA781DC0B69 /* Pods-Puan Hesapla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -510,6 +583,7 @@
 		};
 		F5D3830E249CC9220090A6F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8841163FAE5D070B6293BFC /* Pods-Puan Hesapla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
