@@ -18,10 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-
+        setupGlobalAppearance()
         return true
     }
 
+    func setupGlobalAppearance(){
+           
+       //global Appearance settings
+        UITextField.appearance().font  =  UIFont(name: "Montserrat-Regular", size: 14)
+        //UILabel.appearance().font = UIFont(name: "Montserrat-Regular", size: 18)!
+        
+           
+     }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

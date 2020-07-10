@@ -49,6 +49,15 @@
 		F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D38304249CC9220090A6F5 /* Assets.xcassets */; };
 		F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */; };
 		F5D38315249CE97E0090A6F5 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D38314249CE97E0090A6F5 /* University.swift */; };
+		F5D931FC24B866B000A8AA93 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F324B8667900A8AA93 /* Montserrat-Black.ttf */; };
+		F5D931FD24B866B300A8AA93 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F624B8667A00A8AA93 /* Montserrat-Bold.ttf */; };
+		F5D931FE24B866B800A8AA93 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F724B8667A00A8AA93 /* Montserrat-ExtraBold.ttf */; };
+		F5D931FF24B866BB00A8AA93 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931FB24B8667B00A8AA93 /* Montserrat-ExtraLight.ttf */; };
+		F5D9320024B866BE00A8AA93 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F424B8667900A8AA93 /* Montserrat-Light.ttf */; };
+		F5D9320124B866C000A8AA93 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F924B8667B00A8AA93 /* Montserrat-Medium.ttf */; };
+		F5D9320224B866C400A8AA93 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931FA24B8667B00A8AA93 /* Montserrat-Regular.ttf */; };
+		F5D9320324B866C600A8AA93 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F524B8667900A8AA93 /* Montserrat-SemiBold.ttf */; };
+		F5D9320424B866C900A8AA93 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F824B8667A00A8AA93 /* Montserrat-Thin.ttf */; };
 		F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */; };
 		F5E67DFB24B5D31400D704AC /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */; };
 		F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */; };
@@ -102,6 +111,15 @@
 		F5D38307249CC9220090A6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D38309249CC9220090A6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D38314249CE97E0090A6F5 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		F5D931F324B8667900A8AA93 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		F5D931F424B8667900A8AA93 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		F5D931F524B8667900A8AA93 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F5D931F624B8667A00A8AA93 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F5D931F724B8667A00A8AA93 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F5D931F824B8667A00A8AA93 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		F5D931F924B8667B00A8AA93 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F5D931FA24B8667B00A8AA93 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F5D931FB24B8667B00A8AA93 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTYTTableViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +263,7 @@
 				F5D38313249CE9690090A6F5 /* Model */,
 				F54F4E4324A36CA3008204E9 /* View */,
 				F54F4E4224A36C9B008204E9 /* Controller */,
+				F5D931F224B8662A00A8AA93 /* fonts */,
 				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
 				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
 				F5D38309249CC9220090A6F5 /* Info.plist */,
@@ -261,6 +280,22 @@
 				F5C5788724AA0F2100575C70 /* Result.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F5D931F224B8662A00A8AA93 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5D931F324B8667900A8AA93 /* Montserrat-Black.ttf */,
+				F5D931F624B8667A00A8AA93 /* Montserrat-Bold.ttf */,
+				F5D931F724B8667A00A8AA93 /* Montserrat-ExtraBold.ttf */,
+				F5D931FB24B8667B00A8AA93 /* Montserrat-ExtraLight.ttf */,
+				F5D931F424B8667900A8AA93 /* Montserrat-Light.ttf */,
+				F5D931F924B8667B00A8AA93 /* Montserrat-Medium.ttf */,
+				F5D931FA24B8667B00A8AA93 /* Montserrat-Regular.ttf */,
+				F5D931F524B8667900A8AA93 /* Montserrat-SemiBold.ttf */,
+				F5D931F824B8667A00A8AA93 /* Montserrat-Thin.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		F5DAEF1024A09171003F2A95 /* ArticleCell */ = {
@@ -356,7 +391,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D931FD24B866B300A8AA93 /* Montserrat-Bold.ttf in Resources */,
+				F5D9320424B866C900A8AA93 /* Montserrat-Thin.ttf in Resources */,
 				F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */,
+				F5D9320324B866C600A8AA93 /* Montserrat-SemiBold.ttf in Resources */,
 				F54F4E3D24A2DB38008204E9 /* ArticleCollectionViewCell.xib in Resources */,
 				F54F4E3524A22185008204E9 /* UniversityTableViewCell.xib in Resources */,
 				F5C5787C24A9DD8600575C70 /* CalculateButtonTableViewCell.xib in Resources */,
@@ -365,14 +403,20 @@
 				F5C5788E24ABB16400575C70 /* AlertStoryboard.storyboard in Resources */,
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
+				F5D9320024B866BE00A8AA93 /* Montserrat-Light.ttf in Resources */,
 				F543464C24B475FE0025525A /* GoogleService-Info.plist in Resources */,
 				F509489724B5CEF10085B7E9 /* FirstTableViewCell.xib in Resources */,
+				F5D9320224B866C400A8AA93 /* Montserrat-Regular.ttf in Resources */,
 				F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */,
+				F5D931FC24B866B000A8AA93 /* Montserrat-Black.ttf in Resources */,
 				F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
+				F5D931FF24B866BB00A8AA93 /* Montserrat-ExtraLight.ttf in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
 				F5C5788024A9F6E600575C70 /* ResultAYTTableViewCell.xib in Resources */,
+				F5D931FE24B866B800A8AA93 /* Montserrat-ExtraBold.ttf in Resources */,
+				F5D9320124B866C000A8AA93 /* Montserrat-Medium.ttf in Resources */,
 				F509489324B5C3640085B7E9 /* BlogTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

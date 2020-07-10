@@ -7,6 +7,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Keşfet-->
         <scene sceneID="DJf-NL-B2I">
@@ -31,17 +39,18 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-Sl-iRQ">
-                                                <rect key="frame" x="16" y="24.000000000000004" width="183.66666666666666" height="57.333333333333343"/>
+                                                <rect key="frame" x="16" y="24" width="172.33333333333334" height="56"/>
                                                 <string key="text">Hayalindeki üniversiteye
 ne kadar uzaktasın
 hemen puanını hesapla</string>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atz-ye-vQl">
-                                                <rect key="frame" x="16" y="105.66666666666666" width="102" height="30"/>
+                                                <rect key="frame" x="16" y="106.66666666666666" width="95" height="29"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title=" Puan Hesapla ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -117,40 +126,8 @@ hemen puanını hesapla</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-eY-XHq" userLabel="CalculateView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="130"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-mz-Dgg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-tw-Cjj">
-                                        <rect key="frame" x="16" y="24.000000000000004" width="183.66666666666666" height="57.333333333333343"/>
-                                        <string key="text">Hayalindeki üniversiteye
-ne kadar uzaktasın
-hemen puanını hesapla</string>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="nJz-mz-Dgg" firstAttribute="leading" secondItem="SEa-eY-XHq" secondAttribute="leading" id="6XO-h3-cny"/>
-                                    <constraint firstItem="nJz-mz-Dgg" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="top" id="FIS-CC-SrY"/>
-                                    <constraint firstAttribute="bottom" secondItem="nJz-mz-Dgg" secondAttribute="bottom" id="MQP-Dm-MI3"/>
-                                    <constraint firstAttribute="trailing" secondItem="nJz-mz-Dgg" secondAttribute="trailing" id="TT3-ut-Aqs"/>
-                                    <constraint firstItem="5GX-tw-Cjj" firstAttribute="leading" secondItem="SEa-eY-XHq" secondAttribute="leading" constant="16" id="ULl-7I-GOo"/>
-                                    <constraint firstAttribute="height" constant="130" id="foN-go-ZvE"/>
-                                    <constraint firstItem="5GX-tw-Cjj" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="top" constant="24" id="sIo-GQ-rXc"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
-                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="l4Q-Rt-VOM"/>
@@ -161,12 +138,9 @@ hemen puanını hesapla</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4Ql-Av-aaF" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="AP7-36-KQQ"/>
-                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="top" secondItem="SEa-eY-XHq" secondAttribute="bottom" id="SYM-D7-l1B"/>
                             <constraint firstItem="4Ql-Av-aaF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="X7X-wT-A1p"/>
-                            <constraint firstItem="SEa-eY-XHq" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="XQL-aP-Uh2"/>
                             <constraint firstItem="4Ql-Av-aaF" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="eUb-zp-xwo"/>
-                            <constraint firstItem="SEa-eY-XHq" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="sHe-7C-ZkY"/>
-                            <constraint firstItem="SEa-eY-XHq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="zcB-2O-gkR"/>
+                            <constraint firstItem="4Ql-Av-aaF" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="u3f-ss-v9o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -178,7 +152,7 @@ hemen puanını hesapla</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="896"/>
+            <point key="canvasLocation" x="205.79710144927537" y="895.98214285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -313,7 +287,7 @@ hemen puanını hesapla</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Iw-pA-ank"/>
+        <segue reference="RuF-n6-ssN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle.fill" catalog="system" width="128" height="121"/>
