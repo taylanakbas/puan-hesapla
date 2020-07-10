@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,17 +13,17 @@
             <objects>
                 <viewController id="MUS-6U-YC5" customClass="HomeViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V7J-lL-s3n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-EX-nQX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMS-L3-noN" userLabel="HeaderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-r4-vtr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="4"/>
@@ -30,7 +31,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-Sl-iRQ">
-                                                <rect key="frame" x="16" y="24" width="184" height="57.5"/>
+                                                <rect key="frame" x="16" y="24.000000000000004" width="183.66666666666666" height="57.333333333333343"/>
                                                 <string key="text">Hayalindeki üniversiteye
 ne kadar uzaktasın
 hemen puanını hesapla</string>
@@ -39,7 +40,7 @@ hemen puanını hesapla</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atz-ye-vQl">
-                                                <rect key="frame" x="16" y="105.5" width="102" height="30"/>
+                                                <rect key="frame" x="16" y="105.66666666666666" width="102" height="30"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" title=" Puan Hesapla ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +69,7 @@ hemen puanını hesapla</string>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-Sb-AdT">
-                                        <rect key="frame" x="0.0" y="155" width="375" height="463"/>
+                                        <rect key="frame" x="0.0" y="155" width="414" height="614"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <sections/>
@@ -106,21 +107,21 @@ hemen puanını hesapla</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQE-Ug-q65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="-322.48875562218893"/>
+            <point key="canvasLocation" x="-618" y="896"/>
         </scene>
         <!--Puan Hesapla-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController storyboardIdentifier="tyt" id="8rJ-Kc-sve" customClass="CalculatorViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-eY-XHq" userLabel="CalculateView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="nJz-mz-Dgg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="6"/>
@@ -128,7 +129,7 @@ hemen puanını hesapla</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-tw-Cjj">
-                                        <rect key="frame" x="16" y="24" width="184" height="57.5"/>
+                                        <rect key="frame" x="16" y="24.000000000000004" width="183.66666666666666" height="57.333333333333343"/>
                                         <string key="text">Hayalindeki üniversiteye
 ne kadar uzaktasın
 hemen puanını hesapla</string>
@@ -149,7 +150,7 @@ hemen puanını hesapla</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-Av-aaF">
-                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="l4Q-Rt-VOM"/>
@@ -177,7 +178,7 @@ hemen puanını hesapla</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="454"/>
+            <point key="canvasLocation" x="206" y="896"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -187,23 +188,142 @@ hemen puanını hesapla</string>
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="DarkColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="MUS-6U-YC5" kind="relationship" relationship="viewControllers" id="6cb-en-PxI"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="Lke-kb-mih"/>
+                        <segue destination="s0E-0Z-A58" kind="relationship" relationship="viewControllers" id="eh8-QC-sdM"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="8Iw-pA-ank"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="-15"/>
+            <point key="canvasLocation" x="207" y="82"/>
+        </scene>
+        <!--Blog-->
+        <scene sceneID="2vd-Yw-9ya">
+            <objects>
+                <navigationController id="s0E-0Z-A58" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Blog" image="book.circle.fill" catalog="system" id="L1B-zM-F2Z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rsg-Af-zCL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="td7-Du-ePn" kind="relationship" relationship="rootViewController" id="xut-lq-awA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSE-IT-eWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="81"/>
+        </scene>
+        <!--Bloglar-->
+        <scene sceneID="Syf-0E-YPc">
+            <objects>
+                <viewController id="td7-Du-ePn" customClass="BlogViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LTa-RV-GHL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-hy-ihJ">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="td7-Du-ePn" id="XgZ-ux-s3K"/>
+                                    <outlet property="delegate" destination="td7-Du-ePn" id="MGv-gN-sv7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bg2-hy-ihJ" firstAttribute="trailing" secondItem="nlX-la-SYW" secondAttribute="trailing" id="RAo-e9-TlC"/>
+                            <constraint firstItem="bg2-hy-ihJ" firstAttribute="top" secondItem="nlX-la-SYW" secondAttribute="top" id="SA7-L1-gXs"/>
+                            <constraint firstItem="bg2-hy-ihJ" firstAttribute="leading" secondItem="nlX-la-SYW" secondAttribute="leading" id="Sp2-o2-pYN"/>
+                            <constraint firstItem="bg2-hy-ihJ" firstAttribute="bottom" secondItem="nlX-la-SYW" secondAttribute="bottom" id="uOH-m4-tpb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nlX-la-SYW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Blog" image="book.fill" catalog="system" id="fJz-gj-Hwq"/>
+                    <navigationItem key="navigationItem" title="Bloglar" id="ZcE-Qa-piq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="o0j-tw-eyQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bg2-hy-ihJ" id="aFe-UI-i0F"/>
+                        <segue destination="NBP-C8-73g" kind="show" identifier="DetailVC" id="Dgd-Ps-6YS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxI-LT-QiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="81"/>
+        </scene>
+        <!--Blog Detail View Controller-->
+        <scene sceneID="jgk-lm-e1p">
+            <objects>
+                <viewController id="NBP-C8-73g" customClass="BlogDetailViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEd-hP-Rzn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9o-3I-hH6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="u0" translatesAutoresizingMaskIntoConstraints="NO" id="bRQ-Pq-ewl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How can You Become a Music Teacher?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-uU-bBE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mop-KX-d2i">
+                                        <rect key="frame" x="8" y="273" width="398" height="532"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Efw-6g-gFb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fZc-BF-EZP"/>
+                    <connections>
+                        <outlet property="content" destination="mop-KX-d2i" id="Wwm-XH-3Ri"/>
+                        <outlet property="headerImage" destination="bRQ-Pq-ewl" id="hOq-z5-sHv"/>
+                        <outlet property="titleLabel" destination="6lD-uU-bBE" id="k5s-Qq-ywI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4u-Td-CUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666.666666666667" y="80.357142857142847"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RuF-n6-ssN"/>
+        <segue reference="8Iw-pA-ank"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="book.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="cactus" width="7935" height="2729"/>
-        <image name="calculator" width="25" height="25"/>
-        <image name="compass" width="25" height="25"/>
+        <image name="calculator" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="compass" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="u0" width="640" height="427"/>
+        <namedColor name="DarkColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
     </resources>
 </document>
