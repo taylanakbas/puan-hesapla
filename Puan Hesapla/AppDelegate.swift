@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
         setupGlobalAppearance()
         return true
     }
@@ -26,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            
        //global Appearance settings
         UITextField.appearance().font  =  UIFont(name: "Montserrat-Regular", size: 14)
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 8)!], for: .normal)
+        
+
         //UILabel.appearance().font = UIFont(name: "Montserrat-Regular", size: 18)!
         
            

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 import WebKit
 
 class HomeViewController: UIViewController {
@@ -35,6 +36,18 @@ class HomeViewController: UIViewController {
         self.universities.insert(u1, at: 1)
         self.universities.insert(u2, at: 2)
         self.universities.insert(u3, at: 3)
+    }
+    @objc func playVideo(){
+        guard let path = Bundle.main.path(forResource: "univerlist", ofType:"mp4") else {
+            debugPrint("univerlist.mp4 not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+        }
     }
     
     @objc func allUniversities(){
@@ -75,23 +88,27 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
+            let cell = Bundle.main.loadNibNamed("BannerTableViewCell", owner: self, options: nil)?.first as! BannerTableViewCell
+            cell.playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
+            return cell
+        }else if indexPath.section == 1 {
             let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
             cell.titleLabel.text = "Popüler Üniversiteler"
             cell.seeAllButton.addTarget(self, action: #selector(allUniversities), for: .touchUpInside)
             return cell
-        }else if indexPath.section == 1 {
+        }else if indexPath.section == 2 {
             let cell = Bundle.main.loadNibNamed("UniversityTableViewCell", owner: self, options: nil)?.first as! UniversityTableViewCell
             self.cvUni = cell.collectionView
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
             cell.collectionView.register(UINib(nibName: "UniversityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UniversityCollectionViewCell")
             return cell
-        }else if indexPath.section == 2 {
+        }else if indexPath.section == 3 {
             let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
             cell.titleLabel.text = "Yazılar"
             cell.seeAllButton.addTarget(self, action: #selector(allArticles), for: .touchUpInside)
             return cell
-        }else{
+        }else {
             let cell = Bundle.main.loadNibNamed("ArticleTableViewCell", owner: self, options: nil)?.first as! ArticleTableViewCell
             self.cvBlog = cell.collectionView
             cell.collectionView.delegate = self
@@ -101,12 +118,23 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 || indexPath.section == 2  { return 80.0 }
-        else if indexPath.section == 1 { return 180.0 }
-        else { return 830 }
+        switch indexPath.section {
+        case 0:
+            return 240.0
+        case 1:
+            return 80.0
+        case 2:
+            return 180.0
+        case 3:
+            return 80.0
+        case 4:
+            return 830.0
+        default:
+            return 0.0
+        }
     }
 }
 

@@ -25,6 +25,9 @@
 		F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */; };
 		F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */; };
 		F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */; };
+		F560A11224BC4F3700AEECBE /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560A11024BC4F3700AEECBE /* BannerTableViewCell.swift */; };
+		F560A11324BC4F3700AEECBE /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F560A11124BC4F3700AEECBE /* BannerTableViewCell.xib */; };
+		F560A11624BC686A00AEECBE /* univerlist.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F560A11524BC685600AEECBE /* univerlist.mp4 */; };
 		F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */; };
 		F56FEE1624B278640046D5D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FEE1524B278640046D5D0 /* WebViewController.swift */; };
 		F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */; };
@@ -85,6 +88,9 @@
 		F54F4E3F24A2DB57008204E9 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		F560A11024BC4F3700AEECBE /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		F560A11124BC4F3700AEECBE /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
+		F560A11524BC685600AEECBE /* univerlist.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = univerlist.mp4; sourceTree = "<group>"; };
 		F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewStoryboard.storyboard; sourceTree = "<group>"; };
 		F56FEE1524B278640046D5D0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateAYTTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 			children = (
 				F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */,
 				F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */,
+				F560A11024BC4F3700AEECBE /* BannerTableViewCell.swift */,
+				F560A11124BC4F3700AEECBE /* BannerTableViewCell.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
 				F5C5789324ABCC5C00575C70 /* Constants.swift */,
+				F560A11524BC685600AEECBE /* univerlist.mp4 */,
 				F5C5789524ABD9CE00575C70 /* Helper */,
 				F5D38313249CE9690090A6F5 /* Model */,
 				F54F4E4324A36CA3008204E9 /* View */,
@@ -391,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F560A11624BC686A00AEECBE /* univerlist.mp4 in Resources */,
 				F5D931FD24B866B300A8AA93 /* Montserrat-Bold.ttf in Resources */,
 				F5D9320424B866C900A8AA93 /* Montserrat-Thin.ttf in Resources */,
 				F54F4E4124A2DB57008204E9 /* ArticleTableViewCell.xib in Resources */,
@@ -404,6 +414,7 @@
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
 				F5D9320024B866BE00A8AA93 /* Montserrat-Light.ttf in Resources */,
+				F560A11324BC4F3700AEECBE /* BannerTableViewCell.xib in Resources */,
 				F543464C24B475FE0025525A /* GoogleService-Info.plist in Resources */,
 				F509489724B5CEF10085B7E9 /* FirstTableViewCell.xib in Resources */,
 				F5D9320224B866C400A8AA93 /* Montserrat-Regular.ttf in Resources */,
@@ -471,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54F4E3C24A2DB38008204E9 /* ArticleCollectionViewCell.swift in Sources */,
+				F560A11224BC4F3700AEECBE /* BannerTableViewCell.swift in Sources */,
 				F5C5789424ABCC5C00575C70 /* Constants.swift in Sources */,
 				F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */,
 				F5C5788824AA0F2100575C70 /* Result.swift in Sources */,

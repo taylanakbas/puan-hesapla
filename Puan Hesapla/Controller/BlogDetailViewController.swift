@@ -13,18 +13,31 @@ class BlogDetailViewController: UIViewController {
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    @IBOutlet weak var constL: NSLayoutConstraint!
+    @IBOutlet weak var constR: NSLayoutConstraint!
+    @IBOutlet weak var constTop: NSLayoutConstraint!
+    @IBOutlet weak var constBottom: NSLayoutConstraint!
+
+    private var lastContentOffset: CGFloat = 0
+
     var str = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         content.delegate = self
         
-        self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationItem.backBarButtonItem?.isEnabled = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        headerImage.image = addBlurTo(self.headerImage.image!)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        //headerImage.image = addBlurTo(self.headerImage.image!)
         content.attributedText = htmlToAttributedString(str)
         
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     func htmlToAttributedString(_ str : String)-> NSAttributedString?{
         
@@ -55,7 +68,7 @@ class BlogDetailViewController: UIViewController {
         guard let ciImg = CIImage(image: image) else { return nil }
         let blur = CIFilter(name: "CIGaussianBlur")
         blur?.setValue(ciImg, forKey: kCIInputImageKey)
-        blur?.setValue(2.0, forKey: kCIInputRadiusKey)
+        blur?.setValue(4.0, forKey: kCIInputRadiusKey)
         if let outputImg = blur?.outputImage {
             return UIImage(ciImage: outputImg)
         }
@@ -69,6 +82,42 @@ extension BlogDetailViewController : UITextViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
     }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        if scrollView.contentOffset.y == 0 {
+            UIView.animate(withDuration: 2, animations: {
+                self.constL.constant = 70
+                self.constR.constant = 70
+                self.constBottom.constant = 40
+                self.view.layoutIfNeeded()
+            })
+        }
+        
+        let dif = self.lastContentOffset - scrollView.contentOffset.y
+        print(dif)
+        if dif  < 0 {
+            // down
+            UIView.animate(withDuration: 3, animations: {
+                self.constL.constant -= (self.constL.constant < 40) ? 0 : 10
+                self.constR.constant -= (self.constR.constant < 40) ? 0 : 10
+                //self.constTop.constant -= (self.constTop.constant < 40) ? 0 : 10
+                self.constBottom.constant -= (self.constBottom.constant < 40) ? 0 : 5
+                self.view.layoutIfNeeded()
+            })
+        }
+        
 
+        self.lastContentOffset = scrollView.contentOffset.y
     }
+
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        UIView.animate(withDuration: 3, animations: {
+            self.constL.constant = 70
+            self.constR.constant = 70
+            self.constBottom.constant = 40
+            self.view.layoutIfNeeded()
+        })
+        print("11")
+    }
+
 }

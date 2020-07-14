@@ -13,7 +13,7 @@ class ArticleCollectionViewCell: UICollectionViewCell,UICollectionViewDelegateFl
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
-        super.awakeFromNib()        
+        super.awakeFromNib()
         // Initialization code
     }
 

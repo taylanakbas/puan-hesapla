@@ -7,17 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7FE32232-8A61-4150-9709-BB14257C70A9"
+            uuid = "4F02896D-B981-43D6-8E01-AC9A52E476C2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Puan Hesapla/Controller/BlogDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "BlogDetailViewController"
-            landmarkType = "21">
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "scrollViewWillBeginDragging(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4F02896D-B981-43D6-8E01-AC9A52E476C2 - 3e0301e499d30b45"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Puan_Hesapla.BlogDetailViewController.scrollViewWillBeginDragging(__C.UIScrollView) -&gt; ()"
+                  moduleName = "Puan Hesapla"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taylanakbas/Desktop/puan-hesapla-iOS/Puan%20Hesapla/Controller/BlogDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "627">
+               </Location>
+               <Location
+                  uuid = "4F02896D-B981-43D6-8E01-AC9A52E476C2 - 62996af1ad68404e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Puan_Hesapla.BlogDetailViewController.scrollViewWillBeginDragging(__C.UIScrollView) -&gt; ()"
+                  moduleName = "Puan Hesapla"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taylanakbas/Desktop/puan-hesapla-iOS/Puan%20Hesapla/Controller/BlogDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CA3DB99-B42C-4D80-91C0-BD7DBFE0C646"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puan Hesapla/Controller/BlogDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "scrollViewWillBeginDragging(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
