@@ -154,8 +154,8 @@
             filePath = "Puan Hesapla/Controller/WebViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "loadView()"
             landmarkType = "7">
          </BreakpointContent>

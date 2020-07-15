@@ -65,6 +65,7 @@
 		F5E67DFB24B5D31400D704AC /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */; };
 		F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */; };
 		F5EC335424A8C92D00A8499E /* CalculateTYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */; };
+		F5F6E33124BF1845003BE975 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6E33024BF1845003BE975 /* Blog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTYTTableViewCell.swift; sourceTree = "<group>"; };
 		F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateTYTTableViewCell.xib; sourceTree = "<group>"; };
+		F5F6E33024BF1845003BE975 /* Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 			children = (
 				F5D38314249CE97E0090A6F5 /* University.swift */,
 				F5C5788724AA0F2100575C70 /* Result.swift */,
+				F5F6E33024BF1845003BE975 /* Blog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F6E33124BF1845003BE975 /* Blog.swift in Sources */,
 				F54F4E3C24A2DB38008204E9 /* ArticleCollectionViewCell.swift in Sources */,
 				F560A11224BC4F3700AEECBE /* BannerTableViewCell.swift in Sources */,
 				F5C5789424ABCC5C00575C70 /* Constants.swift in Sources */,
@@ -574,10 +578,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -587,6 +588,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -632,6 +634,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -641,6 +644,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

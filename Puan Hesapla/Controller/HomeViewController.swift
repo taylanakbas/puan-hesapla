@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import WebKit
+import SDWebImageWebPCoder
 
 class HomeViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     var cvBlog : UICollectionView?
     
     var universities : [University] = []
+    var articles : [Blog] = []
     let estimatedWidth = 160.0
     let cellMarginSize = 16.0
 
@@ -26,16 +28,48 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         initUniversities()
+        initArticles()
     }
     func initUniversities(){
-        let u0 =  University(name: "Manchester Üniversitesi", location: "Manchester, İngiltere", rate: "9.4", image: UIImage(named: "u0")!)
-        let u1 =  University(name: "Bahcesehir Üniversitesi", location: "İstanbul, Türkiye", rate: "8.8", image: UIImage(named: "u1")!)
-        let u2 =  University(name: "Liverpool Üniversitesi", location: "Liverpool, İngiltere", rate: "9.2", image: UIImage(named: "u2")!)
-        let u3 =  University(name: "Adnan Menderes Üniversitesi", location: "İzmir, Türkiye", rate: "8.1", image: UIImage(named: "u3")!)
-        self.universities.insert(u0, at: 0)
-        self.universities.insert(u1, at: 1)
-        self.universities.insert(u2, at: 2)
-        self.universities.insert(u3, at: 3)
+        let session = URLSession.shared
+        let url = URL(string: "https://furkanerkorkmaz.com/stajyer/university.json")!
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:Any] else { return }
+                let result = json["results"] as! [[String:Any]]
+                for idx in 0...result.count - 1 {
+                    let uni = University(result, idx)
+                    self.universities.insert(uni, at: idx)
+                }
+            }
+            catch let error{
+                print("Json Parse Error : \(error)")
+            }
+        })
+        task.resume()
+    }
+    func initArticles(){
+        let session = URLSession.shared
+        let url = URL(string: "https://furkanerkorkmaz.com/stajyer/blog.json")!
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:Any] else { return }
+                let result = json["results"] as! [[String:Any]]
+                for idx in 0...7 {
+                    let article = Blog(result, idx)
+                    self.articles.insert(article, at: idx)
+                }
+            } catch let error{
+                print("Json Parse Error : \(error)")
+            }
+        })
+        task.resume()
     }
     @objc func playVideo(){
         guard let path = Bundle.main.path(forResource: "univerlist", ofType:"mp4") else {
@@ -49,7 +83,6 @@ class HomeViewController: UIViewController {
             player.play()
         }
     }
-    
     @objc func allUniversities(){
         let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
         let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
@@ -67,7 +100,10 @@ class HomeViewController: UIViewController {
         let indexPath = self.cvUni?.indexPathForItem(at: location)
 
         if let index = indexPath {
-           print("Index: \(index)")
+            let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+            let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+            webVC.url = "https://univerlist.com/tr/\(self.universities[index.row].slug)/"
+            self.present(webVC, animated: true)
         }
     }
     @objc func detailedArticle(_ sender : UITapGestureRecognizer){
@@ -75,7 +111,10 @@ class HomeViewController: UIViewController {
         let indexPath = self.cvBlog?.indexPathForItem(at: location)
 
         if let index = indexPath {
-           print("Index: \(index)")
+            let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+            let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+            webVC.url = "https://univerlist.com/tr/blog/\(self.articles[index.row].slug)/"
+            self.present(webVC, animated: true)
         }
     }
 }
@@ -145,7 +184,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             return universities.count
         }
         else {
-            return 8
+            return articles.count
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -154,18 +193,33 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversityCollectionViewCell", for: indexPath) as? UniversityCollectionViewCell else {
                 fatalError("Cell not exists in storyboard")
             }
-            cell.mainImageView.image = self.universities[indexPath.row].image
+            
             cell.nameLabel.text = self.universities[indexPath.row].name
             cell.locationLabel.text = self.universities[indexPath.row].location
-            cell.rateLabel.text = self.universities[indexPath.row].rate
+            if self.universities[indexPath.row].rate == 0.0 {
+                cell.rateLabel.isHidden = true
+            }else {
+                cell.rateLabel.text = String(self.universities[indexPath.row].rate)
+            }
+            let webPCoder = SDImageWebPCoder.shared
+            SDImageCodersManager.shared.addCoder(webPCoder)
+            let webpURL = URL(string:self.universities[indexPath.row].imageUrl)!
+            DispatchQueue.main.async {
+                cell.mainImageView.sd_setImage(with: webpURL)
+            }
             cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(detailedUniversity(_:))))
             return cell
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell else {
                 fatalError("Cell not exists in storyboard")
             }
-            cell.mainImageView.image = UIImage(named: "u3")
-            cell.titleLabel.text = "2020 En çok tercih edilen üniversiteleri hemen incele"
+            let webPCoder = SDImageWebPCoder.shared
+            SDImageCodersManager.shared.addCoder(webPCoder)
+            let webpURL = URL(string:self.articles[indexPath.row].imageUrl)!
+            DispatchQueue.main.async {
+                cell.mainImageView.sd_setImage(with: webpURL)
+            }
+            cell.titleLabel.text = self.articles[indexPath.row].title
             cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(detailedArticle(_:))))
             return cell
         }

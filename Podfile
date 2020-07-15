@@ -6,8 +6,9 @@ target 'Puan Hesapla' do
   use_frameworks!
 
   # Pods for Puan Hesapla
-  pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
-
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Messaging'
+  pod 'SDWebImage'
+  pod 'SDWebImageWebPCoder'
 
 end

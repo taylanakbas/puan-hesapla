@@ -18,6 +18,9 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         let request = URLRequest(url: URL(string: self.url)!)
         webView.load(request)
+        self.webView.scrollView.bouncesZoom = false;
+        self.webView.isMultipleTouchEnabled = false
+
     }
 }
 extension WebViewController : WKUIDelegate {
