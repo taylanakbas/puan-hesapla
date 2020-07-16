@@ -13,11 +13,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+      func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+          // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+          // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+          // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+          guard let _ = (scene as? UIWindowScene) else { return }
+          self.scene(scene, openURLContexts: connectionOptions.urlContexts)
+      }
+      
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) { //2
+        if let url = URLContexts.first?.url {
+            let urlStr = url.absoluteString.components(separatedBy: "?")
+            if urlStr.first == "app://uni" {
+                self.pushToUniversity(urlStr.last!)
+            }else if urlStr.first == "app://blog" {
+                self.pushToBlog(urlStr.last!)
+            }
+        }
+    }
+    func pushToBlog(_ slug : String){
+        
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        //window?.rootViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BlogViewController") as! BlogViewController
+        window?.makeKeyAndVisible()
+        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+        webVC.url = "https://univerlist.com/tr/blog/\(slug)/"
+        window?.rootViewController?.present(webVC, animated: true)
+        window?.makeKeyAndVisible()
+    }
+    func pushToUniversity(_ slug : String){
+        
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
+        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
+        webVC.url = "https://univerlist.com/tr/\(slug)/"
+        window?.rootViewController?.present(webVC, animated: true)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +83,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-

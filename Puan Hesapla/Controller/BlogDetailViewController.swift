@@ -117,7 +117,6 @@ extension BlogDetailViewController : UITextViewDelegate {
             self.constBottom.constant = 40
             self.view.layoutIfNeeded()
         })
-        print("11")
     }
 
 }
