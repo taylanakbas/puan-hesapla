@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,30 +11,65 @@
         <!--Web View Controller-->
         <scene sceneID="HSP-Y2-YXd">
             <objects>
-                <viewController storyboardIdentifier="WebViewVC" id="bU1-aR-boZ" customClass="WebViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="bU1-aR-boZ" customClass="WebViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3A-rC-AD1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtV-7P-4yl">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EID-vK-Cx7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-C9-6Ea">
+                                        <rect key="frame" x="8" y="8" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="02u-VJ-pbs"/>
+                                            <constraint firstAttribute="width" constant="32" id="Ffw-BE-MK6"/>
+                                        </constraints>
+                                        <state key="normal" image="Action-Close"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="jRl-C9-6Ea" firstAttribute="top" secondItem="EID-vK-Cx7" secondAttribute="top" constant="8" id="AmA-KX-lG4"/>
+                                    <constraint firstAttribute="bottom" secondItem="jRl-C9-6Ea" secondAttribute="bottom" constant="8" id="Qfu-qN-3cf"/>
+                                    <constraint firstItem="jRl-C9-6Ea" firstAttribute="leading" secondItem="EID-vK-Cx7" secondAttribute="leading" constant="8" id="V8N-g9-Ztj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-za-oR0">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtV-7P-4yl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="BtV-7P-4yl" firstAttribute="leading" secondItem="yzb-za-oR0" secondAttribute="leading" id="AMM-jU-qeu"/>
+                                    <constraint firstItem="BtV-7P-4yl" firstAttribute="centerX" secondItem="yzb-za-oR0" secondAttribute="centerX" id="f7K-dy-dIb"/>
+                                    <constraint firstItem="BtV-7P-4yl" firstAttribute="top" secondItem="yzb-za-oR0" secondAttribute="top" id="fUL-RJ-8Ck"/>
+                                    <constraint firstItem="BtV-7P-4yl" firstAttribute="centerY" secondItem="yzb-za-oR0" secondAttribute="centerY" id="x8q-57-jD9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BtV-7P-4yl" firstAttribute="top" secondItem="f2B-yT-N90" secondAttribute="top" constant="96" id="Oj5-fW-Vrg"/>
-                            <constraint firstItem="BtV-7P-4yl" firstAttribute="leading" secondItem="f2B-yT-N90" secondAttribute="leading" id="PUa-Ad-0fp"/>
-                            <constraint firstItem="BtV-7P-4yl" firstAttribute="trailing" secondItem="f2B-yT-N90" secondAttribute="trailing" id="fG4-zm-3PS"/>
-                            <constraint firstItem="BtV-7P-4yl" firstAttribute="bottom" secondItem="f2B-yT-N90" secondAttribute="bottom" id="hgT-g4-wwy"/>
+                            <constraint firstItem="yzb-za-oR0" firstAttribute="bottom" secondItem="f2B-yT-N90" secondAttribute="bottom" id="D49-t0-2VA"/>
+                            <constraint firstItem="EID-vK-Cx7" firstAttribute="trailing" secondItem="f2B-yT-N90" secondAttribute="trailing" id="EU4-hV-H6K"/>
+                            <constraint firstItem="yzb-za-oR0" firstAttribute="top" secondItem="EID-vK-Cx7" secondAttribute="bottom" id="WHA-8k-p0C"/>
+                            <constraint firstItem="yzb-za-oR0" firstAttribute="trailing" secondItem="f2B-yT-N90" secondAttribute="trailing" id="d8P-zQ-7oH"/>
+                            <constraint firstItem="EID-vK-Cx7" firstAttribute="leading" secondItem="f2B-yT-N90" secondAttribute="leading" id="fQR-9q-WB1"/>
+                            <constraint firstItem="EID-vK-Cx7" firstAttribute="top" secondItem="f2B-yT-N90" secondAttribute="top" id="mNT-cc-NzJ"/>
+                            <constraint firstItem="yzb-za-oR0" firstAttribute="leading" secondItem="f2B-yT-N90" secondAttribute="leading" id="pGw-Xx-rFw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f2B-yT-N90"/>
                     </view>
                     <connections>
+                        <outlet property="dismissButton" destination="jRl-C9-6Ea" id="XCk-mj-syP"/>
                         <outlet property="webView" destination="BtV-7P-4yl" id="Sah-1N-tQK"/>
                     </connections>
                 </viewController>
@@ -42,4 +78,7 @@
             <point key="canvasLocation" x="-23.188405797101453" y="92.410714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Action-Close" width="13" height="13"/>
+    </resources>
 </document>

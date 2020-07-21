@@ -11,6 +11,8 @@ import UIKit
 class BlogViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @objc var uniParam : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

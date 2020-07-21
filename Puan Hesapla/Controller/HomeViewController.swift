@@ -19,9 +19,6 @@ class HomeViewController: UIViewController {
     
     var universities : [University] = []
     var articles : [Blog] = []
-    let estimatedWidth = 160.0
-    let cellMarginSize = 16.0
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,50 +27,51 @@ class HomeViewController: UIViewController {
         initUniversities()
         initArticles()
     }
+
     func initUniversities(){
         let session = URLSession.shared
-        let url = URL(string: "https://furkanerkorkmaz.com/stajyer/university.json")!
+        let url = URL(string: K.API.url + K.API.uni + K.API.ext)!
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
             if error != nil {
                 print(error!.localizedDescription)
             }
             do {
                 guard let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:Any] else { return }
-                let result = json["results"] as! [[String:Any]]
+                let result = json[K.API.response] as! [[String:Any]]
                 for idx in 0...result.count - 1 {
                     let uni = University(result, idx)
                     self.universities.insert(uni, at: idx)
                 }
             }
             catch let error{
-                print("Json Parse Error : \(error)")
+                print(K.Error.API.parse + error.localizedDescription)
             }
         })
         task.resume()
     }
     func initArticles(){
         let session = URLSession.shared
-        let url = URL(string: "https://furkanerkorkmaz.com/stajyer/blog.json")!
+         let url = URL(string: K.API.url + K.API.blog + K.API.ext)!
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
             if error != nil {
                 print(error!.localizedDescription)
             }
             do {
                 guard let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:Any] else { return }
-                let result = json["results"] as! [[String:Any]]
+                let result = json[K.API.response] as! [[String:Any]]
                 for idx in 0...7 {
                     let article = Blog(result, idx)
                     self.articles.insert(article, at: idx)
                 }
             } catch let error{
-                print("Json Parse Error : \(error)")
+                print(K.Error.API.parse + error.localizedDescription)
             }
         })
         task.resume()
     }
     @objc func playVideo(){
-        guard let path = Bundle.main.path(forResource: "univerlist", ofType:"mp4") else {
-            debugPrint("univerlist.mp4 not found")
+        guard let path = Bundle.main.path(forResource: K.Resources.video, ofType:K.Resources.videoExt) else {
+            debugPrint("Video is \(K.Error.Resources.notFound)")
             return
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
@@ -84,15 +82,16 @@ class HomeViewController: UIViewController {
         }
     }
     @objc func allUniversities(){
-        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
-        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
-        webVC.url = "https://univerlist.com/tr/universiteler/"
+        let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
+        let webVC = storyboard.instantiateViewController(withIdentifier: K.VC.web) as! WebViewController
+        webVC.url = K.URL.universities
         self.present(webVC, animated: true)
+        
     }
     @objc func allArticles(){
-        let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
-        let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
-        webVC.url = "https://univerlist.com/tr/blog/"
+        let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
+        let webVC = storyboard.instantiateViewController(withIdentifier: K.VC.web) as! WebViewController
+        webVC.url = K.URL.blog
         self.present(webVC, animated: true)
     }
     @objc func detailedUniversity(_ sender : UITapGestureRecognizer){
@@ -100,9 +99,9 @@ class HomeViewController: UIViewController {
         let indexPath = self.cvUni?.indexPathForItem(at: location)
 
         if let index = indexPath {
-            let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
-            let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
-            webVC.url = "https://univerlist.com/tr/\(self.universities[index.row].slug)/"
+            let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
+            let webVC = storyboard.instantiateViewController(identifier: K.VC.web) as! WebViewController
+            webVC.url = K.URL.main + self.universities[index.row].slug
             self.present(webVC, animated: true)
         }
     }
@@ -111,11 +110,14 @@ class HomeViewController: UIViewController {
         let indexPath = self.cvBlog?.indexPathForItem(at: location)
 
         if let index = indexPath {
-            let storyboard = UIStoryboard(name: "WebViewStoryboard", bundle: .main)
-            let webVC = storyboard.instantiateViewController(identifier: "WebViewVC") as! WebViewController
-            webVC.url = "https://univerlist.com/tr/blog/\(self.articles[index.row].slug)/"
+            let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
+            let webVC = storyboard.instantiateViewController(identifier: K.VC.web) as! WebViewController
+            webVC.url = K.URL.blog + self.articles[index.row].slug
             self.present(webVC, animated: true)
         }
+    }
+    @objc func segueToCalculator(){
+        
     }
 }
 
@@ -129,6 +131,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = Bundle.main.loadNibNamed("BannerTableViewCell", owner: self, options: nil)?.first as! BannerTableViewCell
             cell.playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
+            cell.calculateButton.addTarget(self, action: #selector(segueToCalculator), for: .touchUpInside)
             return cell
         }else if indexPath.section == 1 {
             let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
@@ -166,7 +169,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 80.0
         case 2:
-            return 180.0
+            return 230.0
         case 3:
             return 80.0
         case 4:
@@ -229,14 +232,16 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.cvUni{
             let width = calculateWidth()
-            return CGSize(width: width, height: 160.0)
+            return CGSize(width: width, height: 230.0)
         }else{
             let width = calculateWidth()
             return CGSize(width: width, height: 200.0)
         }
     }
     func calculateWidth() -> CGFloat{
-        let estimatedWidth = CGFloat(self.estimatedWidth)
+        //let estimatedWidth = 160.0
+        let cellMarginSize = 16.0
+        let estimatedWidth = CGFloat(160.0)
         let cellCount = floor(CGFloat(self.view.frame.size.width / estimatedWidth))
         let margin = CGFloat(cellMarginSize * 2)
         let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount

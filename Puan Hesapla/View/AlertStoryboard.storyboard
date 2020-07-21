@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJI-Vw-1dd">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJI-Vw-1dd">
                                 <rect key="frame" x="69.5" y="355.5" width="275" height="185.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-2p-YbN">
@@ -74,6 +74,11 @@
                                     <constraint firstItem="qmh-sc-71f" firstAttribute="top" secondItem="MTY-2p-YbN" secondAttribute="bottom" constant="24" id="fz9-TK-vGJ"/>
                                     <constraint firstItem="Ckn-pu-ob5" firstAttribute="top" secondItem="qmh-sc-71f" secondAttribute="bottom" constant="24" id="tqH-NR-Y3m"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
