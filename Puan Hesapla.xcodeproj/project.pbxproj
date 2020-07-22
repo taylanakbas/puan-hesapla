@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB0A913843D506CDDB1F1FA2 /* Pods_Puan_Hesapla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13386EE72294FFA43A44C32E /* Pods_Puan_Hesapla.framework */; };
 		F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503711C24A0DF12008B153E /* HomeViewController.swift */; };
+		F503B46C24C8778B00ECCBD6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503B46B24C8778B00ECCBD6 /* LoginViewController.swift */; };
 		F509488E24B5C1030085B7E9 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509488D24B5C1030085B7E9 /* BlogViewController.swift */; };
 		F509489224B5C3640085B7E9 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509489024B5C3640085B7E9 /* BlogTableViewCell.swift */; };
 		F509489324B5C3640085B7E9 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F509489124B5C3640085B7E9 /* BlogTableViewCell.xib */; };
@@ -26,6 +27,9 @@
 		F54F4E4724A48FCA008204E9 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */; };
 		F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */; };
 		F55D68E324C583AB00EEF9FC /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D68E224C583AB00EEF9FC /* DeepLinkManager.swift */; };
+		F55D68E524C6E56B00EEF9FC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55D68E424C6E56B00EEF9FC /* WebKit.framework */; };
+		F55D68E724C6F21100EEF9FC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D68E624C6F21100EEF9FC /* OnboardingViewController.swift */; };
+		F55D68E924C7A74F00EEF9FC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D68E824C7A74F00EEF9FC /* RegisterViewController.swift */; };
 		F560A11224BC4F3700AEECBE /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560A11024BC4F3700AEECBE /* BannerTableViewCell.swift */; };
 		F560A11324BC4F3700AEECBE /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F560A11124BC4F3700AEECBE /* BannerTableViewCell.xib */; };
 		F560A11624BC686A00AEECBE /* univerlist.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F560A11524BC685600AEECBE /* univerlist.mp4 */; };
@@ -74,6 +78,7 @@
 		ABD351F8D709FEA781DC0B69 /* Pods-Puan Hesapla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puan Hesapla.debug.xcconfig"; path = "Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla.debug.xcconfig"; sourceTree = "<group>"; };
 		E8841163FAE5D070B6293BFC /* Pods-Puan Hesapla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puan Hesapla.release.xcconfig"; path = "Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla.release.xcconfig"; sourceTree = "<group>"; };
 		F503711C24A0DF12008B153E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F503B46B24C8778B00ECCBD6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F509488D24B5C1030085B7E9 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		F509489024B5C3640085B7E9 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		F509489124B5C3640085B7E9 /* BlogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
@@ -91,6 +96,9 @@
 		F54F4E4524A48FCA008204E9 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		F54F4E4624A48FCA008204E9 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		F55D68E224C583AB00EEF9FC /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
+		F55D68E424C6E56B00EEF9FC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F55D68E624C6F21100EEF9FC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F55D68E824C7A74F00EEF9FC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F560A11024BC4F3700AEECBE /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		F560A11124BC4F3700AEECBE /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
 		F560A11524BC685600AEECBE /* univerlist.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = univerlist.mp4; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55D68E524C6E56B00EEF9FC /* WebKit.framework in Frameworks */,
 				CB0A913843D506CDDB1F1FA2 /* Pods_Puan_Hesapla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +169,7 @@
 		A9D5015B62D60361A3DCB51F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F55D68E424C6E56B00EEF9FC /* WebKit.framework */,
 				13386EE72294FFA43A44C32E /* Pods_Puan_Hesapla.framework */,
 			);
 			name = Frameworks;
@@ -196,6 +206,9 @@
 				F56FEE1524B278640046D5D0 /* WebViewController.swift */,
 				F509488D24B5C1030085B7E9 /* BlogViewController.swift */,
 				F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */,
+				F55D68E624C6F21100EEF9FC /* OnboardingViewController.swift */,
+				F55D68E824C7A74F00EEF9FC /* RegisterViewController.swift */,
+				F503B46B24C8778B00ECCBD6 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,10 +253,10 @@
 		F5C5789524ABD9CE00575C70 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F5C5788524AA0F0600575C70 /* Calculator.swift */,
 				F5C5789124ABB6CA00575C70 /* AlertManager.swift */,
-				F5C5788B24AA133200575C70 /* Parser.swift */,
 				F55D68E224C583AB00EEF9FC /* DeepLinkManager.swift */,
+				F5C5788B24AA133200575C70 /* Parser.swift */,
+				F5C5788524AA0F0600575C70 /* Calculator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -508,11 +521,14 @@
 				F5E67DFB24B5D31400D704AC /* BlogDetailViewController.swift in Sources */,
 				F5D382F9249CC91B0090A6F5 /* SceneDelegate.swift in Sources */,
 				F5C5788C24AA133200575C70 /* Parser.swift in Sources */,
+				F503B46C24C8778B00ECCBD6 /* LoginViewController.swift in Sources */,
 				F55D68E324C583AB00EEF9FC /* DeepLinkManager.swift in Sources */,
 				F509489624B5CEF10085B7E9 /* FirstTableViewCell.swift in Sources */,
+				F55D68E724C6F21100EEF9FC /* OnboardingViewController.swift in Sources */,
 				F5C5788324A9FD2400575C70 /* ResultTYTTableViewCell.swift in Sources */,
 				F503711D24A0DF12008B153E /* HomeViewController.swift in Sources */,
 				F54F4E3824A22473008204E9 /* UniversityCollectionViewCell.swift in Sources */,
+				F55D68E924C7A74F00EEF9FC /* RegisterViewController.swift in Sources */,
 				F54F4E4024A2DB57008204E9 /* ArticleTableViewCell.swift in Sources */,
 				F509489224B5C3640085B7E9 /* BlogTableViewCell.swift in Sources */,
 				F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */,

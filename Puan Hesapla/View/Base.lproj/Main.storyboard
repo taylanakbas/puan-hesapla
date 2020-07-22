@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="30o-8q-MqZ">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Keşfet-->
         <scene sceneID="DJf-NL-B2I">
@@ -81,10 +88,154 @@
             </objects>
             <point key="canvasLocation" x="205.79710144927537" y="895.98214285714278"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="y0x-Wy-xec">
+            <objects>
+                <viewController id="30o-8q-MqZ" customClass="OnboardingViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gVo-EK-y9n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIj-td-T4w">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGE-tJ-Dqo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="1Hh-7B-zXH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="30o-8q-MqZ" id="frH-tJ-taU"/>
+                                        </connections>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-Dt-gFr">
+                                        <rect key="frame" x="0.0" y="300" width="414" height="518"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vUV-Gb-tdB">
+                                                <rect key="frame" x="32" y="32" width="350" height="176"/>
+                                                <subviews>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="qEn-q3-Es5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="9fX-1r-dQh"/>
+                                                            <constraint firstAttribute="width" constant="350" id="Abe-R7-kt9"/>
+                                                        </constraints>
+                                                        <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="currentPageIndicatorTintColor" red="0.23279461260000001" green="0.05346218497" blue="0.80741202830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="pageChanged:" destination="30o-8q-MqZ" eventType="valueChanged" id="aki-CZ-4LS"/>
+                                                        </connections>
+                                                    </pageControl>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhu-IC-CUk">
+                                                        <rect key="frame" x="0.0" y="63" width="350" height="50"/>
+                                                        <color key="backgroundColor" red="0.23279461260000001" green="0.05346218497" blue="0.80741202830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Eqa-7Y-cuk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Hemen Başla"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="ewx-KN-xxx" kind="show" id="lIW-sC-5sE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j7-Zc-f2j">
+                                                        <rect key="frame" x="0.0" y="126" width="350" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="1bq-i1-C26"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Hesabın var mı? Giriş yap"/>
+                                                        <connections>
+                                                            <segue destination="sNX-ZD-p3H" kind="show" id="Og2-ad-B61"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vUV-Gb-tdB" firstAttribute="leading" secondItem="1y0-Dt-gFr" secondAttribute="leading" constant="32" id="FP4-yf-MFZ"/>
+                                            <constraint firstItem="vUV-Gb-tdB" firstAttribute="top" secondItem="1y0-Dt-gFr" secondAttribute="top" constant="32" id="MDf-1S-iaw"/>
+                                            <constraint firstAttribute="trailing" secondItem="vUV-Gb-tdB" secondAttribute="trailing" constant="32" id="aUD-2k-egD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="1y0-Dt-gFr" firstAttribute="leading" secondItem="GIj-td-T4w" secondAttribute="leading" id="0fB-cq-6JO"/>
+                                    <constraint firstItem="1y0-Dt-gFr" firstAttribute="top" secondItem="sGE-tJ-Dqo" secondAttribute="bottom" id="CkR-Gb-MPk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1y0-Dt-gFr" secondAttribute="trailing" id="dM4-8S-XsF"/>
+                                    <constraint firstItem="sGE-tJ-Dqo" firstAttribute="top" secondItem="GIj-td-T4w" secondAttribute="top" id="isp-Ig-URb"/>
+                                    <constraint firstAttribute="bottom" secondItem="1y0-Dt-gFr" secondAttribute="bottom" id="jP5-cc-odi"/>
+                                    <constraint firstItem="sGE-tJ-Dqo" firstAttribute="leading" secondItem="GIj-td-T4w" secondAttribute="leading" id="rdL-CD-sNU"/>
+                                    <constraint firstAttribute="trailing" secondItem="sGE-tJ-Dqo" secondAttribute="trailing" id="tF7-Iy-Qyb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GIj-td-T4w" firstAttribute="leading" secondItem="VG7-OI-yXK" secondAttribute="leading" id="Hva-JR-wHX"/>
+                            <constraint firstItem="GIj-td-T4w" firstAttribute="top" secondItem="VG7-OI-yXK" secondAttribute="top" id="RpX-Hm-Hig"/>
+                            <constraint firstItem="GIj-td-T4w" firstAttribute="bottom" secondItem="VG7-OI-yXK" secondAttribute="bottom" id="YNR-HE-fmO"/>
+                            <constraint firstItem="GIj-td-T4w" firstAttribute="trailing" secondItem="VG7-OI-yXK" secondAttribute="trailing" id="ghO-0F-be0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VG7-OI-yXK"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="zhu-IC-CUk" id="sSe-35-fZx"/>
+                        <outlet property="pageControl" destination="qEn-q3-Es5" id="qw8-r0-Ukl"/>
+                        <outlet property="registerButton" destination="7j7-Zc-f2j" id="HUf-TO-a2p"/>
+                        <outlet property="scrollView" destination="sGE-tJ-Dqo" id="ZTv-KU-1E9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s79-R1-oIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1725" y="80"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="mDQ-Ru-sMN">
+            <objects>
+                <viewController id="sNX-ZD-p3H" customClass="LoginViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIz-zH-oeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="N6Q-r6-dKy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aiq-ZL-kKA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMG-Pw-jVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733" y="82"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="BOj-5p-pbh">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="ewx-KN-xxx" customClass="RegisterViewController" customModule="Puan_Hesapla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3v-wX-EcU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2FD-Dn-0g3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SaF-27-CzT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Usr-2s-Mg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752.17391304347836" y="-594.64285714285711"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uzk-gI-IU3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

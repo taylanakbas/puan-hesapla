@@ -129,33 +129,33 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell = Bundle.main.loadNibNamed("BannerTableViewCell", owner: self, options: nil)?.first as! BannerTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.banner, owner: self, options: nil)?.first as! BannerTableViewCell
             cell.playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
             cell.calculateButton.addTarget(self, action: #selector(segueToCalculator), for: .touchUpInside)
             return cell
         }else if indexPath.section == 1 {
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.titleLabel.text = "Popüler Üniversiteler"
             cell.seeAllButton.addTarget(self, action: #selector(allUniversities), for: .touchUpInside)
             return cell
         }else if indexPath.section == 2 {
-            let cell = Bundle.main.loadNibNamed("UniversityTableViewCell", owner: self, options: nil)?.first as! UniversityTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.university, owner: self, options: nil)?.first as! UniversityTableViewCell
             self.cvUni = cell.collectionView
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
-            cell.collectionView.register(UINib(nibName: "UniversityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UniversityCollectionViewCell")
+            cell.collectionView.register(UINib(nibName: K.XIB.Collection.university, bundle: nil), forCellWithReuseIdentifier: K.XIB.Collection.university)
             return cell
         }else if indexPath.section == 3 {
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.titleLabel.text = "Yazılar"
             cell.seeAllButton.addTarget(self, action: #selector(allArticles), for: .touchUpInside)
             return cell
         }else {
-            let cell = Bundle.main.loadNibNamed("ArticleTableViewCell", owner: self, options: nil)?.first as! ArticleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.article, owner: self, options: nil)?.first as! ArticleTableViewCell
             self.cvBlog = cell.collectionView
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
-            cell.collectionView.register(UINib(nibName: "ArticleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCollectionViewCell")
+            cell.collectionView.register(UINib(nibName: K.XIB.Collection.article, bundle: nil), forCellWithReuseIdentifier: K.XIB.Collection.article)
             return cell
         }
     }
@@ -165,15 +165,15 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 240.0
+            return K.XIB.Table.bannerHeight
         case 1:
-            return 80.0
+            return K.XIB.Table.titleHeight
         case 2:
-            return 230.0
+            return K.XIB.Table.universityHeight
         case 3:
-            return 80.0
+            return K.XIB.Table.titleHeight
         case 4:
-            return 830.0
+            return K.XIB.Table.articleHeight
         default:
             return 0.0
         }
@@ -193,8 +193,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if collectionView == self.cvUni {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversityCollectionViewCell", for: indexPath) as? UniversityCollectionViewCell else {
-                fatalError("Cell not exists in storyboard")
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.XIB.Collection.university, for: indexPath) as? UniversityCollectionViewCell else {
+                fatalError(K.Error.XIB.notExists)
             }
             
             cell.nameLabel.text = self.universities[indexPath.row].name
@@ -213,8 +213,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(detailedUniversity(_:))))
             return cell
         }else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as? ArticleCollectionViewCell else {
-                fatalError("Cell not exists in storyboard")
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.XIB.Collection.article, for: indexPath) as? ArticleCollectionViewCell else {
+                fatalError(K.Error.XIB.notExists)
             }
             let webPCoder = SDImageWebPCoder.shared
             SDImageCodersManager.shared.addCoder(webPCoder)
@@ -232,7 +232,7 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.cvUni{
             let width = calculateWidth()
-            return CGSize(width: width, height: 230.0)
+            return CGSize(width: width, height: K.XIB.Collection.universityHeight)
         }else{
             let width = calculateWidth()
             return CGSize(width: width, height: 200.0)

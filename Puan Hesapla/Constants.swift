@@ -7,18 +7,27 @@
 //
 
 import Foundation
+import UIKit
 
 struct K {
     struct XIB {
         struct Table {
             static let title = "TitleTableViewCell"
-            static let titleHeight = 240.0
+            static let titleHeight : CGFloat = 80.0
             static let banner = "BannerTableViewCell"
-            static let bannerHeight = 80.0
+            static let bannerHeight : CGFloat  = 240.0
             static let university = "UniversityTableViewCell"
-            static let universityHeight = 230.0
+            static let universityHeight : CGFloat  = 230.0
             static let article = "ArticleTableViewCell"
-            static let articleHeight = 80
+            static let articleHeight : CGFloat = 830.0
+        }
+        struct Collection {
+            static let estimatedWidth : CGFloat  = 160.0
+            static let cellMarginSize : CGFloat  = 16.0
+            static let university = "UniversityCollectionViewCell"
+            static let universityHeight : CGFloat  = 230.0
+            static let article = "ArticleCollectionViewCell"
+            static let articleHeight : CGFloat  = 200.0
         }
 
     }
@@ -64,7 +73,9 @@ struct K {
         }
         struct Resources {
             static let notFound = " not found!"
-                
+        }
+        struct XIB {
+            static let notExists = "XIB not exists in storyboard0"
         }
         struct Calc {
             static let tyt : [Int : String] = [

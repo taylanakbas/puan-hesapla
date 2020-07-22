@@ -14,22 +14,26 @@ PODS:
   - SDWebImageWebPCoder (0.6.1):
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.7)
+  - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
   - SDWebImage
   - SDWebImageWebPCoder
+  - SkyFloatingLabelTextField
 
 SPEC REPOS:
   trunk:
     - libwebp
     - SDWebImage
     - SDWebImageWebPCoder
+    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: c83a07ebbb67280b91b8afd70b97d3fdfc69d58c
+PODFILE CHECKSUM: 88230476136e0e39e5848e545fefb15dbb97f315
 
 COCOAPODS: 1.8.4

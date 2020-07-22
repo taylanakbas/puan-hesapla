@@ -10,5 +10,6 @@ target 'Puan Hesapla' do
   #pod 'Firebase/Messaging'
   pod 'SDWebImage'
   pod 'SDWebImageWebPCoder'
+  pod 'SkyFloatingLabelTextField'
 
 end

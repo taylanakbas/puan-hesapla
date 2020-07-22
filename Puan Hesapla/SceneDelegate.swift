@@ -23,8 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        
-        
         if let url = URLContexts.first?.url {
             window?.rootViewController = DeepLinkManager().execute(with: url).vc
             window?.rootViewController!.present(DeepLinkManager().execute(with: url).web, animated: true)

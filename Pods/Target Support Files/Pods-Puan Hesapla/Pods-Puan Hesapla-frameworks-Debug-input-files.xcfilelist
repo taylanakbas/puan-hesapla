@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Puan Hesapla/Pods-Puan Hesapla-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework
+${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework
 ${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework
