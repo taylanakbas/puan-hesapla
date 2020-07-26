@@ -162,25 +162,19 @@
                         <rect key="frame" x="82" y="0.0" width="278" height="265"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-ek-LbJ">
-                                <rect key="frame" x="12" y="12" width="258" height="247"/>
+                                <rect key="frame" x="11" y="12" width="259" height="264.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Ry-Tnp">
-                                        <rect key="frame" x="0.0" y="0.0" width="258" height="34.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Ry-Tnp">
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="34.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Türkçe" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-Lf-kVE">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="34.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="YEi-7z-SNN"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuB-h7-fJE">
-                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="34.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="S5l-LH-rad"/>
-                                                </constraints>
+                                                <rect key="frame" x="70.5" y="0.0" width="47.5" height="34.5"/>
                                                 <string key="text">Temel 
 Mat</string>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
@@ -188,19 +182,13 @@ Mat</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sosyal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSt-Jc-gyE">
-                                                <rect key="frame" x="137" y="0.0" width="52.5" height="34.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="0tO-hg-ddt"/>
-                                                </constraints>
+                                                <rect key="frame" x="141" y="0.0" width="47.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fen" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-iq-PTI">
-                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="34.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="zvI-le-gl6"/>
-                                                </constraints>
+                                                <rect key="frame" x="211.5" y="0.0" width="47.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -208,22 +196,25 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-3x-7bD">
-                                        <rect key="frame" x="0.0" y="64" width="258" height="45"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="258" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-y0-Vpa" userLabel="TextFieldView">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="40" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pon-7m-rVv">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="40" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pon-7m-rVv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="UMk-IB-q4A"/>
-                                                    <constraint firstAttribute="height" constant="45" id="YbD-68-e90"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pon-7m-rVv" secondAttribute="bottom" id="3PN-aW-cMm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pon-7m-rVv" secondAttribute="trailing" id="4B5-m2-cYp"/>
+                                                    <constraint firstItem="pon-7m-rVv" firstAttribute="leading" secondItem="dSr-y0-Vpa" secondAttribute="leading" id="Dce-f4-8ht"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="Eoj-0s-072"/>
+                                                    <constraint firstAttribute="height" constant="50" id="J9H-0K-JiF"/>
+                                                    <constraint firstItem="pon-7m-rVv" firstAttribute="top" secondItem="dSr-y0-Vpa" secondAttribute="top" id="zxa-ag-rdF"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -232,19 +223,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-b7-Pg0" userLabel="TextFieldView">
-                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="40" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-pI-9ik">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="40" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-pI-9ik">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="TzH-vG-dTe"/>
-                                                    <constraint firstAttribute="height" constant="45" id="Zd5-VD-djE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Wm0-pI-9ik" secondAttribute="bottom" id="5GV-Ae-PBW"/>
+                                                    <constraint firstAttribute="height" constant="50" id="C8N-26-IjD"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="CM4-r0-oIB"/>
+                                                    <constraint firstItem="Wm0-pI-9ik" firstAttribute="leading" secondItem="LsS-b7-Pg0" secondAttribute="leading" id="Gh8-RS-Hue"/>
+                                                    <constraint firstItem="Wm0-pI-9ik" firstAttribute="top" secondItem="LsS-b7-Pg0" secondAttribute="top" id="Pvu-aC-9Uj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Wm0-pI-9ik" secondAttribute="trailing" id="xjh-Pg-IOf"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -253,19 +247,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHw-Vq-2Vy" userLabel="TextFieldView">
-                                                <rect key="frame" x="137" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="137" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2T-8F-c0N">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2T-8F-c0N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="MRL-O4-jxx"/>
-                                                    <constraint firstAttribute="height" constant="45" id="gwb-14-Qpb"/>
+                                                    <constraint firstItem="k2T-8F-c0N" firstAttribute="top" secondItem="tHw-Vq-2Vy" secondAttribute="top" id="4jq-Yw-7x9"/>
+                                                    <constraint firstItem="k2T-8F-c0N" firstAttribute="leading" secondItem="tHw-Vq-2Vy" secondAttribute="leading" id="7XR-BS-vJJ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Eia-8e-giR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="k2T-8F-c0N" secondAttribute="bottom" id="Xpu-OY-iT2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="k2T-8F-c0N" secondAttribute="trailing" id="gI3-5R-K8C"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="wfD-Hn-OCV"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -274,19 +271,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E8-0z-odo" userLabel="TextFieldView">
-                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MIu-Q0-bVv">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MIu-Q0-bVv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="Z2m-vu-1eh"/>
-                                                    <constraint firstAttribute="height" constant="45" id="uVa-gC-pKS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MIu-Q0-bVv" secondAttribute="bottom" id="Rwb-GC-u36"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="VNW-Iw-wfA"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Z1o-7H-3S2"/>
+                                                    <constraint firstItem="MIu-Q0-bVv" firstAttribute="top" secondItem="0E8-0z-odo" secondAttribute="top" id="aNu-ib-nyc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MIu-Q0-bVv" secondAttribute="trailing" id="uXf-WH-6BG"/>
+                                                    <constraint firstItem="MIu-Q0-bVv" firstAttribute="leading" secondItem="0E8-0z-odo" secondAttribute="leading" id="ygk-dY-mc1"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -297,22 +297,25 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-2c-sB3">
-                                        <rect key="frame" x="0.0" y="133" width="258" height="45"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="258" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69K-AF-6UZ" userLabel="TextFieldView">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-jZ-lBo">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-jZ-lBo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="Gt8-MX-HOq"/>
-                                                    <constraint firstAttribute="height" constant="45" id="e0I-Hi-dGK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="k3c-jZ-lBo" secondAttribute="bottom" id="1Oe-HF-3th"/>
+                                                    <constraint firstAttribute="height" constant="50" id="6MG-Fp-kcO"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="7gu-XN-vv9"/>
+                                                    <constraint firstItem="k3c-jZ-lBo" firstAttribute="leading" secondItem="69K-AF-6UZ" secondAttribute="leading" id="dtG-bz-J4Q"/>
+                                                    <constraint firstItem="k3c-jZ-lBo" firstAttribute="top" secondItem="69K-AF-6UZ" secondAttribute="top" id="vDl-yU-7CC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="k3c-jZ-lBo" secondAttribute="trailing" id="yWB-PR-Lu8"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -321,19 +324,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8To-ZV-EaP" userLabel="TextFieldView">
-                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-aM-0ks">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-aM-0ks">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="A0W-My-PhZ"/>
-                                                    <constraint firstAttribute="height" constant="45" id="a53-GZ-9bk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="B3A-aM-0ks" secondAttribute="bottom" id="HBP-VI-mMR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="B3A-aM-0ks" secondAttribute="trailing" id="LjD-Ed-RUA"/>
+                                                    <constraint firstAttribute="height" constant="50" id="PO4-FF-JyT"/>
+                                                    <constraint firstItem="B3A-aM-0ks" firstAttribute="top" secondItem="8To-ZV-EaP" secondAttribute="top" id="QIj-hM-quo"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="mE0-mK-OGT"/>
+                                                    <constraint firstItem="B3A-aM-0ks" firstAttribute="leading" secondItem="8To-ZV-EaP" secondAttribute="leading" id="oZA-51-t1w"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -342,19 +348,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYN-YW-WWX" userLabel="TextFieldView">
-                                                <rect key="frame" x="137" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="137" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-8v-iaq">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-8v-iaq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="IpD-zX-5cd"/>
-                                                    <constraint firstAttribute="height" constant="45" id="rDF-5w-TSL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="1k4-Kb-J9n"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="2fe-vV-qHl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7pe-8v-iaq" secondAttribute="trailing" id="3Hr-5G-7Vm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7pe-8v-iaq" secondAttribute="bottom" id="5oA-Ge-D0G"/>
+                                                    <constraint firstItem="7pe-8v-iaq" firstAttribute="leading" secondItem="wYN-YW-WWX" secondAttribute="leading" id="MCs-kB-wty"/>
+                                                    <constraint firstItem="7pe-8v-iaq" firstAttribute="top" secondItem="wYN-YW-WWX" secondAttribute="top" id="s2M-Dj-T9M"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -363,19 +372,22 @@ Mat</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-gQ-Jdr" userLabel="TextFieldView">
-                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f81-cI-CbD">
-                                                        <rect key="frame" x="8" y="8" width="39" height="26"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f81-cI-CbD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="Oq7-4n-rvc"/>
-                                                    <constraint firstAttribute="height" constant="45" id="wbu-wN-7S7"/>
+                                                    <constraint firstItem="f81-cI-CbD" firstAttribute="top" secondItem="iOg-gQ-Jdr" secondAttribute="top" id="0v7-y7-nKV"/>
+                                                    <constraint firstItem="f81-cI-CbD" firstAttribute="leading" secondItem="iOg-gQ-Jdr" secondAttribute="leading" id="CsA-es-Xm4"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Dbj-Q8-Xca"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="FrF-lA-Gem"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f81-cI-CbD" secondAttribute="bottom" id="drS-kQ-jte"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f81-cI-CbD" secondAttribute="trailing" id="wb5-5n-AvZ"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -386,25 +398,25 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-Aq-Kiq">
-                                        <rect key="frame" x="0.0" y="202" width="52.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="214.5" width="52.5" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNh-sI-sEq" userLabel="TextFieldView">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-xE-pns">
-                                                        <rect key="frame" x="8" y="8" width="36.5" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95699530840000002" green="0.94898051019999996" blue="0.94902318720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52.5" id="7Vl-7c-ILd"/>
-                                                    <constraint firstItem="fwk-xE-pns" firstAttribute="leading" secondItem="UNh-sI-sEq" secondAttribute="leading" constant="8" id="8Ib-YM-Ok2"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fwk-xE-pns" secondAttribute="trailing" constant="8" id="Sus-KJ-8fD"/>
-                                                    <constraint firstAttribute="bottom" secondItem="fwk-xE-pns" secondAttribute="bottom" constant="8" id="WDl-lL-uOD"/>
-                                                    <constraint firstItem="fwk-xE-pns" firstAttribute="top" secondItem="UNh-sI-sEq" secondAttribute="top" constant="8" id="p63-8S-kRg"/>
-                                                    <constraint firstAttribute="height" constant="45" id="u7D-vf-Rls"/>
+                                                    <constraint firstItem="fwk-xE-pns" firstAttribute="top" secondItem="UNh-sI-sEq" secondAttribute="top" id="Ayv-Yo-xp8"/>
+                                                    <constraint firstAttribute="width" constant="52.5" id="EaF-v5-hXn"/>
+                                                    <constraint firstAttribute="height" constant="50" id="GDY-ko-onf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fwk-xE-pns" secondAttribute="trailing" id="PvK-Uf-FIy"/>
+                                                    <constraint firstItem="fwk-xE-pns" firstAttribute="leading" secondItem="UNh-sI-sEq" secondAttribute="leading" id="Qha-5y-9dR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fwk-xE-pns" secondAttribute="bottom" id="TM0-wW-LI5"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

@@ -24,36 +24,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="386" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazılar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H58-8D-f2W">
-                        <rect key="frame" x="16" y="24" width="246" height="32"/>
-                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hno-nC-adu">
-                        <rect key="frame" x="270" y="24" width="100" height="32"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7d1-gP-HC3">
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yazılar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H58-8D-f2W">
+                                <rect key="frame" x="8" y="0.0" width="258" height="80"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hno-nC-adu">
+                                <rect key="frame" x="266" y="0.0" width="120" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="mR7-Ta-99e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                <state key="normal" title="Tümünü Gör"/>
+                            </button>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="K68-3Q-Alu"/>
+                            <constraint firstAttribute="trailing" secondItem="Hno-nC-adu" secondAttribute="trailing" id="Maw-ac-5Qa"/>
+                            <constraint firstItem="H58-8D-f2W" firstAttribute="top" secondItem="7d1-gP-HC3" secondAttribute="top" id="aLh-Ln-zKU"/>
+                            <constraint firstItem="Hno-nC-adu" firstAttribute="leading" secondItem="H58-8D-f2W" secondAttribute="trailing" id="dUE-tB-jmp"/>
+                            <constraint firstAttribute="bottom" secondItem="Hno-nC-adu" secondAttribute="bottom" id="e4k-Zc-0GE"/>
+                            <constraint firstAttribute="bottom" secondItem="H58-8D-f2W" secondAttribute="bottom" id="iVc-oA-lqL"/>
+                            <constraint firstItem="H58-8D-f2W" firstAttribute="leading" secondItem="7d1-gP-HC3" secondAttribute="leading" constant="8" id="lwp-Qc-HW1"/>
+                            <constraint firstItem="Hno-nC-adu" firstAttribute="top" secondItem="7d1-gP-HC3" secondAttribute="top" id="wzs-Qn-1Fe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
-                        <state key="normal" title="Tümünü Gör"/>
-                    </button>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Hno-nC-adu" secondAttribute="bottom" constant="24" id="1u6-q4-GeI"/>
-                    <constraint firstItem="Hno-nC-adu" firstAttribute="leading" secondItem="H58-8D-f2W" secondAttribute="trailing" constant="8" id="7tx-lo-7nm"/>
-                    <constraint firstItem="Hno-nC-adu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="FSO-sJ-FPv"/>
-                    <constraint firstAttribute="bottom" secondItem="H58-8D-f2W" secondAttribute="bottom" constant="24" id="JgW-iJ-Edv"/>
-                    <constraint firstAttribute="trailing" secondItem="Hno-nC-adu" secondAttribute="trailing" constant="16" id="M2x-Yd-q5f"/>
-                    <constraint firstItem="H58-8D-f2W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="MpD-Eh-tRt"/>
-                    <constraint firstItem="Hno-nC-adu" firstAttribute="leading" secondItem="H58-8D-f2W" secondAttribute="trailing" constant="8" id="h2z-fz-wfE"/>
-                    <constraint firstItem="H58-8D-f2W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zJC-l5-Hno"/>
+                    <constraint firstItem="7d1-gP-HC3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Aei-dK-6kk"/>
+                    <constraint firstAttribute="bottom" secondItem="7d1-gP-HC3" secondAttribute="bottom" id="aXw-Pu-ixz"/>
+                    <constraint firstAttribute="trailing" secondItem="7d1-gP-HC3" secondAttribute="trailing" id="eXw-sT-WF5"/>
+                    <constraint firstItem="7d1-gP-HC3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="y7g-a6-V4v"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="seeAllButton" destination="Hno-nC-adu" id="WaF-7B-f0c"/>
                 <outlet property="titleLabel" destination="H58-8D-f2W" id="omU-lY-a2i"/>
+                <outlet property="view" destination="7d1-gP-HC3" id="aWs-WK-X1h"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="150"/>
         </tableViewCell>

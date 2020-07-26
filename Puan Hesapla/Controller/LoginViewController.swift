@@ -103,9 +103,9 @@ class LoginViewController: UIViewController {
                 
         if let email = mailTextField.text, let psw = pswTextField.text {
                    Auth.auth().signIn(withEmail: email, password: psw) { authResult, error in
-                       if let e = error {
-                        print(e.localizedDescription)
-                            let alertVC = self.alertManager.alert(errorCode: 1, e.localizedDescription )
+                    if error != nil {
+                        self.viewDidDisappear(true)
+                        let alertVC = self.alertManager.alert(errorCode: -1, description: "Email veya şifre" + K.Error.Register.invalidInput)
                             self.present(alertVC, animated: true)
                        }else{
                         let homeVC = UIStoryboard.init(name: K.SB.main, bundle: Bundle.main).instantiateViewController(withIdentifier: K.VC.home) as! HomeViewController

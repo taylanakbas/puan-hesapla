@@ -68,6 +68,13 @@ struct K {
     }
     
     struct Error {
+        
+        struct Register {
+            static let invalidInput = " bilgilerinizi kontrol ediniz!"
+            static let error = "Bir hata oluştu!"
+            static let switchOff = "Devam edebilmek için gizlilik sözleşmemizi kabul etmeniz gerekmektedir."
+        }
+        
                 
         struct API {
             static let parse = "Json Parse Error : "

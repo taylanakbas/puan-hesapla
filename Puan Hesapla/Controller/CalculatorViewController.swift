@@ -81,7 +81,7 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "TYT Puan"
             cell.titleLabel.textColor = .white
-            cell.backgroundColor = UIColor(named: "PurpleColor")
+            cell.view.backgroundColor = UIColor(named: "PurpleColor")
             let rectShape = CAShapeLayer()
             rectShape.bounds = cell.frame
             rectShape.position = cell.center

@@ -9,32 +9,37 @@
 import UIKit
 
 class AlertManager {
-    func alert(errorCode : Int, _ description : String = "") -> AlertViewController {
+    func alert(errorCode : Int, description : String = "") -> AlertViewController {
     
         let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! AlertViewController
-
-        if errorCode <= 10 {
-            let content = CalculatorAlert(body: "\(K.Error.Calc.tyt[errorCode]!) Doğru/Yanlış sonuçlarınızı kontrol ediniz!")
+        
+        
+        if errorCode == -1 {
+            // Others
+            let content = AlertView(body: description)
             alertVC.alertTitle = content.title
             alertVC.alertBody = content.body
             alertVC.buttonTitle = content.buttonTitle
-        }else{
-            let content = CalculatorAlert(body: "\(K.Error.Calc.ayt[errorCode]!) Doğru/Yanlış sonuçlarınızı kontrol ediniz!")
+        }else {
+            // Calculator
+            let content = AlertView(body:
+                "\(errorCode <= 10 ? K.Error.Calc.tyt[errorCode]! : K.Error.Calc.ayt[errorCode]!) Doğru/Yanlış sonuçlarınızı kontrol ediniz!")
             alertVC.alertTitle = content.title
             alertVC.alertBody = content.body
             alertVC.buttonTitle = content.buttonTitle
         }
+
         return alertVC
     }
 }
 
-class CalculatorAlert {
+class AlertView {
     let title : String
     var body : String
     let buttonTitle : String
     internal init(body : String) {
-        self.title = "Uyarı"
+        self.title = "UYARI"
         self.body = body
         self.buttonTitle = "Tamam"
     }

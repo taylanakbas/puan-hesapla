@@ -150,33 +150,51 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func register(){
+        
+        
+        
         if switchOnOff1.isOn {
-             if let email = mailTextField.text, let psw = pswTextField.text {
-                Auth.auth().createUser(withEmail: email, password: psw) { authResult, error in
-                    guard let _ = authResult?.user, error == nil else {
-                        let alertVC = self.alertManager.alert(errorCode: 1, error!.localizedDescription)
-                        self.present(alertVC, animated: true)
-                        return
-                  }
-                    let phone = self.phoneTextField.text ?? ""
-                    self.db.collection("users")
-                        .addDocument(data: [
-                            "email" : email,
-                            "phone" : phone,
-                            "subscription" : self.switchOnOff2.isOn
-                    ]) { (err) in
-                        if let e = err{
-                           print(e)
+            if  mailTextField.text != nil && mailTextField.text != "" {
+                let email = mailTextField.text!
+                if pswTextField.text != nil && pswTextField.text != "" {
+                   let psw = pswTextField.text!
+                    Auth.auth().createUser(withEmail: email, password: psw) { authResult, error in
+                       guard let _ = authResult?.user, error == nil else {
+                        let alertVC = self.alertManager.alert(errorCode: -1, description: K.Error.Register.error)
+                           self.present(alertVC, animated: true)
+                           return
+                     }
+                       let phone = self.phoneTextField.text ?? ""
+                       self.db.collection("users")
+                           .addDocument(data: [
+                               "email" : email,
+                               "phone" : phone,
+                               "subscription" : self.switchOnOff2.isOn
+                       ]){ (err) in
+                        if err != nil{
+                            let alertVC = self.alertManager.alert(errorCode: -1, description: K.Error.Register.error)
+                            self.present(alertVC, animated: true)
                         }
+                       }
+                        let loginVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                        self.present(loginVC,animated: true)
                     }
+                }else {
+                    let alertVC = alertManager.alert(errorCode: -1, description: "Şifre" + K.Error.Register.invalidInput)
+                    self.present(alertVC, animated: true)
                 }
+            }else {
+                let alertVC = alertManager.alert(errorCode: -1, description: "E-mail" + K.Error.Register.invalidInput)
+                self.present(alertVC, animated: true)
             }
-            let loginVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.present(loginVC,animated: true)
+        }else {
+            let alertVC = alertManager.alert(errorCode: -1, description: K.Error.Register.switchOff)
+            self.present(alertVC, animated: true)
         }
-        print(self.switchOnOff1.isOn)
-        print(self.switchOnOff2.isOn)
-        print("register")
+
+
+        
+        
     }
     @objc func emailFieldDidChange(_ textField: UITextField) {
         if textField.text!.count < 3 || !(textField.text?.contains("@"))!{
