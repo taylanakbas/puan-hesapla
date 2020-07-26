@@ -15,19 +15,19 @@ class BlogViewController: UIViewController {
     
     
     var articles : [Blog] = []
-    let starred = Blog(title: "Veterinerlik Bölümü Hakkında Bilmeniz Gerekenler", image: "vet", content: K.Resources.html)
+    let starred = Blog(title: "Veterinerlik Bölümü Hakkında Bilmeniz Gerekenler", image: K.Resources.Image.firstBlog, content: K.Resources.html)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "BlogTableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: K.XIB.Table.blog)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.black,
-             NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 20)!]
+             NSAttributedString.Key.font: UIFont(name: K.Resources.Font.bold, size: 20)!]
         initArticles()
         
     }
@@ -72,7 +72,7 @@ class BlogViewController: UIViewController {
             self.present(webVC, animated: true)
         }
     }
-    @objc func readStarred(){ performSegue(withIdentifier: "DetailVC", sender: K.Resources.html) }
+    @objc func readStarred(){ performSegue(withIdentifier: K.detailBlogSegue, sender: K.Resources.html) }
 }
 
 extension BlogViewController : UITableViewDelegate, UITableViewDataSource {
@@ -88,17 +88,16 @@ extension BlogViewController : UITableViewDelegate, UITableViewDataSource {
         2
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = Bundle.main.loadNibNamed("FirstTableViewCell", owner: self, options: nil)?.first as! FirstTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.firstBlog, owner: self, options: nil)?.first as! FirstTableViewCell
             cell.articleTitle.text = starred.title
             cell.articleImageView.image = UIImage(named: starred.imageUrl)
             cell.readButton.addTarget(self, action: #selector(readStarred), for: .touchUpInside)
             return cell
             
         }else {
-            let cell = Bundle.main.loadNibNamed("BlogTableViewCell", owner: self, options: nil)?.first as! BlogTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.blog, owner: self, options: nil)?.first as! BlogTableViewCell
               let webPCoder = SDImageWebPCoder.shared
             SDImageCodersManager.shared.addCoder(webPCoder)
             let webpURL = URL(string:self.articles[indexPath.row].imageUrl)!
@@ -113,22 +112,19 @@ extension BlogViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 240.0
+            return K.XIB.Table.firstBlogHeight
         case 1:
-            return 140.0
+            return K.XIB.Table.blogHeight
         default:
             return 0.0
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "DetailVC", sender: K.Resources.html)
-        
+        performSegue(withIdentifier: K.detailBlogSegue, sender: K.Resources.html)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! BlogDetailViewController
         detailVC.article = starred
     }
-    
-    
 }

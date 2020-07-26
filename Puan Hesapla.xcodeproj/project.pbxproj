@@ -69,6 +69,8 @@
 		F5D9320424B866C900A8AA93 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D931F824B8667A00A8AA93 /* Montserrat-Thin.ttf */; };
 		F5E3CD5A24A0CA5E009F4803 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */; };
 		F5E67DFB24B5D31400D704AC /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */; };
+		F5E9299624CDEA4100C534C3 /* blog.json in Resources */ = {isa = PBXBuildFile; fileRef = F5E9299424CDEA4100C534C3 /* blog.json */; };
+		F5E9299724CDEA4100C534C3 /* university.json in Resources */ = {isa = PBXBuildFile; fileRef = F5E9299524CDEA4100C534C3 /* university.json */; };
 		F5EC335324A8C92D00A8499E /* CalculateTYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */; };
 		F5EC335424A8C92D00A8499E /* CalculateTYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */; };
 		F5F6E33124BF1845003BE975 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6E33024BF1845003BE975 /* Blog.swift */; };
@@ -141,6 +143,8 @@
 		F5D931FB24B8667B00A8AA93 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
+		F5E9299424CDEA4100C534C3 /* blog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blog.json; sourceTree = "<group>"; };
+		F5E9299524CDEA4100C534C3 /* university.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = university.json; sourceTree = "<group>"; };
 		F5EC335124A8C92D00A8499E /* CalculateTYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTYTTableViewCell.swift; sourceTree = "<group>"; };
 		F5EC335224A8C92D00A8499E /* CalculateTYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateTYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5F6E33024BF1845003BE975 /* Blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
@@ -202,15 +206,15 @@
 		F54F4E4224A36C9B008204E9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F55D68E624C6F21100EEF9FC /* OnboardingViewController.swift */,
+				F55D68E824C7A74F00EEF9FC /* RegisterViewController.swift */,
+				F503B46B24C8778B00ECCBD6 /* LoginViewController.swift */,
 				F503711C24A0DF12008B153E /* HomeViewController.swift */,
 				F5E3CD5924A0CA5E009F4803 /* CalculatorViewController.swift */,
 				F5C5788F24ABB19500575C70 /* AlertViewController.swift */,
 				F56FEE1524B278640046D5D0 /* WebViewController.swift */,
 				F509488D24B5C1030085B7E9 /* BlogViewController.swift */,
 				F5E67DFA24B5D31400D704AC /* BlogDetailViewController.swift */,
-				F55D68E624C6F21100EEF9FC /* OnboardingViewController.swift */,
-				F55D68E824C7A74F00EEF9FC /* RegisterViewController.swift */,
-				F503B46B24C8778B00ECCBD6 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,9 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				F5C5789124ABB6CA00575C70 /* AlertManager.swift */,
-				F55D68E224C583AB00EEF9FC /* DeepLinkManager.swift */,
 				F5C5788B24AA133200575C70 /* Parser.swift */,
 				F5C5788524AA0F0600575C70 /* Calculator.swift */,
+				F55D68E224C583AB00EEF9FC /* DeepLinkManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -287,14 +291,11 @@
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
 				F5C5789324ABCC5C00575C70 /* Constants.swift */,
-				F586E6F324CA283A0085F11D /* loading.json */,
-				F560A11524BC685600AEECBE /* univerlist.mp4 */,
-				F5C5789524ABD9CE00575C70 /* Helper */,
 				F5D38313249CE9690090A6F5 /* Model */,
 				F54F4E4324A36CA3008204E9 /* View */,
 				F54F4E4224A36C9B008204E9 /* Controller */,
-				F5D931F224B8662A00A8AA93 /* fonts */,
-				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
+				F5C5789524ABD9CE00575C70 /* Helper */,
+				F5E9299024CDE30900C534C3 /* Resources */,
 				F5D38306249CC9220090A6F5 /* LaunchScreen.storyboard */,
 				F5D38309249CC9220090A6F5 /* Info.plist */,
 				F543464B24B475FE0025525A /* GoogleService-Info.plist */,
@@ -338,6 +339,19 @@
 				F54F4E3B24A2DB38008204E9 /* ArticleCollectionViewCell.xib */,
 			);
 			path = ArticleCell;
+			sourceTree = "<group>";
+		};
+		F5E9299024CDE30900C534C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5D38304249CC9220090A6F5 /* Assets.xcassets */,
+				F586E6F324CA283A0085F11D /* loading.json */,
+				F5E9299424CDEA4100C534C3 /* blog.json */,
+				F5E9299524CDEA4100C534C3 /* university.json */,
+				F560A11524BC685600AEECBE /* univerlist.mp4 */,
+				F5D931F224B8662A00A8AA93 /* fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F5EC334F24A8C7D900A8499E /* TYT */ = {
@@ -446,6 +460,8 @@
 				F54F4E4824A48FCA008204E9 /* TitleTableViewCell.xib in Resources */,
 				F5D38305249CC9220090A6F5 /* Assets.xcassets in Resources */,
 				F54F4E3924A22473008204E9 /* UniversityCollectionViewCell.xib in Resources */,
+				F5E9299624CDEA4100C534C3 /* blog.json in Resources */,
+				F5E9299724CDEA4100C534C3 /* university.json in Resources */,
 				F5D931FF24B866BB00A8AA93 /* Montserrat-ExtraLight.ttf in Resources */,
 				F5D38300249CC91B0090A6F5 /* Main.storyboard in Resources */,
 				F5C5788024A9F6E600575C70 /* ResultAYTTableViewCell.xib in Resources */,

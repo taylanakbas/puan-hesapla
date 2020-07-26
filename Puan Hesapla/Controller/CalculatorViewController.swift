@@ -76,12 +76,12 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "TYT Puan"
             cell.titleLabel.textColor = .white
-            cell.view.backgroundColor = UIColor(named: "PurpleColor")
+            cell.view.backgroundColor = UIColor(named: K.Resources.Color.purple)
             let rectShape = CAShapeLayer()
             rectShape.bounds = cell.frame
             rectShape.position = cell.center
@@ -89,7 +89,7 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.layer.mask = rectShape
             return cell
         }else if indexPath.section == 1 {
-                var cell = Bundle.main.loadNibNamed("CalculateTYTTableViewCell", owner: self, options: nil)?.first as! CalculateTYTTableViewCell
+            var cell = Bundle.main.loadNibNamed(K.XIB.Table.tyt, owner: self, options: nil)?.first as! CalculateTYTTableViewCell
                 if !reloadFlagTYT {
                     self.tytCell = cell
                     self.reloadFlagTYT = true
@@ -102,12 +102,12 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
                 cell.SCNet.text = String(format: "%.2f", tytResult.fenNet)
                 return cell
         }else if indexPath.section == 2 {
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "TYT Sonuç"
             cell.titleLabel.textColor = .white
-            cell.backgroundColor = UIColor(named: "PurpleColor")
+            cell.backgroundColor = UIColor(named: K.Resources.Color.purple)
             let rectShape = CAShapeLayer()
             rectShape.bounds = cell.frame
             rectShape.position = cell.center
@@ -116,19 +116,19 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             return cell
         }else if indexPath.section == 3 {
             
-            let cell = Bundle.main.loadNibNamed("ResultTYTTableViewCell", owner: self, options: nil)?.first as! ResultTYTTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.tytResult, owner: self, options: nil)?.first as! ResultTYTTableViewCell
             cell.hamGrade.text = String(format:"%.1f", tytResult.hamGrade)
             cell.yerGrade.text = String(format:"%.1f", tytResult.yerGrade)
             return cell
             
         }
         else if indexPath.section == 4 {
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "AYT Puan"
             cell.titleLabel.textColor = .white
-            cell.backgroundColor = UIColor(named: "LightBlueColor")
+            cell.backgroundColor = UIColor(named: K.Resources.Color.lightBlue)
             let rectShape = CAShapeLayer()
             rectShape.bounds = cell.frame
             rectShape.position = cell.center
@@ -138,7 +138,7 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             
         }else if indexPath.section == 5 {
             
-            var cell = Bundle.main.loadNibNamed("CalculateAYTTableViewCell", owner: self, options: nil)?.first as! CalculateAYTTableViewCell
+            var cell = Bundle.main.loadNibNamed(K.XIB.Table.ayt, owner: self, options: nil)?.first as! CalculateAYTTableViewCell
             if !reloadFlagAYT {
                 self.aytCell = cell
                 self.reloadFlagAYT = true
@@ -152,12 +152,12 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.GRNet.text = String(format: "%.2f", aytResult.ydNet)
             return cell
         }else if indexPath.section == 6{
-            let cell = Bundle.main.loadNibNamed("TitleTableViewCell", owner: self, options: nil)?.first as! TitleTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "AYT Sonuç"
             cell.titleLabel.textColor = .white
-            cell.backgroundColor = UIColor(named: "LightBlueColor")
+            cell.backgroundColor = UIColor(named: K.Resources.Color.lightBlue)
             let rectShape = CAShapeLayer()
             rectShape.bounds = cell.frame
             rectShape.position = cell.center
@@ -165,7 +165,7 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.layer.mask = rectShape
             return cell
         }else if indexPath.section == 7 {
-            let cell = Bundle.main.loadNibNamed("ResultAYTTableViewCell", owner: self, options: nil)?.first as! ResultAYTTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.aytResult, owner: self, options: nil)?.first as! ResultAYTTableViewCell
             cell.EA_Ham.text = String(format:"%.1f", aytResult.eaHam)
             cell.SOZ_Ham.text = String(format:"%.1f", aytResult.sozHam)
             cell.SAY_Ham.text = String(format:"%.1f", aytResult.sayHam)
@@ -176,7 +176,7 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.YDIL_Yer.text = String(format:"%.1f", aytResult.ydilYer)
             return cell
         }else {
-            let cell = Bundle.main.loadNibNamed("CalculateButtonTableViewCell", owner: self, options: nil)?.first as! CalculateButtonTableViewCell
+            let cell = Bundle.main.loadNibNamed(K.XIB.Table.calculate, owner: self, options: nil)?.first as! CalculateButtonTableViewCell
             cell.calculateButton.addTarget(self, action: #selector(calculate), for: .touchUpInside)
             return cell
         }
@@ -187,23 +187,23 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 80.0 // Title
+            return K.XIB.Table.titleHeight
         case 1:
-            return 400.0 // TYT Calculator
+            return K.XIB.Table.tytHeight
         case 2:
-            return 80.0 // Title
+            return K.XIB.Table.titleHeight
         case 3:
-            return 150.0 // TYT Result
+            return K.XIB.Table.tytResultHeight
         case 4:
-            return 80.0 // Title
+            return K.XIB.Table.titleHeight
         case 5:
-            return 280.0 // AYT Calculator
+            return K.XIB.Table.aytHeight
         case 6:
-            return 80.0 // Title
+            return K.XIB.Table.titleHeight
         case 7:
-            return 200.0 // AYT Result
+            return K.XIB.Table.aytResultHeight
         case 8:
-            return 60.0 // Button
+            return K.XIB.Table.calculateHeight
         default:
             return 0.0
         }

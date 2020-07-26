@@ -210,6 +210,9 @@
                         <viewLayoutGuide key="safeArea" id="N6Q-r6-dKy"/>
                     </view>
                     <navigationItem key="navigationItem" id="Aiq-ZL-kKA"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="toTabBarController" modalPresentationStyle="fullScreen" id="ztZ-GA-T1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMG-Pw-jVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,8 +348,8 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veterinerlik Bölümü Hakkında Bilmeniz Gerekenler" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-uU-bBE">
-                                                    <rect key="frame" x="0.0" y="15.000000000000004" width="334" height="58.333333333333343"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <rect key="frame" x="8" y="8" width="318" height="72"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,10 +357,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6lD-uU-bBE" firstAttribute="centerY" secondItem="Rkf-Cp-I3s" secondAttribute="centerY" id="Iwj-nS-P9t"/>
-                                                <constraint firstAttribute="trailing" secondItem="6lD-uU-bBE" secondAttribute="trailing" id="VjJ-In-Rkz"/>
-                                                <constraint firstItem="6lD-uU-bBE" firstAttribute="centerX" secondItem="Rkf-Cp-I3s" secondAttribute="centerX" id="orJ-SK-s0E"/>
-                                                <constraint firstItem="6lD-uU-bBE" firstAttribute="leading" secondItem="Rkf-Cp-I3s" secondAttribute="leading" id="tVR-ER-Owf"/>
+                                                <constraint firstItem="6lD-uU-bBE" firstAttribute="leading" secondItem="Rkf-Cp-I3s" secondAttribute="leading" constant="8" id="VcD-It-8Tq"/>
+                                                <constraint firstItem="6lD-uU-bBE" firstAttribute="top" secondItem="Rkf-Cp-I3s" secondAttribute="top" constant="8" id="eGb-0d-d3x"/>
+                                                <constraint firstAttribute="bottom" secondItem="6lD-uU-bBE" secondAttribute="bottom" constant="8" id="j6e-V6-09e"/>
+                                                <constraint firstAttribute="trailing" secondItem="6lD-uU-bBE" secondAttribute="trailing" constant="8" id="kK1-Py-qNI"/>
                                             </constraints>
                                         </view>
                                         <blurEffect style="regular"/>
@@ -395,9 +398,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="fZc-BF-EZP"/>
                     <connections>
-                        <outlet property="constL" destination="4TW-et-nAv" id="ajz-Sy-fos"/>
-                        <outlet property="constR" destination="JeG-D9-4y3" id="4wl-CG-Yzk"/>
-                        <outlet property="constTop" destination="tT0-Pe-HtV" id="95J-Ay-yCH"/>
                         <outlet property="content" destination="mop-KX-d2i" id="Wwm-XH-3Ri"/>
                         <outlet property="headerImage" destination="bRQ-Pq-ewl" id="hOq-z5-sHv"/>
                         <outlet property="titleLabel" destination="6lD-uU-bBE" id="k5s-Qq-ywI"/>
@@ -406,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4u-Td-CUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2666.4000000000001" y="79.610194902548727"/>
+            <point key="canvasLocation" x="2665.217391304348" y="79.017857142857139"/>
         </scene>
     </scenes>
     <resources>

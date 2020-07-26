@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     var registerButton = UIButton(type: .system)
     
     let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.extraLight))
-    let starAnimationView = AnimationView(name: "loading")
+    let starAnimationView = AnimationView(name: K.Resources.Animation.loading)
     
     override func viewDidLayoutSubviews() {
         width = view.frame.size.width
@@ -41,14 +41,14 @@ class LoginViewController: UIViewController {
         titleLabel.numberOfLines = 0
         titleLabel.textColor = .black
         titleLabel.text = "Giriş Yap"
-        titleLabel.font = UIFont(name: "Montserrat-Bold", size: 40)
+        titleLabel.font = UIFont(name: K.Resources.Font.bold, size: 40)
         view.addSubview(titleLabel)
         
         mailTextField.frame = CGRect(x: 16, y: titleLabel.frame.maxY + 32, width: width - 32, height: 45)
         mailTextField.placeholder = "  E-mail"
-        mailTextField.title = "  E-mail adresİnİz:".lowercased()
-        mailTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
-        mailTextField.iconImage = UIImage(systemName: "envelope")
+        mailTextField.title = "  E-mail".lowercased()
+        mailTextField.font = UIFont(name: K.Resources.Font.medium, size: 16)
+        mailTextField.iconImage = UIImage(systemName: K.Resources.Icon.mail)
         mailTextField.iconColor = .black
         mailTextField.text = "ta@univerlist.com"
         self.view.addSubview(mailTextField)
@@ -57,9 +57,9 @@ class LoginViewController: UIViewController {
         pswTextField.frame = CGRect(x: 16, y: mailTextField.frame.maxY + 32, width: width - 32, height: 45)
         pswTextField.isSecureTextEntry = true
         pswTextField.placeholder = "  Şifre"
-        pswTextField.title = "  Şifrenİz:"
-        pswTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
-        pswTextField.iconImage = UIImage(named: "password")
+        pswTextField.title = "  Şİfre"
+        pswTextField.font = UIFont(name: K.Resources.Font.medium, size: 16)
+        pswTextField.iconImage = UIImage(named: K.Resources.Icon.password)
         pswTextField.iconColor = .black
         pswTextField.text = "123456"
         self.view.addSubview(pswTextField)
@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         loginButton.frame = CGRect(x: 16, y: pswTextField.frame.maxY + 64, width: width - 32, height: 50)
         loginButton.backgroundColor = .black
         loginButton.setTitle("Giriş yap", for: .normal)
-        loginButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 18)
+        loginButton.titleLabel?.font = UIFont(name: K.Resources.Font.medium, size: 18)
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.layer.cornerRadius = 10
         loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
         registerButton.frame = CGRect(x: 16, y: loginButton.frame.maxY + 32, width: width - 32, height: 30)
         
         registerButton.setTitle("Hesabın yok mu? Kayıt ol", for: .normal)
-        registerButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 16)
+        registerButton.titleLabel?.font = UIFont(name: K.Resources.Font.medium, size: 16)
         registerButton.setTitleColor(.black, for: .normal)
         registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         self.view.addSubview(registerButton)
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
                         navController.navigationBar.prefersLargeTitles = true
                         tabBarController.viewControllers = [homeVC, navController, calcVC]
                         tabBarController.tabBar.barTintColor = .white
-                        tabBarController.tabBar.tintColor = UIColor(named: "BlueColor")
+                        tabBarController.tabBar.tintColor = UIColor(named: K.Resources.Color.blue)
                         tabBarController.modalPresentationStyle = .fullScreen
                         self.show(tabBarController, sender: self)
                        }
@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
         }
     }
     @objc func register(){
-        let registerVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        let registerVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: K.VC.register) as! RegisterViewController
         self.present(registerVC,animated: true)
     }
 }

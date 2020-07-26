@@ -19,18 +19,16 @@ class OnboardingViewController: UIViewController {
     var scrollHeight : CGFloat! = 0.0
     
     var titles = [
-        "Yurtdışında mı okumak istiyorsun?",
+        "Puan Hesapla",
         "Hayalindeki üniversiteyi bul",
         "Bölümler hakkında doğru bilgiyi al"
     ]
     var descriptions = [
-        "Üniversiteleri detaylı incele!",
+        "Sistem değişti, kafalar karıştı! TYT-AYT Puan Hesaplama ile olası puanını hesaplayabilirsin",
         "Geleceğin için hayallerini kurduğun üniversiteyi bul",
         "Hayallerindeki meslek için bölümle ilgili yazılarımızı okumalısın"
     ]
-    var images = ["onboard1", "onboard2", "onboard3"]
-    
-    
+    var images = [K.Resources.Image.onboard1,K.Resources.Image.onboard2,K.Resources.Image.onboard3]
     
     override func viewDidLayoutSubviews() {
         // Get dynamic width and height
@@ -53,16 +51,17 @@ class OnboardingViewController: UIViewController {
             let title = UILabel.init(frame: CGRect(x: 16, y: 48, width: scrollWidth - 64, height: 180))
             title.textAlignment = .left
             title.numberOfLines = 0
+            print(title.numberOfLines)
             title.textColor = .black
             title.text = self.titles[idx]
-            title.font = UIFont(name: "Montserrat-Bold", size: 40)
+            title.font = UIFont(name: K.Resources.Font.bold, size: 40)
             
-            let desc = UILabel.init(frame: CGRect(x: 16, y: title.frame.maxY - 8, width: scrollWidth, height: 100))
+            let desc = UILabel.init(frame: CGRect(x: 16, y: title.frame.maxY - 16, width: scrollWidth, height: 100))
             desc.textAlignment = .left
             desc.numberOfLines = 0
             desc.textColor = .gray
             desc.text = self.descriptions[idx]
-            desc.font = UIFont(name: "Montserrat-Regular", size: 20)
+            desc.font = UIFont(name: K.Resources.Font.regular, size: 18)
             
             let imageView = UIImageView.init(image: UIImage.init(named: images[idx]))
             imageView.frame = CGRect(x:0,y:0,width:200,height:200)
@@ -97,6 +96,4 @@ extension OnboardingViewController : UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.changeCurrentPage()
     }
-
-
 }

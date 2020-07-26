@@ -80,7 +80,7 @@ class HomeViewController: UIViewController {
     }
     @objc func playVideo(){
         guard let path = Bundle.main.path(forResource: K.Resources.video, ofType:K.Resources.videoExt) else {
-            debugPrint("Video is \(K.Error.Resources.notFound)")
+            //debugPrint("Video \(K.Error.Resources.notFound)")
             return
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
@@ -130,7 +130,8 @@ class HomeViewController: UIViewController {
         }
     }
     @objc func segueToCalculator(){
-        
+        print("calc")
+        self.tabBarController?.selectedIndex = 2
     }
     @objc func logout(){
         do {

@@ -45,7 +45,7 @@ class RegisterViewController: UIViewController {
         titleLabel.numberOfLines = 0
         titleLabel.textColor = .black
         titleLabel.text = "Kayıt ol"
-        titleLabel.font = UIFont(name: "Montserrat-Bold", size: 40)
+        titleLabel.font = UIFont(name: K.Resources.Font.bold, size: 40)
         view.addSubview(titleLabel)
         
         
@@ -53,8 +53,8 @@ class RegisterViewController: UIViewController {
         mailTextField.placeholder = "  E-mail"
         mailTextField.title = "  E-mail adresİnİz:".lowercased()
         
-        mailTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
-        mailTextField.iconImage = UIImage(systemName: "envelope")
+        mailTextField.font = UIFont(name: K.Resources.Font.medium, size: 16)
+        mailTextField.iconImage = UIImage(systemName: K.Resources.Icon.mail)
         mailTextField.iconColor = .black
         mailTextField.addTarget(self, action: #selector(RegisterViewController.emailFieldDidChange(_:)), for: .editingChanged)
 
@@ -65,16 +65,16 @@ class RegisterViewController: UIViewController {
         pswTextField.isSecureTextEntry = true
         pswTextField.placeholder = "  Şifre"
         pswTextField.title = "  Şifrenİz:"
-        pswTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
-        pswTextField.iconImage = UIImage(named: "password")
+        pswTextField.font = UIFont(name: K.Resources.Font.medium, size: 16)
+        pswTextField.iconImage = UIImage(named: K.Resources.Icon.password)
         pswTextField.addTarget(self, action: #selector(RegisterViewController.passwordFieldDidChange(_:)), for: .editingChanged)
         self.view.addSubview(pswTextField)
         
         phoneTextField.frame = CGRect(x: 16, y: pswTextField.frame.maxY + 32, width: width - 32, height: 45)
         phoneTextField.placeholder = "  Telefon (İsteğe bağlı)"
         phoneTextField.title = "  Telefon numaranız:"
-        phoneTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
-        phoneTextField.iconImage = UIImage(systemName: "phone")
+        phoneTextField.font = UIFont(name: K.Resources.Font.medium, size: 16)
+        phoneTextField.iconImage = UIImage(systemName: K.Resources.Icon.phone)
         phoneTextField.iconColor = .black
         phoneTextField.keyboardType = .phonePad
         phoneTextField.delegate = self
@@ -91,13 +91,13 @@ class RegisterViewController: UIViewController {
         switchLabel1.numberOfLines = 0
         switchLabel1.textColor = .black
         switchLabel1.text = "Kayıt olup devam etmeniz durumunda gizlilik sözleşmemizi kabul etmiş sayılırsınız."
-        switchLabel1.font = UIFont(name: "Montserrat-Regular", size: 16)
+        switchLabel1.font = UIFont(name: K.Resources.Font.regular, size: 16)
         switchLabel1.adjustsFontSizeToFitWidth = true
         switchLabel1.translatesAutoresizingMaskIntoConstraints = false
 
         switchOnOff1.setOn(true, animated: false)
         switchOnOff1.translatesAutoresizingMaskIntoConstraints = false
-        switchOnOff1.onTintColor = UIColor(named: "BlueColor")!
+        switchOnOff1.onTintColor = UIColor(named: K.Resources.Color.blue)!
         
         stackView1.addArrangedSubview(switchLabel1)
         stackView1.addArrangedSubview(switchOnOff1)
@@ -120,13 +120,13 @@ class RegisterViewController: UIViewController {
         switchLabel2.numberOfLines = 0
         switchLabel2.textColor = .black
         switchLabel2.text = "Üniversiteler tarafından bilgilendirme aramaları ve sms almak istiyorum."
-        switchLabel2.font = UIFont(name: "Montserrat-Regular", size: 16)
+        switchLabel2.font = UIFont(name: K.Resources.Font.medium, size: 16)
         switchLabel2.adjustsFontSizeToFitWidth = true
         switchLabel2.translatesAutoresizingMaskIntoConstraints = false
 
         switchOnOff2.setOn(true, animated: false)
         switchOnOff2.translatesAutoresizingMaskIntoConstraints = false
-        switchOnOff2.onTintColor = UIColor(named: "BlueColor")!
+        switchOnOff2.onTintColor = UIColor(named: K.Resources.Color.blue)!
 
         stackView2.addArrangedSubview(switchLabel2)
         stackView2.addArrangedSubview(switchOnOff2)
@@ -142,7 +142,7 @@ class RegisterViewController: UIViewController {
         registerButton.frame = CGRect(x: 16, y: phoneTextField.frame.maxY + 256, width: width - 32, height: 50)
         registerButton.backgroundColor = .black
         registerButton.setTitle("Kayıt ol", for: .normal)
-        registerButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 18)
+        registerButton.titleLabel?.font = UIFont(name: K.Resources.Font.medium, size: 18)
         registerButton.setTitleColor(.white, for: .normal)
         registerButton.layer.cornerRadius = 10
         registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
@@ -150,9 +150,6 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func register(){
-        
-        
-        
         if switchOnOff1.isOn {
             if  mailTextField.text != nil && mailTextField.text != "" {
                 let email = mailTextField.text!
@@ -165,18 +162,18 @@ class RegisterViewController: UIViewController {
                            return
                      }
                        let phone = self.phoneTextField.text ?? ""
-                       self.db.collection("users")
+                        self.db.collection(K.FStore.user.collectionName)
                            .addDocument(data: [
-                               "email" : email,
-                               "phone" : phone,
-                               "subscription" : self.switchOnOff2.isOn
+                                K.FStore.user.emailField : email,
+                                K.FStore.user.phoneField : phone,
+                                K.FStore.user.isSubscribed : self.switchOnOff2.isOn
                        ]){ (err) in
                         if err != nil{
                             let alertVC = self.alertManager.alert(errorCode: -1, description: K.Error.Register.error)
                             self.present(alertVC, animated: true)
                         }
                        }
-                        let loginVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                        let loginVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: K.VC.login) as! LoginViewController
                         self.present(loginVC,animated: true)
                     }
                 }else {
@@ -191,28 +188,24 @@ class RegisterViewController: UIViewController {
             let alertVC = alertManager.alert(errorCode: -1, description: K.Error.Register.switchOff)
             self.present(alertVC, animated: true)
         }
-
-
-        
-        
     }
     @objc func emailFieldDidChange(_ textField: UITextField) {
         if textField.text!.count < 3 || !(textField.text?.contains("@"))!{
-            self.mailTextField.title = "Geçersİz mail adresİ"
+            self.mailTextField.title = K.Error.Register.invalidEmail
             self.mailTextField.selectedTitleColor = .red
         }else {
-            self.mailTextField.title = "  E-mail adresİnİz:"
-            self.mailTextField.selectedTitleColor = UIColor(named: "BlueColor")!
+            self.mailTextField.title = "  E-mail"
+            self.mailTextField.selectedTitleColor = UIColor(named: K.Resources.Color.blue)!
         
         }
     }
     @objc func passwordFieldDidChange(_ textField: UITextField) {
         if textField.text!.count < 8 {
-            self.pswTextField.title = "Parolanız en az 8 karakterden oluşmalı"
+            self.pswTextField.title = K.Error.Register.invalidPassword
             self.pswTextField.selectedTitleColor = .red
         }else {
-            self.pswTextField.title = "  Şİfrenİz:"
-            self.pswTextField.selectedTitleColor = UIColor(named: "BlueColor")!
+            self.pswTextField.title = "  Şİfre:"
+            self.pswTextField.selectedTitleColor = UIColor(named: K.Resources.Color.blue)!
         }
     }
 }

@@ -1,0 +1,194 @@
+{
+    "count": 1475,
+    "next": "https://furkanerkorkmaz.com/rest-api/blog",
+    "previous": null,
+    "results": [
+        {
+            "pk": 1181,
+            "name": "Gemi Makineleri İşletme Mühendisliği Hakkında Bilmeniz Gerekenler!",
+            "slug": "gemi-makineleri-isletme-muhendisligi-hakkinda-bilmeniz-gerekenler",
+            "thumbnail": "https://univerlist.com/media/cache/a5/a9/a5a98548631787ff87d63ee3e2bb9a4c.webp",
+            "updated_at": "2020-07-14T12:58:17",
+            "owner": {
+                "id": 617,
+                "profile_photo": "https://univerlist.com/media/cache/b1/8b/b18bd70f42355689d6ee567f41524aea.webp",
+                "username": "burckarakas",
+                "first_name": "Burç B.",
+                "last_name": "Karakaş"
+            },
+            "categories": [
+                {
+                    "name": "Bölümler-Şehirler"
+                }
+            ]
+        },
+        {
+            "pk": 1513,
+            "name": "Ekonomi ve Ekonometri Bölümü Arasındaki Fark Nedir?",
+            "slug": "ekonomi-ve-ekonometri-bolumu-arasindaki-fark-nedir",
+            "thumbnail": "https://univerlist.com/media/cache/7f/5f/7f5f55018e0084ea6c3792185e368a67.webp",
+            "updated_at": "2020-07-14T09:34:14",
+            "owner": {
+                "id": 55394,
+                "profile_photo": "https://univerlist.com/media/cache/7a/bf/7abf370f676d6211b46ee1df924fb9fa.webp",
+                "username": "gokte.bulut@univerlist.com",
+                "first_name": "Gokte",
+                "last_name": "Bulut"
+            },
+            "categories": []
+        },
+        {
+            "pk": 1512,
+            "name": "Asya'da Görülmesi Gereken Kültür Festivalleri",
+            "slug": "asyada-gorulmesi-gereken-kultur-festivalleri",
+            "thumbnail": "https://univerlist.com/media/cache/4c/2e/4c2ea766b47e59971df64ed8c3b7422e.webp",
+            "updated_at": "2020-07-14T07:38:17",
+            "owner": {
+                "id": 55394,
+                "profile_photo": "https://univerlist.com/media/cache/7a/bf/7abf370f676d6211b46ee1df924fb9fa.webp",
+                "username": "gokte.bulut@univerlist.com",
+                "first_name": "Gokte",
+                "last_name": "Bulut"
+            },
+            "categories": []
+        },
+        {
+            "pk": 1296,
+            "name": "Kamuda En Çok İstihdam Oranına Sahip 10 Bölüm",
+            "slug": "kamuda-en-cok-istihdam-oranina-sahip-10-bolum",
+            "thumbnail": "https://univerlist.com/media/cache/ba/94/ba94ba497812f516d20abc5998126d92.webp",
+            "updated_at": "2020-07-14T06:47:38",
+            "owner": {
+                "id": 54407,
+                "profile_photo": "https://univerlist.com/media/cache/5c/c4/5cc45392d3881c87612bdae919d504fb.webp",
+                "username": "ercanctnky",
+                "first_name": "Ercan",
+                "last_name": "Çetinkaya"
+            },
+            "categories": [
+                {
+                    "name": "Kariyer"
+                },
+                {
+                    "name": "Diğer"
+                },
+                {
+                    "name": "Sosyal"
+                }
+            ]
+        },
+        {
+            "pk": 1511,
+            "name": "Tarih Öğrencilerinin Muhakkak Okuması Gereken 7 Kitap",
+            "slug": "tarih-ogrencilerinin-muhakkak-okumasi-gereken-7-kitap",
+            "thumbnail": "https://univerlist.com/media/cache/13/59/13595b5b933bb5fd54fa48a92d7a7e4c.webp",
+            "updated_at": "2020-07-13T11:24:54",
+            "owner": {
+                "id": 55394,
+                "profile_photo": "https://univerlist.com/media/cache/7a/bf/7abf370f676d6211b46ee1df924fb9fa.webp",
+                "username": "gokte.bulut@univerlist.com",
+                "first_name": "Gokte",
+                "last_name": "Bulut"
+            },
+            "categories": [
+                {
+                    "name": "Kariyer"
+                },
+                {
+                    "name": "Diğer"
+                },
+                {
+                    "name": "Sosyal"
+                }
+            ]
+        },
+        {
+            "pk": 1510,
+            "name": "2020 Yılı Özel Yetenek Sınavları Tarihi Belli Olan Üniversiteler!",
+            "slug": "2020-yili-ozel-yetenek-sinavlari-tarihi-belli-olan-universiteler",
+            "thumbnail": "https://univerlist.com/media/cache/46/ae/46aef9bb0974dcccba345fabaf83bb69.webp",
+            "updated_at": "2020-07-13T11:15:05",
+            "owner": {
+                "id": 55394,
+                "profile_photo": "https://univerlist.com/media/cache/7a/bf/7abf370f676d6211b46ee1df924fb9fa.webp",
+                "username": "gokte.bulut@univerlist.com",
+                "first_name": "Gokte",
+                "last_name": "Bulut"
+            },
+            "categories": [
+                {
+                    "name": "Bölümler-Şehirler"
+                },
+                {
+                    "name": "Diğer"
+                },
+                {
+                    "name": "Sosyal"
+                }
+            ]
+        },
+        {
+            "pk": 1509,
+            "name": "Liberal Sanat Eğitimi Nedir?",
+            "slug": "liberal-sanat-egitimi-nedir",
+            "thumbnail": "https://univerlist.com/media/cache/59/93/59939e7d10555bb9ee4ee1736f84deec.webp",
+            "updated_at": "2020-07-10T13:04:14",
+            "owner": {
+                "id": 617,
+                "profile_photo": "https://univerlist.com/media/cache/b1/8b/b18bd70f42355689d6ee567f41524aea.webp",
+                "username": "burckarakas",
+                "first_name": "Burç B.",
+                "last_name": "Karakaş"
+            },
+            "categories": [
+                {
+                    "name": "Bölümler-Şehirler"
+                }
+            ]
+        },
+        {
+            "pk": 1508,
+            "name": "Düşük Maliyetli Doktora için Avrupa'nın En İyi 5 Noktası",
+            "slug": "dusuk-maliyetli-doktora-icin-avrupanin-en-iyi-5-noktasi",
+            "thumbnail": "https://univerlist.com/media/cache/63/0c/630cf39824730f2381b618a6614fcb74.webp",
+            "updated_at": "2020-07-10T08:54:46",
+            "owner": {
+                "id": 55394,
+                "profile_photo": "https://univerlist.com/media/cache/7a/bf/7abf370f676d6211b46ee1df924fb9fa.webp",
+                "username": "gokte.bulut@univerlist.com",
+                "first_name": "Gokte",
+                "last_name": "Bulut"
+            },
+            "categories": [
+                {
+                    "name": "Kariyer"
+                },
+                {
+                    "name": "Diğer"
+                }
+            ]
+        },
+        {
+            "pk": 1507,
+            "name": "Profesyonel Futbolculuktan Profesörlüğe Giden Yol \"Fethi Heper\"",
+            "slug": "profesyonel-futbolculuktan-profesorluge-giden-yol-fethi-heper",
+            "thumbnail": "https://univerlist.com/media/cache/64/ff/64ff9c4d7d5cf1b868a3cada4be97aad.webp",
+            "updated_at": "2020-07-10T08:28:00",
+            "owner": {
+                "id": 617,
+                "profile_photo": "https://univerlist.com/media/cache/b1/8b/b18bd70f42355689d6ee567f41524aea.webp",
+                "username": "burckarakas",
+                "first_name": "Burç B.",
+                "last_name": "Karakaş"
+            },
+            "categories": [
+                {
+                    "name": "Kariyer"
+                },
+                {
+                    "name": "Sosyal"
+                }
+            ]
+        }
+    ]
+}
