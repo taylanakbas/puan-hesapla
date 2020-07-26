@@ -21,7 +21,7 @@ class BlogDetailViewController: UIViewController {
 
     private var lastContentOffset: CGFloat = 0
 
-    var str = String()
+    var article = Blog()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,10 @@ class BlogDetailViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.white;
-        //headerImage.image = addBlurTo(self.headerImage.image!)
-        content.attributedText = htmlToAttributedString(str)
+    
+        content.attributedText = htmlToAttributedString(article.content)
+        titleLabel.text = article.title
+        headerImage.image = UIImage(named: article.imageUrl)
         
     }
     override var prefersStatusBarHidden: Bool {
@@ -79,44 +81,43 @@ class BlogDetailViewController: UIViewController {
 extension BlogDetailViewController : UITextViewDelegate {
 
 
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-    }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
-        if scrollView.contentOffset.y == 0 {
-            UIView.animate(withDuration: 2, animations: {
-                self.constL.constant = 70
-                self.constR.constant = 70
-                self.constBottom.constant = 40
-                self.view.layoutIfNeeded()
-            })
-        }
-        
-        let dif = self.lastContentOffset - scrollView.contentOffset.y
-        print(dif)
-        if dif  < 0 {
-            // down
-            UIView.animate(withDuration: 3, animations: {
-                self.constL.constant -= (self.constL.constant < 40) ? 0 : 10
-                self.constR.constant -= (self.constR.constant < 40) ? 0 : 10
-                //self.constTop.constant -= (self.constTop.constant < 40) ? 0 : 10
-                self.constBottom.constant -= (self.constBottom.constant < 40) ? 0 : 5
-                self.view.layoutIfNeeded()
-            })
-        }
-        
-
-        self.lastContentOffset = scrollView.contentOffset.y
-    }
-
-    
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        UIView.animate(withDuration: 3, animations: {
-            self.constL.constant = 70
-            self.constR.constant = 70
-            self.constBottom.constant = 40
-            self.view.layoutIfNeeded()
-        })
-    }
-
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//    }
+//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//
+//        if scrollView.contentOffset.y == 0 {
+//            UIView.animate(withDuration: 2, animations: {
+//                self.constL.constant = 70
+//                self.constR.constant = 70
+//                self.constBottom.constant = 40
+//                self.view.layoutIfNeeded()
+//            })
+//        }
+//
+//        let dif = self.lastContentOffset - scrollView.contentOffset.y
+//        print(dif)
+//        if dif  < 0 {
+//            // down
+//            UIView.animate(withDuration: 3, animations: {
+//                self.constL.constant -= (self.constL.constant < 40) ? 0 : 10
+//                self.constR.constant -= (self.constR.constant < 40) ? 0 : 10
+//                //self.constTop.constant -= (self.constTop.constant < 40) ? 0 : 10
+//                self.constBottom.constant -= (self.constBottom.constant < 40) ? 0 : 5
+//                self.view.layoutIfNeeded()
+//            })
+//        }
+//
+//
+//        self.lastContentOffset = scrollView.contentOffset.y
+//    }
+//
+//
+//    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+//        UIView.animate(withDuration: 3, animations: {
+//            self.constL.constant = 70
+//            self.constR.constant = 70
+//            self.constBottom.constant = 40
+//            self.view.layoutIfNeeded()
+//        })
+//    }
 }

@@ -8,11 +8,15 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import Firebase
 
 class RegisterViewController: UIViewController {
     
     var width : CGFloat! = 0.0
     var height : CGFloat! = 0.0
+    let alertManager = AlertManager()
+    let db = Firestore.firestore()
+
     
     var titleLabel = UILabel()
     var mailTextField = SkyFloatingLabelTextFieldWithIcon(frame: .zero, iconType: .image)
@@ -24,7 +28,7 @@ class RegisterViewController: UIViewController {
     var switchOnOff1 = UISwitch()
     var switchLabel2 = UILabel()
     var switchOnOff2 = UISwitch()
-    var registerButton = UIButton()
+    var registerButton = UIButton(type: .system)
     
     override func viewDidLayoutSubviews() {
         width = view.frame.size.width
@@ -146,6 +150,30 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func register(){
+        if switchOnOff1.isOn {
+             if let email = mailTextField.text, let psw = pswTextField.text {
+                Auth.auth().createUser(withEmail: email, password: psw) { authResult, error in
+                    guard let _ = authResult?.user, error == nil else {
+                        let alertVC = self.alertManager.alert(errorCode: 1, error!.localizedDescription)
+                        self.present(alertVC, animated: true)
+                        return
+                  }
+                    let phone = self.phoneTextField.text ?? ""
+                    self.db.collection("users")
+                        .addDocument(data: [
+                            "email" : email,
+                            "phone" : phone,
+                            "subscription" : self.switchOnOff2.isOn
+                    ]) { (err) in
+                        if let e = err{
+                           print(e)
+                        }
+                    }
+                }
+            }
+            let loginVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(loginVC,animated: true)
+        }
         print(self.switchOnOff1.isOn)
         print(self.switchOnOff2.isOn)
         print("register")

@@ -28,7 +28,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.79855113779999998" blue="0.32666255550000001" alpha="0.68324593320000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.80186268849999998" green="0.2591983451" blue="0.27421461250000001" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="D1q-zU-CYk" firstAttribute="top" secondItem="MTY-2p-YbN" secondAttribute="top" constant="19" id="7yw-hA-X7L"/>
                                             <constraint firstAttribute="height" constant="60" id="kAd-6s-kK2"/>
@@ -39,10 +39,10 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-pu-ob5">
                                         <rect key="frame" x="100" y="129.5" width="75" height="34"/>
-                                        <color key="backgroundColor" red="1" green="0.79855113779999998" blue="0.32666255550000001" alpha="0.68324593320000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.80186268849999998" green="0.2591983451" blue="0.27421461250000001" alpha="0.69921875" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Action">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -76,7 +76,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -87,11 +87,6 @@
                             <constraint firstItem="BJI-Vw-1dd" firstAttribute="centerX" secondItem="H1g-Nz-pIW" secondAttribute="centerX" id="lKU-W9-BUk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pNs-nu-clc"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="Ckn-pu-ob5" id="xJV-jP-y65"/>

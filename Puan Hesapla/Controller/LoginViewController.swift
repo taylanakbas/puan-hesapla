@@ -8,17 +8,23 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import FirebaseAuth
+import Lottie
 
 class LoginViewController: UIViewController {
     
     var width : CGFloat! = 0.0
     var height : CGFloat! = 0.0
+    let alertManager = AlertManager()
     
     var titleLabel = UILabel()
     var mailTextField = SkyFloatingLabelTextFieldWithIcon(frame: .zero, iconType: .image)
     var pswTextField =  SkyFloatingLabelTextFieldWithIcon(frame: .zero, iconType: .image)
-    var loginButton = UIButton()
-    var registerButton = UIButton()
+    var loginButton = UIButton(type: .system)
+    var registerButton = UIButton(type: .system)
+    
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.extraLight))
+    let starAnimationView = AnimationView(name: "loading")
     
     override func viewDidLayoutSubviews() {
         width = view.frame.size.width
@@ -43,6 +49,8 @@ class LoginViewController: UIViewController {
         mailTextField.title = "  E-mail adresİnİz:".lowercased()
         mailTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
         mailTextField.iconImage = UIImage(systemName: "envelope")
+        mailTextField.iconColor = .black
+        mailTextField.text = "ta@univerlist.com"
         self.view.addSubview(mailTextField)
         
         
@@ -52,6 +60,8 @@ class LoginViewController: UIViewController {
         pswTextField.title = "  Şifrenİz:"
         pswTextField.font = UIFont(name: "Montserrat-Medium", size: 16)
         pswTextField.iconImage = UIImage(named: "password")
+        pswTextField.iconColor = .black
+        pswTextField.text = "123456"
         self.view.addSubview(pswTextField)
         
         loginButton.frame = CGRect(x: 16, y: pswTextField.frame.maxY + 64, width: width - 32, height: 50)
@@ -68,12 +78,54 @@ class LoginViewController: UIViewController {
         registerButton.setTitle("Hesabın yok mu? Kayıt ol", for: .normal)
         registerButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 16)
         registerButton.setTitleColor(.black, for: .normal)
-        registerButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         self.view.addSubview(registerButton)
 
     }
-    @objc func login(){
-        print("Logged in")
-    }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        starAnimationView.stop()
+        starAnimationView.removeFromSuperview()
+        blurEffectView.removeFromSuperview()
+    }
+
+    @objc func login(){
+
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+                
+        starAnimationView.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
+        starAnimationView.center = self.view.center
+        starAnimationView.loopMode = .loop
+        self.view.addSubview(starAnimationView)
+        starAnimationView.play()
+                
+        if let email = mailTextField.text, let psw = pswTextField.text {
+                   Auth.auth().signIn(withEmail: email, password: psw) { authResult, error in
+                       if let e = error {
+                        print(e.localizedDescription)
+                            let alertVC = self.alertManager.alert(errorCode: 1, e.localizedDescription )
+                            self.present(alertVC, animated: true)
+                       }else{
+                        let homeVC = UIStoryboard.init(name: K.SB.main, bundle: Bundle.main).instantiateViewController(withIdentifier: K.VC.home) as! HomeViewController
+                        let blogVC = UIStoryboard.init(name: K.SB.main, bundle: Bundle.main).instantiateViewController(withIdentifier: K.VC.blog) as! BlogViewController
+                        let calcVC = UIStoryboard.init(name: K.SB.main, bundle: Bundle.main).instantiateViewController(withIdentifier: K.VC.calculator) as! CalculatorViewController
+                        let tabBarController = UITabBarController()
+                        let navController = UINavigationController()
+                        navController.viewControllers = [blogVC]
+                        navController.navigationBar.prefersLargeTitles = true
+                        tabBarController.viewControllers = [homeVC, navController, calcVC]
+                        tabBarController.tabBar.barTintColor = .white
+                        tabBarController.tabBar.tintColor = UIColor(named: "BlueColor")
+                        tabBarController.modalPresentationStyle = .fullScreen
+                        self.show(tabBarController, sender: self)
+                       }
+                   }
+        }
+    }
+    @objc func register(){
+        let registerVC =  UIStoryboard(name: K.SB.main, bundle: .main).instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        self.present(registerVC,animated: true)
+    }
 }

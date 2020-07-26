@@ -9,7 +9,7 @@
 import UIKit
 
 class AlertManager {
-    func alert(errorCode : Int) -> AlertViewController {
+    func alert(errorCode : Int, _ description : String = "") -> AlertViewController {
     
         let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! AlertViewController

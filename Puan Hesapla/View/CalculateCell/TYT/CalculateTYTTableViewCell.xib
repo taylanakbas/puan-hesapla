@@ -34,7 +34,7 @@
                                             <constraint firstAttribute="height" constant="45" id="VsH-3o-bCw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.31372549020000001" green="0.70588235294117641" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="width" constant="70" id="fFt-NY-23I"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.79779702429999999" green="0.25299620630000003" blue="0.3151286244" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
@@ -161,20 +161,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-zS-Wyd" userLabel="CalculateView">
                         <rect key="frame" x="82" y="0.0" width="278" height="265"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-ek-LbJ">
-                                <rect key="frame" x="12" y="12" width="258" height="241.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-ek-LbJ">
+                                <rect key="frame" x="12" y="12" width="258" height="247"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Ry-Tnp">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="34.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Türkçe" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-Lf-kVE">
-                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52.5" id="YEi-7z-SNN"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuB-h7-fJE">
-                                                <rect key="frame" x="63.5" y="0.0" width="47.5" height="34.5"/>
+                                                <rect key="frame" x="68.5" y="0.0" width="52.5" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52.5" id="S5l-LH-rad"/>
+                                                </constraints>
                                                 <string key="text">Temel 
 Mat</string>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
@@ -182,13 +188,19 @@ Mat</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sosyal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSt-Jc-gyE">
-                                                <rect key="frame" x="127" y="0.0" width="47.5" height="34.5"/>
+                                                <rect key="frame" x="137" y="0.0" width="52.5" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52.5" id="0tO-hg-ddt"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fen" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-iq-PTI">
-                                                <rect key="frame" x="190.5" y="0.0" width="47.5" height="34.5"/>
+                                                <rect key="frame" x="205.5" y="0.0" width="52.5" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52.5" id="zvI-le-gl6"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -196,7 +208,7 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-3x-7bD">
-                                        <rect key="frame" x="0.0" y="58.5" width="258" height="45"/>
+                                        <rect key="frame" x="0.0" y="64" width="258" height="45"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-y0-Vpa" userLabel="TextFieldView">
                                                 <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>
@@ -285,7 +297,7 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JJf-2c-sB3">
-                                        <rect key="frame" x="0.0" y="127.5" width="258" height="45"/>
+                                        <rect key="frame" x="0.0" y="133" width="258" height="45"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69K-AF-6UZ" userLabel="TextFieldView">
                                                 <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>
@@ -374,7 +386,7 @@ Mat</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-Aq-Kiq">
-                                        <rect key="frame" x="0.0" y="196.5" width="52.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="202" width="52.5" height="45"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNh-sI-sEq" userLabel="TextFieldView">
                                                 <rect key="frame" x="0.0" y="0.0" width="52.5" height="45"/>

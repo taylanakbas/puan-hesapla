@@ -12,6 +12,7 @@ class BannerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var playVisualView: UIVisualEffectView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var bannerLabel: UILabel!
@@ -31,6 +32,11 @@ class BannerTableViewCell: UITableViewCell {
             self.bannerLabel.alpha = 1
             self.calculateButton.alpha = 1
         })
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = self.frame
+        rectShape.position = self.center
+        rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 25, height: 25)).cgPath
+        self.layer.mask = rectShape
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

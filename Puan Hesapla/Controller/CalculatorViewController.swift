@@ -31,6 +31,15 @@ class CalculatorViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items?[2].title = ""
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items?[2].title = "Puan Hesaplama"
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     @objc func calculate(){
     
         
@@ -71,6 +80,13 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "TYT Puan"
+            cell.titleLabel.textColor = .white
+            cell.backgroundColor = UIColor(named: "PurpleColor")
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.frame
+            rectShape.position = cell.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+            cell.layer.mask = rectShape
             return cell
         }else if indexPath.section == 1 {
                 var cell = Bundle.main.loadNibNamed("CalculateTYTTableViewCell", owner: self, options: nil)?.first as! CalculateTYTTableViewCell
@@ -90,6 +106,13 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "TYT Sonuç"
+            cell.titleLabel.textColor = .white
+            cell.backgroundColor = UIColor(named: "PurpleColor")
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.frame
+            rectShape.position = cell.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomLeft , .bottomRight, .topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+            cell.layer.mask = rectShape
             return cell
         }else if indexPath.section == 3 {
             
@@ -104,6 +127,13 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "AYT Puan"
+            cell.titleLabel.textColor = .white
+            cell.backgroundColor = UIColor(named: "LightBlueColor")
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.frame
+            rectShape.position = cell.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomLeft , .bottomRight, .topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+            cell.layer.mask = rectShape
             return cell
             
         }else if indexPath.section == 5 {
@@ -126,6 +156,13 @@ extension CalculatorViewController : UITableViewDelegate, UITableViewDataSource 
             cell.seeAllButton.isHidden = true
             cell.seeAllButton.isEnabled = false
             cell.titleLabel.text = "AYT Sonuç"
+            cell.titleLabel.textColor = .white
+            cell.backgroundColor = UIColor(named: "LightBlueColor")
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.frame
+            rectShape.position = cell.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomLeft , .bottomRight, .topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+            cell.layer.mask = rectShape
             return cell
         }else if indexPath.section == 7 {
             let cell = Bundle.main.loadNibNamed("ResultAYTTableViewCell", owner: self, options: nil)?.first as! ResultAYTTableViewCell

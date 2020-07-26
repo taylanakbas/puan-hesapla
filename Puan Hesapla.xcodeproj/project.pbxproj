@@ -35,6 +35,7 @@
 		F560A11624BC686A00AEECBE /* univerlist.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F560A11524BC685600AEECBE /* univerlist.mp4 */; };
 		F56FEE1424B2773E0046D5D0 /* WebViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */; };
 		F56FEE1624B278640046D5D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FEE1524B278640046D5D0 /* WebViewController.swift */; };
+		F586E6F424CA283A0085F11D /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F586E6F324CA283A0085F11D /* loading.json */; };
 		F5C5787324A96E3B00575C70 /* CalculateAYTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */; };
 		F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */; };
 		F5C5787B24A9DD8600575C70 /* CalculateButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */; };
@@ -104,6 +105,7 @@
 		F560A11524BC685600AEECBE /* univerlist.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = univerlist.mp4; sourceTree = "<group>"; };
 		F56FEE1324B2773E0046D5D0 /* WebViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewStoryboard.storyboard; sourceTree = "<group>"; };
 		F56FEE1524B278640046D5D0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F586E6F324CA283A0085F11D /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F5C5787124A96E3B00575C70 /* CalculateAYTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateAYTTableViewCell.swift; sourceTree = "<group>"; };
 		F5C5787224A96E3B00575C70 /* CalculateAYTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateAYTTableViewCell.xib; sourceTree = "<group>"; };
 		F5C5787924A9DD8600575C70 /* CalculateButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				F5D382F6249CC91B0090A6F5 /* AppDelegate.swift */,
 				F5D382F8249CC91B0090A6F5 /* SceneDelegate.swift */,
 				F5C5789324ABCC5C00575C70 /* Constants.swift */,
+				F586E6F324CA283A0085F11D /* loading.json */,
 				F560A11524BC685600AEECBE /* univerlist.mp4 */,
 				F5C5789524ABD9CE00575C70 /* Helper */,
 				F5D38313249CE9690090A6F5 /* Model */,
@@ -433,6 +436,7 @@
 				F5D38308249CC9220090A6F5 /* LaunchScreen.storyboard in Resources */,
 				F5C5787424A96E3B00575C70 /* CalculateAYTTableViewCell.xib in Resources */,
 				F5D9320024B866BE00A8AA93 /* Montserrat-Light.ttf in Resources */,
+				F586E6F424CA283A0085F11D /* loading.json in Resources */,
 				F560A11324BC4F3700AEECBE /* BannerTableViewCell.xib in Resources */,
 				F543464C24B475FE0025525A /* GoogleService-Info.plist in Resources */,
 				F509489724B5CEF10085B7E9 /* FirstTableViewCell.xib in Resources */,

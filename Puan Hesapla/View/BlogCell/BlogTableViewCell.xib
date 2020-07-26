@@ -15,17 +15,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BlogTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="BlogTableViewCell" customModule="Puan_Hesapla" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="140"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-pK-ksE">
-                        <rect key="frame" x="16" y="8" width="318" height="104"/>
+                        <rect key="frame" x="16" y="8" width="318" height="124"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u0" id="pcI-4Z-Z4g">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
+                                <rect key="frame" x="8" y="10" width="100" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -33,8 +33,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Üniversiteler Önümüzdeki Dönem Açılacak Mı?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrN-R7-uG7">
-                                <rect key="frame" x="108" y="28" width="210" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Üniversiteler Önümüzdeki Dönem Açılacak Mı?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrN-R7-uG7">
+                                <rect key="frame" x="116" y="10" width="202" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -50,10 +50,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ohC-pK-ksE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0W6-Gm-wrm"/>
-                    <constraint firstAttribute="trailing" secondItem="ohC-pK-ksE" secondAttribute="trailing" constant="16" id="2kH-IG-J4Y"/>
-                    <constraint firstAttribute="bottom" secondItem="ohC-pK-ksE" secondAttribute="bottom" constant="8" id="E7c-fW-J1W"/>
-                    <constraint firstItem="ohC-pK-ksE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oS7-w1-jTY"/>
+                    <constraint firstAttribute="bottom" secondItem="ohC-pK-ksE" secondAttribute="bottom" constant="8" id="24a-fT-ZId"/>
+                    <constraint firstItem="ohC-pK-ksE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="3dl-OG-tza"/>
+                    <constraint firstItem="ohC-pK-ksE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5az-iI-9nd"/>
+                    <constraint firstAttribute="trailing" secondItem="ohC-pK-ksE" secondAttribute="trailing" constant="16" id="CbQ-CB-wNj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

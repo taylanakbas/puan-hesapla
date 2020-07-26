@@ -8,8 +8,11 @@ target 'Puan Hesapla' do
   # Pods for Puan Hesapla
   #pod 'Firebase/Core'
   #pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   pod 'SDWebImage'
   pod 'SDWebImageWebPCoder'
   pod 'SkyFloatingLabelTextField'
+  pod 'lottie-ios'
 
 end

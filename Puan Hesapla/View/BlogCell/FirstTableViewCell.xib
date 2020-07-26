@@ -30,7 +30,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-fd-oKH">
                         <rect key="frame" x="16" y="8" width="318" height="224"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u1" translatesAutoresizingMaskIntoConstraints="NO" id="ySK-EB-oan">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vet" translatesAutoresizingMaskIntoConstraints="NO" id="ySK-EB-oan">
                                 <rect key="frame" x="8" y="12" width="135" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="Eq1-fV-duy"/>
@@ -43,25 +43,28 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="480-Ag-xwS">
-                                <rect key="frame" x="167" y="24" width="143" height="176"/>
+                                <rect key="frame" x="151" y="30" width="160" height="165"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Öne Çıkan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBT-PL-NOF">
-                                        <rect key="frame" x="30" y="0.0" width="83" height="31"/>
+                                        <rect key="frame" x="37.5" y="0.0" width="85" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="OzS-JE-km0"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                         <color key="textColor" red="0.79779702429999999" green="0.25299620630000003" blue="0.3151286244" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Üniversite Tercihi Yaparken Nasıl Bir Yol İzlemeliyiz?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-yb-Q9J">
-                                        <rect key="frame" x="1.5" y="47" width="140" height="83"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veterinerlik Bölümü Hakkında Bilmeniz Gerekenler" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-yb-Q9J">
+                                        <rect key="frame" x="0.0" y="36" width="160" height="83"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="U69-Fg-gYu"/>
+                                            <constraint firstAttribute="width" constant="160" id="U69-Fg-gYu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcF-Om-RQj">
-                                        <rect key="frame" x="21.5" y="146" width="100" height="30"/>
+                                        <rect key="frame" x="30" y="135" width="100" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="VyZ-ui-YMD"/>
@@ -83,12 +86,12 @@
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ySK-EB-oan" firstAttribute="top" secondItem="e3a-fd-oKH" secondAttribute="top" constant="12" id="5tN-us-sQJ"/>
+                            <constraint firstItem="480-Ag-xwS" firstAttribute="top" secondItem="e3a-fd-oKH" secondAttribute="top" constant="30" id="AJn-aq-juM"/>
                             <constraint firstItem="ySK-EB-oan" firstAttribute="leading" secondItem="e3a-fd-oKH" secondAttribute="leading" constant="8" id="Dqq-KY-2cQ"/>
-                            <constraint firstAttribute="trailing" secondItem="480-Ag-xwS" secondAttribute="trailing" constant="8" id="MdN-CJ-hIb"/>
-                            <constraint firstItem="480-Ag-xwS" firstAttribute="top" secondItem="e3a-fd-oKH" secondAttribute="top" constant="24" id="PkS-hz-AL8"/>
+                            <constraint firstItem="480-Ag-xwS" firstAttribute="leading" secondItem="ySK-EB-oan" secondAttribute="trailing" constant="8" id="IW5-yY-iig"/>
+                            <constraint firstAttribute="trailing" secondItem="480-Ag-xwS" secondAttribute="trailing" constant="7" id="KA9-ee-SlW"/>
+                            <constraint firstAttribute="bottom" secondItem="480-Ag-xwS" secondAttribute="bottom" constant="29" id="bFf-a4-IK5"/>
                             <constraint firstAttribute="bottom" secondItem="ySK-EB-oan" secondAttribute="bottom" constant="12" id="fSz-0H-dVM"/>
-                            <constraint firstItem="480-Ag-xwS" firstAttribute="leading" secondItem="ySK-EB-oan" secondAttribute="trailing" constant="24" id="g8V-BN-D0u"/>
-                            <constraint firstAttribute="bottom" secondItem="480-Ag-xwS" secondAttribute="bottom" constant="24" id="xTQ-5x-izQ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -105,10 +108,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="articleImageView" destination="ySK-EB-oan" id="hqj-Vq-2xh"/>
+                <outlet property="articleTitle" destination="eQI-yb-Q9J" id="zjE-He-rWH"/>
+                <outlet property="readButton" destination="AcF-Om-RQj" id="1a4-Ne-BIP"/>
+            </connections>
             <point key="canvasLocation" x="37.681159420289859" y="198.21428571428569"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="u1" width="800" height="533"/>
+        <image name="vet" width="3000" height="2000"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import WebKit
 import SDWebImageWebPCoder
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -27,7 +28,15 @@ class HomeViewController: UIViewController {
         initUniversities()
         initArticles()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items?[0].title = ""
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items?[0].title = "Keşfet"
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     func initUniversities(){
         let session = URLSession.shared
         let url = URL(string: K.API.url + K.API.uni + K.API.ext)!
@@ -85,6 +94,7 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
         let webVC = storyboard.instantiateViewController(withIdentifier: K.VC.web) as! WebViewController
         webVC.url = K.URL.universities
+        webVC.modalPresentationStyle = .fullScreen
         self.present(webVC, animated: true)
         
     }
@@ -92,6 +102,7 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
         let webVC = storyboard.instantiateViewController(withIdentifier: K.VC.web) as! WebViewController
         webVC.url = K.URL.blog
+        webVC.modalPresentationStyle = .fullScreen
         self.present(webVC, animated: true)
     }
     @objc func detailedUniversity(_ sender : UITapGestureRecognizer){
@@ -102,6 +113,7 @@ class HomeViewController: UIViewController {
             let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
             let webVC = storyboard.instantiateViewController(identifier: K.VC.web) as! WebViewController
             webVC.url = K.URL.main + self.universities[index.row].slug
+            webVC.modalPresentationStyle = .fullScreen
             self.present(webVC, animated: true)
         }
     }
@@ -113,11 +125,20 @@ class HomeViewController: UIViewController {
             let storyboard = UIStoryboard(name: K.SB.web, bundle: .main)
             let webVC = storyboard.instantiateViewController(identifier: K.VC.web) as! WebViewController
             webVC.url = K.URL.blog + self.articles[index.row].slug
+            webVC.modalPresentationStyle = .fullScreen
             self.present(webVC, animated: true)
         }
     }
     @objc func segueToCalculator(){
         
+    }
+    @objc func logout(){
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true)
+        } catch let e as NSError {
+            print(e.description)
+        }
     }
 }
 
@@ -132,6 +153,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             let cell = Bundle.main.loadNibNamed(K.XIB.Table.banner, owner: self, options: nil)?.first as! BannerTableViewCell
             cell.playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
             cell.calculateButton.addTarget(self, action: #selector(segueToCalculator), for: .touchUpInside)
+            cell.logoutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
             return cell
         }else if indexPath.section == 1 {
             let cell = Bundle.main.loadNibNamed(K.XIB.Table.title, owner: self, options: nil)?.first as! TitleTableViewCell

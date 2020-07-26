@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 
 @UIApplicationMain
@@ -15,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        let db = Firestore.firestore()
+        print(db)
         setupGlobalAppearance()
         
         if let url = launchOptions?[.url] as? URL {
@@ -33,7 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupGlobalAppearance(){
-        UITextField.appearance().font  =  UIFont(name: "Montserrat-Regular", size: 14)
+        
+        UITextField.appearance().font  = UIFont(name: "Montserrat-Regular", size: 14)
+        let tabBarAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-SemiBold", size: 10)]
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarAttribute as [NSAttributedString.Key : Any], for: .normal)
         //UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 8)!], for: .normal)
         //UILabel.appearance().font = UIFont(name: "Montserrat-Regular", size: 18)!
      }
